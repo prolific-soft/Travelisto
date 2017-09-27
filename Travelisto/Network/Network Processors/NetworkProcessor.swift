@@ -8,9 +8,22 @@
 
 import Foundation
 
-
-
 //Makes a call to download JSON for a given API
+//This is the Default standard model for the network call
+//The other netowork processor will be based on the part
+//of the API that was requested. Eg Flight, Car Search, hotel
+//or Points of Interest.
+//So FlightNetworkProcessor, CarNetworkProcessor, HotelNetworkProcessor
+//PointsOfInterestNetworkProcessor respectively
+//
+//The reason for having unique or distintive NetworkProcessors is that
+//at the time of getting a success data, the decoding ie using the
+// JSONDecoder().decode() method will take distinctive types ie either
+//FlightResult.self or CarResult.self, in the respective classes.
+//
+//See Other Network Class for description
+
+
 class NetworkProcessor {
     
     //Properties
@@ -62,6 +75,13 @@ class NetworkProcessor {
                         //object so that the message can be retrieved and sent to
                         //the user
                         print("Response Status code: \(httpResponse.statusCode)")
+                        //Switch on status
+                        
+                        //If status is 400 get the data and use it to create
+                        //Error object
+                        
+                        //Get message from Error object and pass to user
+                        //so downloaded data will be nill and Error data will not be nil
                         
                     }
                 }
