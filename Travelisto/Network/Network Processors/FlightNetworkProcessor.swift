@@ -41,7 +41,7 @@ class FlightNetworkProcessor {
     //Can be used to display on a map
     
 
-    //METHOD  =================================================================
+    //METHOD FOUR =================================================================
     //Downloads LOW FARE SEARCH json from provided url
     //Holds a result of relevant Airport, each item is a type Airport
     //Airpor will be decoded in AirportResult.self (contains a list of Airport)
