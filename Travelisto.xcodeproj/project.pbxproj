@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */; };
 		EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9791F795F35009A1DB8 /* AppDelegate.swift */; };
 		EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C97B1F795F35009A1DB8 /* ViewController.swift */; };
 		EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C97D1F795F35009A1DB8 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		EF53C9761F795F35009A1DB8 /* Travelisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9791F795F35009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C97B1F795F35009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF17CAD11F7BE6CD00E938AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF17CADB1F7BFF5A00E938AC /* Error */,
+				EF17CAD31F7BE6E600E938AC /* Firebase */,
+				EF17CAD21F7BE6DA00E938AC /* API */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF17CAD21F7BE6DA00E938AC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EF17CADA1F7BFE4700E938AC /* POI */,
+				EF17CAD91F7BFE3F00E938AC /* Car */,
+				EF17CAD81F7BFE3700E938AC /* Hotel */,
+				EF17CAD71F7BFE2800E938AC /* Flight */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EF17CAD31F7BE6E600E938AC /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		EF17CAD41F7BE6F600E938AC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EF17CAD71F7BFE2800E938AC /* Flight */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flight;
+			sourceTree = "<group>";
+		};
+		EF17CAD81F7BFE3700E938AC /* Hotel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Hotel;
+			sourceTree = "<group>";
+		};
+		EF17CAD91F7BFE3F00E938AC /* Car */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		EF17CADA1F7BFE4700E938AC /* POI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = POI;
+			sourceTree = "<group>";
+		};
+		EF17CADB1F7BFF5A00E938AC /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		EF53C96D1F795F35009A1DB8 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +127,8 @@
 		EF53C9781F795F35009A1DB8 /* Travelisto */ = {
 			isa = PBXGroup;
 			children = (
+				EF17CAD41F7BE6F600E938AC /* Network */,
+				EF17CAD11F7BE6CD00E938AC /* Models */,
 				EF53C9791F795F35009A1DB8 /* AppDelegate.swift */,
 				EF53C97B1F795F35009A1DB8 /* ViewController.swift */,
 				EF53C97D1F795F35009A1DB8 /* Main.storyboard */,
@@ -136,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */,
 				EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */,
 				EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */,
 			);
