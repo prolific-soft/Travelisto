@@ -30,11 +30,6 @@ struct NearestRelevantAirport {
         let cityName : String
         let distance : Int
         
-        struct Coordinates : Codable {
-            let latitiude : Double
-            let longitude : Double
-        }
-        
         let location : Coordinates
         let aircraftMovements : Int32
         let timezone : String
