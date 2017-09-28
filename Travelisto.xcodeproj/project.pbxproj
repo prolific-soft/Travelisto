@@ -16,6 +16,11 @@
 		EF17CAEA1F7C0BFD00E938AC /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAE91F7C0BFD00E938AC /* CarService.swift */; };
 		EF17CAEC1F7C0C3900E938AC /* HotelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAEB1F7C0C3900E938AC /* HotelService.swift */; };
 		EF17CAEE1F7C0C5400E938AC /* PointsOfInterestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAED1F7C0C5400E938AC /* PointsOfInterestService.swift */; };
+		EF17CAF01F7C599A00E938AC /* Destinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAEF1F7C599A00E938AC /* Destinations.swift */; };
+		EF17CAF21F7C702D00E938AC /* LowPriceFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF11F7C702D00E938AC /* LowPriceFlight.swift */; };
+		EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF31F7C72B200E938AC /* Fare.swift */; };
+		EF17CAF61F7C8F0700E938AC /* Outbound.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF51F7C8F0700E938AC /* Outbound.swift */; };
+		EF17CAF81F7C987800E938AC /* AirportResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF71F7C987800E938AC /* AirportResults.swift */; };
 		EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9791F795F35009A1DB8 /* AppDelegate.swift */; };
 		EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C97B1F795F35009A1DB8 /* ViewController.swift */; };
 		EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C97D1F795F35009A1DB8 /* Main.storyboard */; };
@@ -33,6 +38,11 @@
 		EF17CAE91F7C0BFD00E938AC /* CarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
 		EF17CAEB1F7C0C3900E938AC /* HotelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelService.swift; sourceTree = "<group>"; };
 		EF17CAED1F7C0C5400E938AC /* PointsOfInterestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsOfInterestService.swift; sourceTree = "<group>"; };
+		EF17CAEF1F7C599A00E938AC /* Destinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destinations.swift; sourceTree = "<group>"; };
+		EF17CAF11F7C702D00E938AC /* LowPriceFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowPriceFlight.swift; sourceTree = "<group>"; };
+		EF17CAF31F7C72B200E938AC /* Fare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
+		EF17CAF51F7C8F0700E938AC /* Outbound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outbound.swift; sourceTree = "<group>"; };
+		EF17CAF71F7C987800E938AC /* AirportResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportResults.swift; sourceTree = "<group>"; };
 		EF53C9761F795F35009A1DB8 /* Travelisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9791F795F35009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C97B1F795F35009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +103,11 @@
 		EF17CAD71F7BFE2800E938AC /* Flight */ = {
 			isa = PBXGroup;
 			children = (
+				EF17CAEF1F7C599A00E938AC /* Destinations.swift */,
+				EF17CAF11F7C702D00E938AC /* LowPriceFlight.swift */,
+				EF17CAF31F7C72B200E938AC /* Fare.swift */,
+				EF17CAF51F7C8F0700E938AC /* Outbound.swift */,
+				EF17CAF71F7C987800E938AC /* AirportResults.swift */,
 			);
 			path = Flight;
 			sourceTree = "<group>";
@@ -253,15 +268,20 @@
 			files = (
 				EF17CAE11F7C02EA00E938AC /* HotelNetworkProcessor.swift in Sources */,
 				EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */,
+				EF17CAF01F7C599A00E938AC /* Destinations.swift in Sources */,
 				EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */,
 				EF17CAE31F7C030E00E938AC /* PointsOfInterestNetworkProcessor.swift in Sources */,
 				EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */,
 				EF17CAE81F7C0BA300E938AC /* FlightService.swift in Sources */,
+				EF17CAF81F7C987800E938AC /* AirportResults.swift in Sources */,
 				EF17CAEA1F7C0BFD00E938AC /* CarService.swift in Sources */,
 				EF17CAEE1F7C0C5400E938AC /* PointsOfInterestService.swift in Sources */,
+				EF17CAF21F7C702D00E938AC /* LowPriceFlight.swift in Sources */,
 				EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */,
+				EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */,
 				EF17CAEC1F7C0C3900E938AC /* HotelService.swift in Sources */,
 				EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */,
+				EF17CAF61F7C8F0700E938AC /* Outbound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

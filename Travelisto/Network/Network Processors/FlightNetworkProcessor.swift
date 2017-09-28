@@ -13,7 +13,7 @@ import Foundation
 //
 //For each method when success, status 200, is reached the type of
 //json to decode will depend on the class or struct that
-//models structure, ie the key and values in the JSON, defined in the class
+//models structure, ie the key and values in the JSON, defined in the API
 class FlightNetworkProcessor {
     
     //Properties
