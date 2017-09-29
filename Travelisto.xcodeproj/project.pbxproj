@@ -25,6 +25,7 @@
 		EF17CAFC1F7C9E4200E938AC /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAFB1F7C9E4200E938AC /* Coordinates.swift */; };
 		EF17CAFE1F7CB53000E938AC /* HotelAirports.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAFD1F7CB53000E938AC /* HotelAirports.swift */; };
 		EF17CB001F7D2E4C00E938AC /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAFF1F7D2E4C00E938AC /* Address.swift */; };
+		EF17F7251F7EABAA00E7159A /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F7241F7EABAA00E7159A /* Hotel.swift */; };
 		EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9791F795F35009A1DB8 /* AppDelegate.swift */; };
 		EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C97B1F795F35009A1DB8 /* ViewController.swift */; };
 		EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C97D1F795F35009A1DB8 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		EF17CAFB1F7C9E4200E938AC /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		EF17CAFD1F7CB53000E938AC /* HotelAirports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelAirports.swift; sourceTree = "<group>"; };
 		EF17CAFF1F7D2E4C00E938AC /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		EF17F7241F7EABAA00E7159A /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
 		EF53C9761F795F35009A1DB8 /* Travelisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9791F795F35009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C97B1F795F35009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				EF17CAFD1F7CB53000E938AC /* HotelAirports.swift */,
 				EF17CAFF1F7D2E4C00E938AC /* Address.swift */,
+				EF17F7241F7EABAA00E7159A /* Hotel.swift */,
 			);
 			path = Hotel;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */,
 				EF17CAE31F7C030E00E938AC /* PointsOfInterestNetworkProcessor.swift in Sources */,
 				EF17CAFA1F7C9D1F00E938AC /* Location.swift in Sources */,
+				EF17F7251F7EABAA00E7159A /* Hotel.swift in Sources */,
 				EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */,
 				EF17CAE81F7C0BA300E938AC /* FlightService.swift in Sources */,
 				EF17CAF81F7C987800E938AC /* AirportResults.swift in Sources */,

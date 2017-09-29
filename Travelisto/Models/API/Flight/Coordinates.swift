@@ -9,9 +9,12 @@
 import Foundation
 
 
-//The lat and lon of a place
-
+/// The lat and lon of a place
 struct Coordinates : Codable {
+    
+    /// The north-south location of this hotel, in decimal degrees, between -90 and 90.
     let latitiude : Double
+    
+    /// The east-west location of this hotel, in decimal degrees, between -180 and 180.
     let longitude : Double
 }
