@@ -10,7 +10,6 @@ import Foundation
 
 //List of outbound flight to a
 //specific location
-
 struct Outbound : Codable {
     
     struct Flight: Codable {
