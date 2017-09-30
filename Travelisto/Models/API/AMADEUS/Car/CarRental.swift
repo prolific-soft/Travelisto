@@ -43,7 +43,6 @@ struct CarRental : Codable {
     }
     
     
-    
     /// The array of search result objects, sorted by price. The length of the array will correspond to the number_of_results parameter used in the input.
     let result : [Result]
     

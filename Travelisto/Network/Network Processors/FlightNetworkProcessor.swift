@@ -11,7 +11,7 @@ import Foundation
 //The methods defined repectively depends on the type of JSON
 //to obtain from the API with respect to flights
 //
-//For each method when success, status 200, is reached the type of
+//For the defined method when success, status 200, is reached the type of
 //json to decode will depend on the class or struct that
 //models structure, ie the key and values in the JSON, defined in the API
 class FlightNetworkProcessor {
@@ -27,19 +27,7 @@ class FlightNetworkProcessor {
     
     typealias JSONObject = ( (Codable?) -> Void  )
     
-    
     //MARK: METHODS
-    
-    //METHOD ONE =================================================================
-    //Download FLIGHT EXTENSIVE AND FLIGHT INSPIRATION json from provided url
-    
-    //METHOD TWO =================================================================
-    //Download AIRPORT AUTOCOMPLETE json from provided url
- 
-    //METHOD THREE =================================================================
-    //Download List of AIRPORTS FOR A GIVEN LOCATION json from provided url
-    //Can be used to display on a map
-    
 
     //METHOD FOUR =================================================================
     //Downloads LOW FARE SEARCH json from provided url
@@ -56,19 +44,22 @@ class FlightNetworkProcessor {
                         if let successResponseData = data {
                             do{
                                 var downloadedObject : Codable?
-                                //                                switch withStructType {
-                                //                                case "article":
-                                //                                    downloadedObject = try JSONDecoder().decode(Article.self, from: responseData)
-                                //                                case "articles":
-                                //                                    downloadedObject = try JSONDecoder().decode(Articles.self, from: responseData)
-                                //                                    print("Articles was downloaded")
-                                //                                case "source":
-                                //                                    downloadedObject = try JSONDecoder().decode(Source.self, from: responseData)
-                                //                                case "sources":
-                                //                                    downloadedObject = try JSONDecoder().decode(Sources.self, from: responseData)
-                                //                                default:
-                                //                                    print("No conformable case was found!")
-                                //                                }
+                                let decoder = JSONDecoder()
+                                decoder.dateDecodingStrategy = .iso8601
+                                    switch withStructType {
+                                        case FlightAPISearchBy.location.rawValue:
+                                            downloadedObject = try JSONDecoder().decode(Destinations.self, from: successResponseData)
+                                        case FlightAPISearchBy.lowPriceFlight.rawValue:
+                                            downloadedObject = try JSONDecoder().decode(LowPriceFlight.self, from: successResponseData)
+                                        case FlightAPISearchBy.airportAutoComplete.rawValue:
+                                            downloadedObject = try JSONDecoder().decode(AirportAutoComplete.self, from: successResponseData)
+                                        case FlightAPISearchBy.nearestRelevantAirport.rawValue:
+                                            downloadedObject = try JSONDecoder().decode(NearestRelevantAirport.self, from: successResponseData)
+                                        case FlightAPISearchBy.location.rawValue:
+                                            downloadedObject = try JSONDecoder().decode(NearestRelevantAirport.self, from: successResponseData)
+                                    default:
+                                            print("No conformable case was found!")
+                                    }
                                 completion(downloadedObject)
                             }catch let error as NSError {
                                 print("Error decoding: \(error)")

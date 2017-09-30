@@ -1,28 +1,18 @@
 //
-//  AirportAutoComplete.swift
+//  NearestRelevantAirport.swift
 //  Travelisto
 //
-//  Created by Chidi Emeh on 9/27/17.
+//  Created by Chidi Emeh on 9/29/17.
 //  Copyright © 2017 Chidi Emeh. All rights reserved.
 //
 
 import Foundation
 
-//Finds the airports code in a given city
-struct AirportAutoComplete : Codable {
-    
-    struct AirportCode: Codable {
-        let value : String
-        let label : String
-    }
-    
-    let result : [AirportCode]
-    
-}
 
 //Returns a list of Nearest Airports for a given
 //latitude and longitude
-struct NearestRelevantAirport {
+struct NearestRelevantAirport : Codable {
+    
     struct Airport : Codable {
         let airport : String
         let airportName : String
@@ -48,19 +38,3 @@ struct NearestRelevantAirport {
     }
     let result : [Airport]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

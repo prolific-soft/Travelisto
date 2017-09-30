@@ -20,7 +20,7 @@
 		EF17CAF21F7C702D00E938AC /* LowPriceFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF11F7C702D00E938AC /* LowPriceFlight.swift */; };
 		EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF31F7C72B200E938AC /* Fare.swift */; };
 		EF17CAF61F7C8F0700E938AC /* Outbound.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF51F7C8F0700E938AC /* Outbound.swift */; };
-		EF17CAF81F7C987800E938AC /* AirportResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF71F7C987800E938AC /* AirportResults.swift */; };
+		EF17CAF81F7C987800E938AC /* AirportAutoComplets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF71F7C987800E938AC /* AirportAutoComplets.swift */; };
 		EF17CAFA1F7C9D1F00E938AC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAF91F7C9D1F00E938AC /* Location.swift */; };
 		EF17CAFC1F7C9E4200E938AC /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAFB1F7C9E4200E938AC /* Coordinates.swift */; };
 		EF17CAFE1F7CB53000E938AC /* HotelAirports.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAFD1F7CB53000E938AC /* HotelAirports.swift */; };
@@ -35,6 +35,14 @@
 		EF17F7331F7EBCE900E7159A /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F7321F7EBCE900E7159A /* Rate.swift */; };
 		EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F7341F7EBD7F00E7159A /* CarRentalGeosearch.swift */; };
 		EF17F7371F7EE39000E7159A /* PointsOfInterestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F7361F7EE39000E7159A /* PointsOfInterestResult.swift */; };
+		EF17F73A1F7EF34800E7159A /* TopFlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F7391F7EF34800E7159A /* TopFlights.swift */; };
+		EF17F73C1F7EF48900E7159A /* TopFlightDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F73B1F7EF48900E7159A /* TopFlightDestination.swift */; };
+		EF17F73E1F7EFB0400E7159A /* FlightTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F73D1F7EFB0400E7159A /* FlightTraffic.swift */; };
+		EF17F7431F7F087400E7159A /* NearestRelevantAirport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F7421F7F087400E7159A /* NearestRelevantAirport.swift */; };
+		EF17F7471F7F0B1D00E7159A /* FlightAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F7461F7F0B1D00E7159A /* FlightAPISearchBy.swift */; };
+		EF17F7491F7F1EC700E7159A /* HotelAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F7481F7F1EC700E7159A /* HotelAPISearchBy.swift */; };
+		EF17F74B1F7F216000E7159A /* CarAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */; };
+		EF17F74D1F7F23AD00E7159A /* POIAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */; };
 		EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9791F795F35009A1DB8 /* AppDelegate.swift */; };
 		EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C97B1F795F35009A1DB8 /* ViewController.swift */; };
 		EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C97D1F795F35009A1DB8 /* Main.storyboard */; };
@@ -56,7 +64,7 @@
 		EF17CAF11F7C702D00E938AC /* LowPriceFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowPriceFlight.swift; sourceTree = "<group>"; };
 		EF17CAF31F7C72B200E938AC /* Fare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
 		EF17CAF51F7C8F0700E938AC /* Outbound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outbound.swift; sourceTree = "<group>"; };
-		EF17CAF71F7C987800E938AC /* AirportResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportResults.swift; sourceTree = "<group>"; };
+		EF17CAF71F7C987800E938AC /* AirportAutoComplets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAutoComplets.swift; sourceTree = "<group>"; };
 		EF17CAF91F7C9D1F00E938AC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		EF17CAFB1F7C9E4200E938AC /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		EF17CAFD1F7CB53000E938AC /* HotelAirports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelAirports.swift; sourceTree = "<group>"; };
@@ -71,6 +79,14 @@
 		EF17F7321F7EBCE900E7159A /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		EF17F7341F7EBD7F00E7159A /* CarRentalGeosearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentalGeosearch.swift; sourceTree = "<group>"; };
 		EF17F7361F7EE39000E7159A /* PointsOfInterestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsOfInterestResult.swift; sourceTree = "<group>"; };
+		EF17F7391F7EF34800E7159A /* TopFlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFlights.swift; sourceTree = "<group>"; };
+		EF17F73B1F7EF48900E7159A /* TopFlightDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFlightDestination.swift; sourceTree = "<group>"; };
+		EF17F73D1F7EFB0400E7159A /* FlightTraffic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTraffic.swift; sourceTree = "<group>"; };
+		EF17F7421F7F087400E7159A /* NearestRelevantAirport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestRelevantAirport.swift; sourceTree = "<group>"; };
+		EF17F7461F7F0B1D00E7159A /* FlightAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAPISearchBy.swift; sourceTree = "<group>"; };
+		EF17F7481F7F1EC700E7159A /* HotelAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelAPISearchBy.swift; sourceTree = "<group>"; };
+		EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPISearchBy.swift; sourceTree = "<group>"; };
+		EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIAPISearchBy.swift; sourceTree = "<group>"; };
 		EF53C9761F795F35009A1DB8 /* Travelisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9791F795F35009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C97B1F795F35009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +110,7 @@
 		EF17CAD11F7BE6CD00E938AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EF17F7441F7F0AC600E7159A /* Enumerations */,
 				EF17CADB1F7BFF5A00E938AC /* Error */,
 				EF17CAD31F7BE6E600E938AC /* Firebase */,
 				EF17CAD21F7BE6DA00E938AC /* API */,
@@ -104,10 +121,9 @@
 		EF17CAD21F7BE6DA00E938AC /* API */ = {
 			isa = PBXGroup;
 			children = (
-				EF17CADA1F7BFE4700E938AC /* POI */,
-				EF17CAD91F7BFE3F00E938AC /* Car */,
-				EF17CAD81F7BFE3700E938AC /* Hotel */,
-				EF17CAD71F7BFE2800E938AC /* Flight */,
+				EF17F7411F7EFC1B00E7159A /* ZOMATO */,
+				EF17F7401F7EFC0600E7159A /* GOOGLE PLACES */,
+				EF17F73F1F7EFBF900E7159A /* AMADEUS */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -133,11 +149,12 @@
 			children = (
 				EF17F7381F7EF25C00E7159A /* FlightIntelligence */,
 				EF17CAEF1F7C599A00E938AC /* Destinations.swift */,
-				EF17CAF51F7C8F0700E938AC /* Outbound.swift */,
-				EF17CAF71F7C987800E938AC /* AirportResults.swift */,
 				EF17CAF11F7C702D00E938AC /* LowPriceFlight.swift */,
-				EF17CAF31F7C72B200E938AC /* Fare.swift */,
+				EF17CAF51F7C8F0700E938AC /* Outbound.swift */,
+				EF17F7421F7F087400E7159A /* NearestRelevantAirport.swift */,
 				EF17CAF91F7C9D1F00E938AC /* Location.swift */,
+				EF17CAF71F7C987800E938AC /* AirportAutoComplets.swift */,
+				EF17CAF31F7C72B200E938AC /* Fare.swift */,
 				EF17CAFB1F7C9E4200E938AC /* Coordinates.swift */,
 			);
 			path = Flight;
@@ -209,8 +226,47 @@
 		EF17F7381F7EF25C00E7159A /* FlightIntelligence */ = {
 			isa = PBXGroup;
 			children = (
+				EF17F7391F7EF34800E7159A /* TopFlights.swift */,
+				EF17F73B1F7EF48900E7159A /* TopFlightDestination.swift */,
+				EF17F73D1F7EFB0400E7159A /* FlightTraffic.swift */,
 			);
 			path = FlightIntelligence;
+			sourceTree = "<group>";
+		};
+		EF17F73F1F7EFBF900E7159A /* AMADEUS */ = {
+			isa = PBXGroup;
+			children = (
+				EF17CADA1F7BFE4700E938AC /* POI */,
+				EF17CAD91F7BFE3F00E938AC /* Car */,
+				EF17CAD81F7BFE3700E938AC /* Hotel */,
+				EF17CAD71F7BFE2800E938AC /* Flight */,
+			);
+			path = AMADEUS;
+			sourceTree = "<group>";
+		};
+		EF17F7401F7EFC0600E7159A /* GOOGLE PLACES */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "GOOGLE PLACES";
+			sourceTree = "<group>";
+		};
+		EF17F7411F7EFC1B00E7159A /* ZOMATO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZOMATO;
+			sourceTree = "<group>";
+		};
+		EF17F7441F7F0AC600E7159A /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				EF17F7461F7F0B1D00E7159A /* FlightAPISearchBy.swift */,
+				EF17F7481F7F1EC700E7159A /* HotelAPISearchBy.swift */,
+				EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */,
+				EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */,
+			);
+			path = Enumerations;
 			sourceTree = "<group>";
 		};
 		EF53C96D1F795F35009A1DB8 = {
@@ -317,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF17CAE11F7C02EA00E938AC /* HotelNetworkProcessor.swift in Sources */,
+				EF17F7471F7F0B1D00E7159A /* FlightAPISearchBy.swift in Sources */,
 				EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */,
 				EF17CAF01F7C599A00E938AC /* Destinations.swift in Sources */,
 				EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */,
@@ -324,12 +381,15 @@
 				EF17CAFA1F7C9D1F00E938AC /* Location.swift in Sources */,
 				EF17F7251F7EABAA00E7159A /* Hotel.swift in Sources */,
 				EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */,
+				EF17F73C1F7EF48900E7159A /* TopFlightDestination.swift in Sources */,
+				EF17F74D1F7F23AD00E7159A /* POIAPISearchBy.swift in Sources */,
 				EF17CAE81F7C0BA300E938AC /* FlightService.swift in Sources */,
-				EF17CAF81F7C987800E938AC /* AirportResults.swift in Sources */,
+				EF17CAF81F7C987800E938AC /* AirportAutoComplets.swift in Sources */,
 				EF17CAEA1F7C0BFD00E938AC /* CarService.swift in Sources */,
 				EF17F72B1F7EB69E00E7159A /* Amount.swift in Sources */,
 				EF17CAEE1F7C0C5400E938AC /* PointsOfInterestService.swift in Sources */,
 				EF17CAF21F7C702D00E938AC /* LowPriceFlight.swift in Sources */,
+				EF17F73E1F7EFB0400E7159A /* FlightTraffic.swift in Sources */,
 				EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */,
 				EF17F7271F7EB06C00E7159A /* CarRental.swift in Sources */,
 				EF17CAFE1F7CB53000E938AC /* HotelAirports.swift in Sources */,
@@ -337,15 +397,19 @@
 				EF17CB001F7D2E4C00E938AC /* Address.swift in Sources */,
 				EF17F7291F7EB36E00E7159A /* Car.swift in Sources */,
 				EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */,
+				EF17F7491F7F1EC700E7159A /* HotelAPISearchBy.swift in Sources */,
 				EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */,
 				EF17F7371F7EE39000E7159A /* PointsOfInterestResult.swift in Sources */,
 				EF17CAEC1F7C0C3900E938AC /* HotelService.swift in Sources */,
 				EF17F7311F7EBC8B00E7159A /* VehicleInfo.swift in Sources */,
 				EF17CAFC1F7C9E4200E938AC /* Coordinates.swift in Sources */,
+				EF17F73A1F7EF34800E7159A /* TopFlights.swift in Sources */,
+				EF17F7431F7F087400E7159A /* NearestRelevantAirport.swift in Sources */,
 				EF17F72F1F7EBC3200E7159A /* Provider.swift in Sources */,
 				EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */,
 				EF17CAF61F7C8F0700E938AC /* Outbound.swift in Sources */,
 				EF17F72D1F7EB7AC00E7159A /* Image.swift in Sources */,
+				EF17F74B1F7F216000E7159A /* CarAPISearchBy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

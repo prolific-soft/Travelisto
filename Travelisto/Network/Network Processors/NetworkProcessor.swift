@@ -46,27 +46,27 @@ class NetworkProcessor {
                     switch httpResponse.statusCode {
                     case 200:
                         print("Success")
-                        if let responseData = data {
-                            do{
-                                var downloadedObject : Codable?
-//                                switch withStructType {
-//                                case "article":
-//                                    downloadedObject = try JSONDecoder().decode(Article.self, from: responseData)
-//                                case "articles":
-//                                    downloadedObject = try JSONDecoder().decode(Articles.self, from: responseData)
-//                                    print("Articles was downloaded")
-//                                case "source":
-//                                    downloadedObject = try JSONDecoder().decode(Source.self, from: responseData)
-//                                case "sources":
-//                                    downloadedObject = try JSONDecoder().decode(Sources.self, from: responseData)
-//                                default:
-//                                    print("No conformable case was found!")
-//                                }
-                                completion(downloadedObject)
-                            }catch let error as NSError {
-                                print("Error decoding: \(error)")
-                            }
-                        }
+//                        if let responseData = data {
+//                            do{
+//                                var downloadedObject : Codable?
+////                                switch withStructType {
+////                                case "article":
+////                                    downloadedObject = try JSONDecoder().decode(Article.self, from: responseData)
+////                                case "articles":
+////                                    downloadedObject = try JSONDecoder().decode(Articles.self, from: responseData)
+////                                    print("Articles was downloaded")
+////                                case "source":
+////                                    downloadedObject = try JSONDecoder().decode(Source.self, from: responseData)
+////                                case "sources":
+////                                    downloadedObject = try JSONDecoder().decode(Sources.self, from: responseData)
+////                                default:
+////                                    print("No conformable case was found!")
+////                                }
+//                                completion(downloadedObject)
+//                            }catch let error as NSError {
+//                                print("Error decoding: \(error)")
+//                            }
+//                        }
                     default:
                         //eg Status 400 : Bad Request
                         //Sends the message to the user so they can correct search term

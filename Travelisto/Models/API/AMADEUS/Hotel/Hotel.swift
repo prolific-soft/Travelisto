@@ -64,7 +64,6 @@ struct Hotel : Codable {
     /// An array of amenity objects to the user what facilities this hotel might provide, such as a pool or parking. If this array is empty, it does not necessarily mean that there are no amenities available at this hotel, it could also mean that the hotel does not list their amenities in our search!
     let amenities : [Amenity]
     
-    
     struct Award  : Codable {
         /// The organization that issued the award. For example:. Local Star Rating, AAA.
         let provider : String

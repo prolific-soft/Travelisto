@@ -42,19 +42,14 @@ class CarNetworkProcessor {
                         if let successResponseData = data {
                             do{
                                 var downloadedObject : Codable?
-                                //                                switch withStructType {
-                                //                                case "article":
-                                //                                    downloadedObject = try JSONDecoder().decode(Article.self, from: responseData)
-                                //                                case "articles":
-                                //                                    downloadedObject = try JSONDecoder().decode(Articles.self, from: responseData)
-                                //                                    print("Articles was downloaded")
-                                //                                case "source":
-                                //                                    downloadedObject = try JSONDecoder().decode(Source.self, from: responseData)
-                                //                                case "sources":
-                                //                                    downloadedObject = try JSONDecoder().decode(Sources.self, from: responseData)
-                                //                                default:
-                                //                                    print("No conformable case was found!")
-                                //                                }
+                                    switch withStructType {
+                                        case CarAPISearchBy.carRentalAirport.rawValue:
+                                            downloadedObject = try JSONDecoder().decode(CarRental.self, from: successResponseData)
+                                        case CarAPISearchBy.carRentalGeosearch.rawValue:
+                                            downloadedObject = try JSONDecoder().decode(CarRentalGeosearch.self, from: successResponseData)
+                                    default:
+                                        print("No conformable case was found!")
+                                    }
                                 completion(downloadedObject)
                             }catch let error as NSError {
                                 print("Error decoding: \(error)")

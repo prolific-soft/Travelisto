@@ -10,7 +10,6 @@ import Foundation
 
 
 
-
 class HotelNetworkProcessor {
     
     //Properties
@@ -24,23 +23,7 @@ class HotelNetworkProcessor {
     
     typealias JSONObject = ( (Codable?) -> Void  )
     
-    
-    //MARK: METHODS
-    
-    //METHOD ONE =================================================================
-    //Download HOTEL AIRPORT SEARCH json from provided url
-    
-    //METHOD TWO =================================================================
-    //Download HOTEL GEOSEARCH BY CIRCLE json from provided url
-    //Can be used to display on a map
-    
-    //METHOD THREE =================================================================
-    //Download HOTEL GEOSEARCH json from provided url
-    //Can be used to display on a map
-    
-    
-    //METHOD FOUR =================================================================
-    //Downloads HOTEL PROPERTY CODE SEARCH json from provided url
+    //MARK: METHOD
     
     func downloadJSONFromURL(withStructType: String, _ completion : @escaping JSONObject ){
         let request = URLRequest(url: url)
@@ -53,11 +36,16 @@ class HotelNetworkProcessor {
                         if let successResponseData = data {
                             do{
                                 var downloadedObject : Codable?
-                                //                                switch withStructType {
-                                //                                case "article":
-                                //                                    downloadedObject = try JSONDecoder().decode(Article.self, from: responseData)
-
-                                //                                }
+                                    switch withStructType {
+                                        case HotelAPISearchBy.hotelAirportSearch.rawValue:
+                                                downloadedObject = try JSONDecoder().decode(HotelAirports.self, from: successResponseData)
+                                        case HotelAPISearchBy.hotelGeosearchByBox.rawValue:
+                                            downloadedObject = try JSONDecoder().decode(HotelAirports.self, from: successResponseData)
+                                        case HotelAPISearchBy.hotelGeosearchByCircle.rawValue:
+                                            downloadedObject = try JSONDecoder().decode(HotelAirports.self, from: successResponseData)
+                                        default:
+                                            print("No conformable case was found!")
+                                    }
                                 completion(downloadedObject)
                             }catch let error as NSError {
                                 print("Error decoding: \(error)")
