@@ -10,3 +10,24 @@ import Foundation
 
 
 //Uses FlightNetWork Processor to get approriate JSON data
+
+class FlightService {
+    
+    
+    let apiKey : String
+    let origin : String
+    
+    init(apiKey: String, origin: String) {
+        self.apiKey = apiKey
+        self.origin = origin
+    }
+    
+    func getFlightInspirationSearch (destination: String, depatureDate : String , oneWay : Bool = false ){
+        
+        
+    }
+    
+}
+
+
+

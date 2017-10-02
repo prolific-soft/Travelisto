@@ -16,6 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var tsurl = LowFareURL()
+        tsurl.apiKey = "akjskajshdhqjh"
+        tsurl.origin = "LOS"
+        tsurl.departureDate = "2017-12-25"
+        tsurl.adults = 1
+        tsurl.children = 3
+        tsurl.infants = 1
+        tsurl.nonstop = false
+        tsurl.currency = "USD"
+        tsurl.travelClass = "ECONOMY"
+        tsurl.numberOfResults = 6
+        
+        
+        let con = tsurl.buildUlRL()
+        
+        print(con)
+        
         return true
     }
 
