@@ -22,8 +22,15 @@ class FlightService {
         self.origin = origin
     }
     
-    func getFlightInspirationSearch (destination: String, depatureDate : String , oneWay : Bool = false ){
-        
+     typealias JSONObject = ( (Codable?) -> Void  )
+    
+    func getFlightInspirationSearch (urlString : String, _ completion : @escaping JSONObject ){
+        let endPoint = FlightAPISearchBy.self
+        let url = URL(string: urlString)!
+        let scanProcessor = FlightNetworkProcessor(url: url)
+        scanProcessor.downloadJSONFromURL(withStructType: endPoint.lowPriceFlight.rawValue) { (data) in
+            //
+        }
         
     }
     

@@ -13,64 +13,79 @@ import Foundation
 
 struct LowFareURL {
     
-    var apiKey : String?
-    var origin : String?
-    var destination : String?
-    var departureDate : String?
-    var returnDate : String?
-    var adults : Int?
-    var children : Int?
-    var infants : Int?
-    var nonstop : Bool?
-    var maxPrice : Int?
-    var currency : String?
-    var travelClass : String?
-    var numberOfResults : Int?
+    var base : String
+    var apiKey : String
+    
+    init(baseUrl : String, apiKey : String){
+        self.base = baseUrl
+        self.apiKey = apiKey
+        base.append("&apiKey=\(apiKey)")
+    }
+    
+    
+    var origin : String? {
+        didSet {
+            base.append("&origin=\(origin ?? "")")
+        }
+    }
+    var destination : String? {
+        didSet {
+            base.append("&destination=\(destination ?? "")")
+        }
+    }
+    var departureDate : String? {
+        didSet {
+            base.append("&departure_date=\(departureDate ?? "")")
+        }
+    }
+    var returnDate : String? {
+        didSet {
+             base.append("&return_date=\(returnDate ?? "")")
+        }
+    }
+    var adults : Int? {
+        didSet {
+            base.append("&adults=\(adults ?? 1)")
+        }
+    }
+    var children : Int? {
+        didSet {
+            base = base + "&children=\(children ?? 0)"
+        }
+    }
+    var infants : Int? {
+        didSet {
+            base = base + "&infants=\(infants ?? 0)"
+        }
+    }
+    var nonstop : Bool? {
+        didSet {
+           base = base + "&nonstop=\(nonstop!)"
+        }
+    }
+    var maxPrice : Int? {
+        didSet {
+           base = base + "&max_price=\(maxPrice ?? 0)"
+        }
+    }
+    var currency : String? {
+        didSet {
+            base = base + "&currency=\(currency ?? "")"
+        }
+    }
+    var travelClass : String? {
+        didSet {
+          base = base + "&travel_class=\(travelClass ?? "")"
+        }
+    }
+    var numberOfResults : Int? {
+        didSet {
+           base = base + "&number_of_results&=\(numberOfResults ?? 1)"
+        }
+    }
     
     
     func buildUlRL()-> String {
-        
-        var base = "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?"
-        
-        if apiKey != nil {
-             base.append("apiKey=\(apiKey ?? "")")
-        }
-        if origin != nil {
-             base.append("&origin=\(origin ?? "")")
-        }
-        if destination != nil {
-            base.append("&destination=\(destination ?? "")")
-        }
-        if departureDate != nil {
-            base.append("&departure_date=\(departureDate ?? "")")
-        }
-        if returnDate != nil {
-            base.append("&return_date=\(returnDate ?? "")")
-        }
-        if adults != nil {
-            base.append("&return_date=\(adults ?? 1)") 
-        }
-        if children != nil {
-            base = base + "&return_date=\(children ?? 0)"
-        }
-        if infants != nil {
-            base = base + "&return_date=\(infants ?? 0)"
-        }
-        if nonstop != nil {
-            base = base + "&nonstop=\(nonstop!)"
-        }
-        if maxPrice != nil {
-            base = base + "&max_price=\(maxPrice ?? 0)"
-        }
-        if currency != nil {
-            base = base + "&currency=\(currency ?? "")"
-        }
-        if travelClass != nil {
-            base = base + "&travel_class=\(travelClass ?? "")"
-        }
-        if numberOfResults != nil {
-            base = base + "&travel_class=\(numberOfResults ?? 1)"
-        }
         return base
     }
     

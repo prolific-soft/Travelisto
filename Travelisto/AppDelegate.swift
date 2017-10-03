@@ -17,8 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        var tsurl = LowFareURL()
-        tsurl.apiKey = "akjskajshdhqjh"
+        var tsurl = LowFareURL(baseUrl: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?", apiKey: "akjskajshdhqjh")
         tsurl.origin = "LOS"
         tsurl.departureDate = "2017-12-25"
         tsurl.adults = 1
