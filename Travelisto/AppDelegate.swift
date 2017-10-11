@@ -17,21 +17,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        var tsurl = LowFareURL(baseUrl: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?", apiKey: "akjskajshdhqjh")
+        var tsurl = LowFareURL(baseUrl: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?", apiKey: "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC")
         tsurl.origin = "LOS"
+        tsurl.destination = "BOS"
         tsurl.departureDate = "2017-12-25"
-        tsurl.adults = 1
+        tsurl.adults = 0
         tsurl.children = 3
         tsurl.infants = 1
         tsurl.nonstop = false
-        tsurl.currency = "USD"
-        tsurl.travelClass = "ECONOMY"
-        tsurl.numberOfResults = 6
+        
+        //tsurl.currency = "USD"
+        //tsurl.travelClass = "ECONOMY"
+        tsurl.numberOfResults = 2
         
         
         let con = tsurl.buildUlRL()
         
         print(con)
+        
+        
+        let service = FlightService()
+        service.getFlightInspirationSearch(urlString: con) { (obj, err) in
+            if err != nil {
+                print((err as! CustomError).message)
+            }else {
+                print(obj.debugDescription)
+            }
+        }
         
         return true
     }

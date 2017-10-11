@@ -13,12 +13,12 @@ import Foundation
 struct Outbound : Codable {
     
     struct Flight: Codable {
-        let departsAt : Date
-        let arrivesAt : Date
+        let departsAt : String
+        let arrivesAt : String
         
         struct Origin : Codable {
             let airport : String
-            let terminal : String
+            let terminal : String?
         }
         
         let origin : Origin

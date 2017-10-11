@@ -49,6 +49,7 @@
 		EF53C9811F795F35009A1DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9801F795F35009A1DB8 /* Assets.xcassets */; };
 		EF53C9841F795F35009A1DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9821F795F35009A1DB8 /* LaunchScreen.storyboard */; };
 		EF7208561F82992100E1824D /* LowFareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208551F82992100E1824D /* LowFareURL.swift */; };
+		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		EF53C9831F795F35009A1DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF53C9851F795F35009A1DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF7208551F82992100E1824D /* LowFareURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowFareURL.swift; sourceTree = "<group>"; };
+		EF7208571F83E55000E1824D /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 		EF17CADB1F7BFF5A00E938AC /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				EF7208571F83E55000E1824D /* CustomError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				EF17F7331F7EBCE900E7159A /* Rate.swift in Sources */,
 				EF17CB001F7D2E4C00E938AC /* Address.swift in Sources */,
 				EF17F7291F7EB36E00E7159A /* Car.swift in Sources */,
+				EF7208581F83E55000E1824D /* CustomError.swift in Sources */,
 				EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */,
 				EF17F7491F7F1EC700E7159A /* HotelAPISearchBy.swift in Sources */,
 				EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */,

@@ -14,11 +14,11 @@ import Foundation
 //Search
 struct Fare: Codable {
     
-    let totalPrice : Double
+    let totalPrice : String?
     
     struct FareAmount: Codable {
-        let totalFare : Double
-        let tax : Double
+        let totalFare : String?
+        let tax : String?
         private enum CodingKeys : String, CodingKey{
             case totalFare = "total_fare"
             case tax

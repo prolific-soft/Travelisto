@@ -21,7 +21,7 @@ class HotelNetworkProcessor {
         self.url = url
     }
     
-    typealias JSONObject = ( (Codable?) -> Void  )
+    typealias JSONObject = ( (Codable?, CustomError?) -> Void  )
     
     //MARK: METHOD
     
@@ -46,7 +46,7 @@ class HotelNetworkProcessor {
                                         default:
                                             print("No conformable case was found!")
                                     }
-                                completion(downloadedObject)
+                                completion(downloadedObject, nil)
                             }catch let error as NSError {
                                 print("Error decoding: \(error)")
                             }
@@ -66,6 +66,18 @@ class HotelNetworkProcessor {
                         
                         //Get message from Error object and pass to user
                         //so downloaded data will be nill and Error data will not be nil
+                        
+                        //eg Status 400 :
+                        print("Response Status code: \(httpResponse.statusCode)")
+                        if let errorData = data {
+                            do {
+                                let downloadedError = try JSONDecoder().decode(CustomError.self, from: errorData)
+                                completion(nil, downloadedError)
+                            } catch let error as NSError {
+                                print("Error downloading error message: \(error)")
+                            }
+                        }
+
                         
                     }
                 }

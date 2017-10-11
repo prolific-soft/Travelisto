@@ -19,9 +19,8 @@ struct LowFareURL {
     init(baseUrl : String, apiKey : String){
         self.base = baseUrl
         self.apiKey = apiKey
-        base.append("&apiKey=\(apiKey)")
+        base.append("&apikey=\(apiKey)")
     }
-    
     
     var origin : String? {
         didSet {

@@ -14,27 +14,53 @@ import Foundation
 class FlightService {
     
     
-    let apiKey : String
-    let origin : String
+//    let apiKey : String
+//    let origin : String
+//    
+//    init(apiKey: String, origin: String) {
+//        self.apiKey = apiKey
+//        self.origin = origin
+//    }
     
-    init(apiKey: String, origin: String) {
-        self.apiKey = apiKey
-        self.origin = origin
-    }
-    
-     typealias JSONObject = ( (Codable?) -> Void  )
+    typealias JSONObject = ( (Codable?, Codable?) -> Void  )
+    typealias AutoObject = ( (Codable?) -> Void  )
     
     func getFlightInspirationSearch (urlString : String, _ completion : @escaping JSONObject ){
         let endPoint = FlightAPISearchBy.self
         let url = URL(string: urlString)!
         let scanProcessor = FlightNetworkProcessor(url: url)
-        scanProcessor.downloadJSONFromURL(withStructType: endPoint.lowPriceFlight.rawValue) { (data) in
-            //
+        scanProcessor.downloadJSONFromURL(withStructType: endPoint.lowPriceFlight.rawValue) { (data, error) in
+            if error != nil {
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
+            }else {
+                DispatchQueue.main.async {
+                    completion(data, nil)
+                }
+            }
         }
-        
-    }
+    }// End getFlightInspirationSearch
     
-}
-
-
-
+    
+    
+    func getAirportAutocomplete(searchString : String, _completion : @escaping AutoObject ) {
+        
+        let endPoint = FlightAPISearchBy.self
+        let url = URL(string: searchString)!
+        let scanProcessor = FlightNetworkProcessor(url: url)
+//        scanProcessor.downloadJSONFromURL(withStructType: endPoint.lowPriceFlight.rawValue) { (data) in
+//            if error != nil {
+//                DispatchQueue.main.async {
+//                    completion(data)
+//                }
+//            }
+//        }
+        
+        
+    } // End getAirportAutocomplete
+    
+    
+    
+    
+}// End Class FlightService
