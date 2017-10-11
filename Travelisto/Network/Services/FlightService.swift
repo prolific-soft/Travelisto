@@ -14,14 +14,6 @@ import Foundation
 class FlightService {
     
     
-//    let apiKey : String
-//    let origin : String
-//    
-//    init(apiKey: String, origin: String) {
-//        self.apiKey = apiKey
-//        self.origin = origin
-//    }
-    
     typealias JSONObject = ( (Codable?, Codable?) -> Void  )
     typealias AutoObject = ( (Codable?) -> Void  )
     
@@ -45,7 +37,7 @@ class FlightService {
     
     
     func getAirportAutocomplete(searchString : String, _completion : @escaping AutoObject ) {
-        
+
         let endPoint = FlightAPISearchBy.self
         let url = URL(string: searchString)!
         let scanProcessor = FlightNetworkProcessor(url: url)

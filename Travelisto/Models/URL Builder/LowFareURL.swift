@@ -13,19 +13,16 @@ import Foundation
 
 struct LowFareURL {
     
-    /*
-     LowFareURL(baseUrl: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?", apiKey: "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC")
-     */
-    
     var base : String
     var apiKey : String
     
-    init(baseUrl : String, apiKey : String){
-        self.base = baseUrl
-        self.apiKey = apiKey
+    init(){
+        self.base = "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?"
+        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
         base.append("&apikey=\(apiKey)")
     }
     
+    /// Flight Low-Fare Search
     var origin : String? {
         didSet {
             base.append("&origin=\(origin ?? "")")
@@ -87,9 +84,34 @@ struct LowFareURL {
         }
     }
     
+    /// Flight Inspiration Search
+    var oneWay : Bool? {
+        didSet {
+            base = base + "&one-way=\(oneWay ?? false)"
+        }
+    }
+    var duration : String? {
+        didSet {
+            base = base + "&duration&=\(duration ?? "")"
+        }
+    }
+    
+    var aggregationMode : String? {
+        didSet {
+            base = base + "&aggregation_mode&=\(aggregationMode ?? "")"
+        }
+    }
+    
+    
+    
+    
     
     func buildUlRL()-> String {
         return base
     }
     
-}
+    
+    
+    
+    
+}//End Class LowFareUrl
