@@ -13,6 +13,10 @@ import Foundation
 
 struct LowFareURL {
     
+    /*
+     LowFareURL(baseUrl: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?", apiKey: "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC")
+     */
+    
     var base : String
     var apiKey : String
     

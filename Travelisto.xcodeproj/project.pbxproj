@@ -43,6 +43,7 @@
 		EF17F7491F7F1EC700E7159A /* HotelAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F7481F7F1EC700E7159A /* HotelAPISearchBy.swift */; };
 		EF17F74B1F7F216000E7159A /* CarAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */; };
 		EF17F74D1F7F23AD00E7159A /* POIAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */; };
+		EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F8981F8DD21D008A1040 /* BaseURL.swift */; };
 		EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9791F795F35009A1DB8 /* AppDelegate.swift */; };
 		EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C97B1F795F35009A1DB8 /* ViewController.swift */; };
 		EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C97D1F795F35009A1DB8 /* Main.storyboard */; };
@@ -89,6 +90,7 @@
 		EF17F7481F7F1EC700E7159A /* HotelAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelAPISearchBy.swift; sourceTree = "<group>"; };
 		EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPISearchBy.swift; sourceTree = "<group>"; };
 		EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIAPISearchBy.swift; sourceTree = "<group>"; };
+		EF43F8981F8DD21D008A1040 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		EF53C9761F795F35009A1DB8 /* Travelisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9791F795F35009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C97B1F795F35009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		EF17CAD11F7BE6CD00E938AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EF7208541F8298F800E1824D /* URL Builder */,
 				EF17F7441F7F0AC600E7159A /* Enumerations */,
 				EF17CADB1F7BFF5A00E938AC /* Error */,
 				EF17CAD31F7BE6E600E938AC /* Firebase */,
@@ -220,7 +223,6 @@
 		EF17CAE61F7C036700E938AC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EF7208541F8298F800E1824D /* URL Builder */,
 				EF17CAE71F7C0BA300E938AC /* FlightService.swift */,
 				EF17CAE91F7C0BFD00E938AC /* CarService.swift */,
 				EF17CAEB1F7C0C3900E938AC /* HotelService.swift */,
@@ -310,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				EF7208551F82992100E1824D /* LowFareURL.swift */,
+				EF43F8981F8DD21D008A1040 /* BaseURL.swift */,
 			);
 			path = "URL Builder";
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				EF17CAF21F7C702D00E938AC /* LowPriceFlight.swift in Sources */,
 				EF17F73E1F7EFB0400E7159A /* FlightTraffic.swift in Sources */,
 				EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */,
+				EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */,
 				EF17F7271F7EB06C00E7159A /* CarRental.swift in Sources */,
 				EF17CAFE1F7CB53000E938AC /* HotelAirports.swift in Sources */,
 				EF17F7331F7EBCE900E7159A /* Rate.swift in Sources */,
