@@ -83,28 +83,9 @@ struct LowFareURL {
            base = base + "&number_of_results&=\(numberOfResults ?? 1)"
         }
     }
+
     
-    /// Flight Inspiration Search
-    var oneWay : Bool? {
-        didSet {
-            base = base + "&one-way=\(oneWay ?? false)"
-        }
-    }
-    var duration : String? {
-        didSet {
-            base = base + "&duration&=\(duration ?? "")"
-        }
-    }
-    
-    var aggregationMode : String? {
-        didSet {
-            base = base + "&aggregation_mode&=\(aggregationMode ?? "")"
-        }
-    }
-    
-    
-    
-    
+
     
     func buildUlRL()-> String {
         return base
