@@ -47,6 +47,10 @@ struct AirportAutoCompleteURL {
             base.append("&all_airports=\(allAirports ?? false)")
         }
     }
+    
+    func buildUlRL()-> String {
+        return base
+    }
 
     
 }//End class AirportAutoCompleteURL
