@@ -8,13 +8,15 @@
 
 import Foundation
 
-/// Construct a URL for a given set of parameters
-
+/// Constructs a URL for a given set of parameters
 
 struct LowFareURL {
     
     var base : String
     var apiKey : String
+    
+    //TODO: Refactor base url to so that it will be constructed using a class or
+    // enum to avoid typed string
     
     init(){
         self.base = "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?"
@@ -38,6 +40,7 @@ struct LowFareURL {
             base.append("&departure_date=\(departureDate ?? "")")
         }
     }
+    
     var returnDate : String? {
         didSet {
              base.append("&return_date=\(returnDate ?? "")")
@@ -83,8 +86,6 @@ struct LowFareURL {
            base = base + "&number_of_results&=\(numberOfResults ?? 1)"
         }
     }
-
-    
 
     
     func buildUlRL()-> String {

@@ -13,7 +13,6 @@ import Foundation
 
 class FlightService {
     
-    
     typealias JSONObject = ( (Codable?, Codable?) -> Void  )
     typealias AutoObject = ( (Codable?) -> Void  )
     
