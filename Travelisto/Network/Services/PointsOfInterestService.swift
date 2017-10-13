@@ -9,4 +9,30 @@
 import Foundation
 
 
-//Uses PointNetWork Processor to get approriate JSON data
+//Uses PointsOfInterestNetWork Processor to get approriate JSON data
+
+class PointsOfInterestService {
+    
+    typealias JSONObject = ( (Codable?, Codable?) -> Void  )
+    typealias AutoObject = ( (Codable?) -> Void  )
+    
+    func getHotelAirportSearch(urlString : String, _ completion : @escaping JSONObject ){
+        let endPoint = HotelAPISearchBy.self
+        let url = URL(string: urlString)!
+        let scanProcessor = HotelNetworkProcessor(url: url)
+        scanProcessor.downloadJSONFromURL(withStructType: endPoint.hotelAirportSearch.rawValue) { (data, error) in
+            if error != nil {
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
+            }else {
+                DispatchQueue.main.async {
+                    completion(data, nil)
+                }
+            }
+        }
+    }// End getHotelAirportSearch
+    
+    
+    
+}// End class PointsOfInterestService

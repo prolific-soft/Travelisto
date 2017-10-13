@@ -21,7 +21,7 @@ class PointsOfInterestNetworkProcessor {
         self.url = url
     }
     
-    typealias JSONObject = ( (Codable?) -> Void  )
+   typealias JSONObject = ( (Codable?, CustomError?) -> Void  )
     
     //MARK: METHOD
     
@@ -42,7 +42,7 @@ class PointsOfInterestNetworkProcessor {
                                 default:
                                     print("No conformable case was found!")
                                 }
-                                completion(downloadedObject)
+                                completion(downloadedObject, nil)
                             }catch let error as NSError {
                                 print("Error decoding: \(error)")
                             }
@@ -54,14 +54,17 @@ class PointsOfInterestNetworkProcessor {
                         //The Response from the status code is converted to Error
                         //object so that the message can be retrieved and sent to
                         //the user
+                        
                         print("Response Status code: \(httpResponse.statusCode)")
-                        //Switch on status
-                        
-                        //If status is 400 get the data and use it to create
-                        //Error object (from errorResponseDate)
-                        
-                        //Get message from Error object and pass to user
-                        //so downloaded data will be nill and Error data will not be nil
+                        if let errorData = data {
+                            do {
+                                let downloadedError = try JSONDecoder().decode(CustomError.self, from: errorData)
+                                completion(nil, downloadedError)
+                            } catch let error as NSError {
+                                print("Error downloading error message: \(error)")
+                            }
+                        }
+
                         
                     }
                 }
