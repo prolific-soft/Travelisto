@@ -16,11 +16,11 @@ class PointsOfInterestService {
     typealias JSONObject = ( (Codable?, Codable?) -> Void  )
     typealias AutoObject = ( (Codable?) -> Void  )
     
-    func getHotelAirportSearch(urlString : String, _ completion : @escaping JSONObject ){
-        let endPoint = HotelAPISearchBy.self
+    func getPointsOfInterestSearch(urlString : String, _ completion : @escaping JSONObject ){
+        let endPoint = POIAPISearchBy.self
         let url = URL(string: urlString)!
-        let scanProcessor = HotelNetworkProcessor(url: url)
-        scanProcessor.downloadJSONFromURL(withStructType: endPoint.hotelAirportSearch.rawValue) { (data, error) in
+        let scanProcessor = PointsOfInterestNetworkProcessor(url: url)
+        scanProcessor.downloadJSONFromURL(withStructType: endPoint.PointsOfInterestResult.rawValue) { (data, error) in
             if error != nil {
                 DispatchQueue.main.async {
                     completion(nil, error)
@@ -31,8 +31,7 @@ class PointsOfInterestService {
                 }
             }
         }
-    }// End getHotelAirportSearch
-    
-    
+    }// End getPointsOfInterestSearch
+
     
 }// End class PointsOfInterestService
