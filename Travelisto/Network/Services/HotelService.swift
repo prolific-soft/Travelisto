@@ -9,6 +9,7 @@
 import Foundation
 
 //Uses HotelNetWork Processor to get approriate JSON data
+
 class HotelService {
     
     typealias JSONObject = ( (Codable?, Codable?) -> Void  )

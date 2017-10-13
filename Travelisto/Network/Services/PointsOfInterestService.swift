@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+
+//Uses PointNetWork Processor to get approriate JSON data
