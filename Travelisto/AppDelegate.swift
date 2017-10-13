@@ -17,33 +17,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        var tsurl = LowFareURL()
-        tsurl.origin = "LOS"
-        tsurl.destination = "BOS"
-        tsurl.departureDate = "2017-12-25"
-        tsurl.adults = 0
-        tsurl.children = 3
-        tsurl.infants = 1
-        tsurl.nonstop = false
-        
-        //tsurl.currency = "USD"
-        //tsurl.travelClass = "ECONOMY"
-        tsurl.numberOfResults = 2
-        
-        
+        var tsurl = HotelURL(withAirportSearch: "search-airport")
+            tsurl.location = "BOS"
+            tsurl.checkIn = "2017-12-15"
+            tsurl.checkOut = "2017-12-16"
+ 
+//        tsurl.infants = 1
+//        tsurl.nonstop = false
+//
+//        //tsurl.currency = "USD"
+//        //tsurl.travelClass = "ECONOMY"
+//        tsurl.numberOfResults = 2
+//
         let con = tsurl.buildUlRL()
-        
+//
         print(con)
         
         
-        let service = FlightService()
-        service.getFlightInspirationSearch(urlString: con) { (obj, err) in
+        let hotelService = HotelService()
+        hotelService.getHotelAirportSearch(urlString: con) { (obj, err) in
             if err != nil {
                 print((err as! CustomError).message)
             }else {
-                print(obj.debugDescription)
-            }
+               print(obj.debugDescription)
+           }
         }
+//
+//
+//        let service = FlightService()
+//        service.getFlightInspirationSearch(urlString: con) { (obj, err) in
+//            if err != nil {
+//                print((err as! CustomError).message)
+//            }else {
+//                print(obj.debugDescription)
+//            }
+//        }
         
         return true
     }

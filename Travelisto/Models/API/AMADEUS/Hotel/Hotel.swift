@@ -10,6 +10,11 @@ import Foundation
 
 //Hotel as defined by the API
 
+//TODO: Make all the member variable values optional
+// because if the value is not in the API it will
+// throw optional error. Making the fields optional
+// will protect this error
+
 struct Hotel : Codable {
     
     ///The 8 character property code of this given hotel. The first 2 characters of this code are the chain code that can be specified in the input. The remaining elements are proprietary to each hotel chain.
@@ -19,10 +24,16 @@ struct Hotel : Codable {
     let propertyName : String
     
     /// The name of this hotel.
-    let marketingText : String
+    let marketingText : String?
+    
+    
+    struct Location : Codable {
+        let latitude : Double
+        let longitude : Double
+    }
     
     /// This hotel's approximate geolocation as a location object.
-    let location : Coordinates
+    let location : Location?
     
     /// This hotel's postal address as an address object.
     let address : Address
@@ -49,7 +60,7 @@ struct Hotel : Codable {
         let amenity : String
         
         /// The Open Travel Alliance Hotel Amenities Code for this amenity.
-        let otaCode : String
+        let otaCode : Int
         
         /// The decoded text description for this amenity code, where available.
         let description : String
@@ -96,8 +107,8 @@ struct Hotel : Codable {
         let totalAmount : Amount
         
         struct Rate : Codable {
-            let startDate : Date
-            let endDate : Date
+            let startDate : String
+            let endDate : String
             let currencyCode : String
             let price : Double
             
@@ -162,13 +173,13 @@ struct Hotel : Codable {
         case location
         case address
         case totalPrices = "total_price"
-        case minDailyRate
+        case minDailyRate = "min_daily_rate"
         case contacts
         case amenities
         case awards
         case images
         case rooms
-        case links
+        case links = "_links"
     }
     
     

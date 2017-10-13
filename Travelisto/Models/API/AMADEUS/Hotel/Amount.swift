@@ -10,7 +10,7 @@ import Foundation
 
 struct Amount : Codable {
     /// Total amount for the stay period. For example: $194.99.
-    let amount : Double
+    let amount : String
     
     /// Currency code of the total amount. For example: "USD".
     let currency : String
