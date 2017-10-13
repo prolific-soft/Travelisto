@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+//Uses carNetWork Processor to get approriate JSON data
 class CarService {
     
     typealias JSONObject = ( (Codable?, Codable?) -> Void  )
