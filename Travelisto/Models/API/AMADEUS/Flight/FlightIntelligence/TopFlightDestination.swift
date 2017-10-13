@@ -10,7 +10,6 @@ import Foundation
 
 struct TopFlightDestination : Codable {
     
-    
     struct SearchPeriod : Codable {
         let market : String
         let ptype : String

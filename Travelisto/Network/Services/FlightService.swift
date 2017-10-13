@@ -16,7 +16,7 @@ class FlightService {
     typealias JSONObject = ( (Codable?, Codable?) -> Void  )
     typealias AutoObject = ( (Codable?) -> Void  )
     
-    func getFlightInspirationSearch (urlString : String, _ completion : @escaping JSONObject ){
+    func getFlightInspirationSearch(urlString : String, _ completion : @escaping JSONObject ){
         let endPoint = FlightAPISearchBy.self
         let url = URL(string: urlString)!
         let scanProcessor = FlightNetworkProcessor(url: url)
@@ -34,24 +34,60 @@ class FlightService {
     }// End getFlightInspirationSearch
     
     
-    
-    func getAirportAutocomplete(searchString : String, _completion : @escaping AutoObject ) {
-
+    func getAirportAutocomplete(urlString : String, _ completion : @escaping JSONObject ) {
         let endPoint = FlightAPISearchBy.self
-        let url = URL(string: searchString)!
+        let url = URL(string: urlString)!
         let scanProcessor = FlightNetworkProcessor(url: url)
-//        scanProcessor.downloadJSONFromURL(withStructType: endPoint.lowPriceFlight.rawValue) { (data) in
-//            if error != nil {
-//                DispatchQueue.main.async {
-//                    completion(data)
-//                }
-//            }
-//        }
-        
-        
+        scanProcessor.downloadJSONFromURL(withStructType: endPoint.airportAutoComplete.rawValue) { (data, error) in
+            if error != nil {
+                DispatchQueue.main.async {
+                    completion(nil, data)
+                }
+            }else {
+                DispatchQueue.main.async {
+                    completion(data, nil)
+                }
+            }
+        }
     } // End getAirportAutocomplete
     
     
+    func getLowFareSearch(urlString : String, _ completion : @escaping JSONObject ) {
+        let endPoint = FlightAPISearchBy.self
+        let url = URL(string: urlString)!
+        let scanProcessor = FlightNetworkProcessor(url: url)
+        scanProcessor.downloadJSONFromURL(withStructType: endPoint.lowPriceFlight.rawValue) { (data, error) in
+            if error != nil {
+                DispatchQueue.main.async {
+                    completion(nil, data)
+                }
+            }else {
+                DispatchQueue.main.async {
+                    completion(data, nil)
+                }
+            }
+        }
+    } // End getLowFareSearch
     
+    
+    func getLocationSearch(urlString : String, _ completion : @escaping JSONObject ) {
+        let endPoint = FlightAPISearchBy.self
+        let url = URL(string: urlString)!
+        let scanProcessor = FlightNetworkProcessor(url: url)
+        scanProcessor.downloadJSONFromURL(withStructType: endPoint.location.rawValue) { (data, error) in
+            if error != nil {
+                DispatchQueue.main.async {
+                    completion(nil, data)
+                }
+            }else {
+                DispatchQueue.main.async {
+                    completion(data, nil)
+                }
+            }
+        }
+    } // End getLowFareSearch
+    
+    
+
     
 }// End Class FlightService
