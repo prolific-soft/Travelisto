@@ -59,14 +59,14 @@ struct HotelURL {
     /// The coordinates of the south-west corner of the search box.
     var southWestCorner : [Double]? {
         didSet {
-            base.append("&south_west_corner=\(southWestCorner[0] ?? 38.8675),\(southWestCorner[1] ?? -77.1457)")
+           // base.append("&south_west_corner=\(southWestCorner[0] ?? 38.8675),\(southWestCorner[1] ?? -77.1457)")
         }
     }
     
     /// The coordinates of the north-east corner of the search box.
     var northEastCorner : [Double]? {
         didSet {
-            base.append("&north_east_corner=\(northEastCorner[0] ?? 38.9072),\(northEastCorner[1] ?? -77.0632)")
+          //  base.append("&north_east_corner=\(northEastCorner[0] ?? 38.9072),\(northEastCorner[1] ?? -77.0632)")
         }
     }
     
