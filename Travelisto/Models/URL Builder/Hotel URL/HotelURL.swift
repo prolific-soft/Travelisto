@@ -12,7 +12,7 @@ import Foundation
 /// fields are created using the inputs from
 /// the UI, provided by the user
 
-struct HotelAirportURL {
+struct HotelURL {
    
     var base : String
     var apiKey : String
@@ -20,11 +20,56 @@ struct HotelAirportURL {
     //TODO: Refactor base url to so that it will be constructed using a class or
     // enum to avoid typed string
     
-    init(){
-        self.base = "https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?"
+    /// Must be set with "search-airport"
+    init(withAirportSearch: String){
+        self.base = "https://api.sandbox.amadeus.com/v1.2/hotels/\(withAirportSearch)?"
         self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
         base.append("&apikey=\(apiKey)")
     }
+    
+    /// Must be set with "search-circle"
+    init(withGeosearchCircle: String){
+        self.base = "https://api.sandbox.amadeus.com/v1.2/hotels/\(withGeosearchCircle)?"
+        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        base.append("&apikey=\(apiKey)")
+    }
+    
+    /// Must be set with "search-box"
+    init(withGeosearchBox: String){
+        self.base = "https://api.sandbox.amadeus.com/v1.2/hotels/\(withGeosearchBox)?"
+        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        base.append("&apikey=\(apiKey)")
+    }
+    
+    
+    /// Latitude of the center of the search. Required for Geosearch circle
+    var latitude : Double? {
+        didSet {
+            base.append("&latitude=\(latitude ?? 36.0857)")
+        }
+    }
+    
+    /// Longitude of the center of the search. Required for Geosearch circle
+    var longitude : Double? {
+        didSet {
+            base.append("&longitude=\(longitude ?? -115.1541)")
+        }
+    }
+    
+    /// The coordinates of the south-west corner of the search box.
+    var southWestCorner : [Double]? {
+        didSet {
+            base.append("&south_west_corner=\(southWestCorner[0] ?? 38.8675),\(southWestCorner[1] ?? -77.1457)")
+        }
+    }
+    
+    /// The coordinates of the north-east corner of the search box.
+    var northEastCorner : [Double]? {
+        didSet {
+            base.append("&north_east_corner=\(northEastCorner[0] ?? 38.9072),\(northEastCorner[1] ?? -77.0632)")
+        }
+    }
+    
     
     /// IATA airport code for hotel availability is required requested. Eg. BOS
     var location : String? {
@@ -127,6 +172,4 @@ struct HotelAirportURL {
     }
     
     
-    
-    
-}
+}//End Class HotelAirportURL
