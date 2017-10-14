@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        var tsurl = HotelURL(withAirportSearch: "search-airport")
-            tsurl.location = "BOS"
-            tsurl.checkIn = "2017-12-15"
-            tsurl.checkOut = "2017-12-16"
+        var tsurl = CarURL(withRentalAirport: "search-airport")
+            tsurl.location = "NCE"
+            tsurl.pickUp = "2017-12-07"
+            tsurl.dropOff = "2017-12-08"
  
 //        tsurl.infants = 1
 //        tsurl.nonstop = false
@@ -34,13 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(con)
         
         
-        let hotelService = HotelService()
-        hotelService.getHotelAirportSearch(urlString: con) { (obj, err) in
-            if err != nil {
-                print((err as! CustomError).message)
+        let carService = CarService()
+        carService.getCarRentalAirportSearch(urlString: con) { (data, error) in
+            
+            if error != nil {
+                 print((error as! CustomError).message)
             }else {
-               print(obj.debugDescription)
-           }
+                print(data.debugDescription)
+            }
         }
 //
 //

@@ -66,9 +66,7 @@ class CarNetworkProcessor {
                             } catch let error as NSError {
                                 print("Error downloading error message: \(error)")
                             }
-                        }
-
-                        
+                        }       
                     }
                 }
             }else {

@@ -26,7 +26,6 @@ struct Hotel : Codable {
     /// The name of this hotel.
     let marketingText : String?
     
-    
     struct Location : Codable {
         let latitude : Double
         let longitude : Double
@@ -127,14 +126,14 @@ struct Hotel : Codable {
         let descriptions : [String]
         
         struct RoomType : Codable {
-            let roomType : String
+            let roomType : String?
             
             private enum CodingKeys : String, CodingKey {
                 case roomType = "room_type"
             }
         }
         
-        let roomTypeInfo : RoomType
+        let roomTypeInfo : RoomType?
         let rateTypeCode : String
         
         private enum CodingKeys : String, CodingKey {
