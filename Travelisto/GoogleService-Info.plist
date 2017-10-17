@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>107766343782-60muhb7ci6alkhpfjmu0krp8ckoiuarr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.107766343782-60muhb7ci6alkhpfjmu0krp8ckoiuarr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDd04sgYx_pETiWE5A9FI3aJNhWBmLPCZM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>107766343782</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gmail.chidiemeh184.Travelisto</string>
+	<key>PROJECT_ID</key>
+	<string>travelisto-8ef9b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>travelisto-8ef9b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:107766343782:ios:a94538d31c80d902</string>
+	<key>DATABASE_URL</key>
+	<string>https://travelisto-8ef9b.firebaseio.com</string>
+</dict>
+</plist>
