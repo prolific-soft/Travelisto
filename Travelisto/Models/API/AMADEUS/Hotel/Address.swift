@@ -11,19 +11,19 @@ import Foundation
 //The Address of a Hotel
 struct Address : Codable {
     ///The first line of the hotel's address. Generally represents the hotel's basic street address.
-    let line1 : String
+    let line1 : String?
     
     /// The town or city in which hotel is located.
-    let city : String
+    let city : String?
     
     /// The state or region code in which the hotel is located.
-    let region : String
+    let region : String?
     
     /// The postal or zip code of this address.
-    let postalCode : String
+    let postalCode : String?
     
     /// The ISO 3166-1 alpha-2 country code of this address.
-    let country : String
+    let country : String?
     
     private enum CodingKeys : String, CodingKey {
         case line1

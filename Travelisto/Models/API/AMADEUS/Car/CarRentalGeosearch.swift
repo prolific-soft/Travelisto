@@ -12,17 +12,25 @@ struct CarRentalGeosearch : Codable {
     
     struct Result : Codable {
         let provider : Provider
-        let location : Coordinates
-        let address : Address
+        let location : Coordinates?
+        let address : Address?
         
         struct Vehicle : Codable {
             let vehicleInfo : VehicleInfo
-            let rates : Amount
+            
+            struct Rate : Codable {
+                let type : String
+                let price : Amount
+            }
+            
+            let rates : [Rate]
+            let images : Image?
             let estimatedTotal : Amount
             
             private enum CodingKeys : String, CodingKey {
                 case vehicleInfo = "vehicle_info"
                 case rates
+                case images
                 case estimatedTotal = "estimated_total"
             }
         }
@@ -30,5 +38,5 @@ struct CarRentalGeosearch : Codable {
         let cars : [Vehicle]
     }
     
-   // let results : [Any]
+    let results : [Result]
 }
