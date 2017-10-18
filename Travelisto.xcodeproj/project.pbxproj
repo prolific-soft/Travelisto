@@ -148,6 +148,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF15579A1F96C70500B63F85 /* WIKIPEDIA */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WIKIPEDIA;
+			sourceTree = "<group>";
+		};
 		EF17CAD11F7BE6CD00E938AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +170,7 @@
 		EF17CAD21F7BE6DA00E938AC /* API */ = {
 			isa = PBXGroup;
 			children = (
+				EF15579A1F96C70500B63F85 /* WIKIPEDIA */,
 				EF17F7411F7EFC1B00E7159A /* ZOMATO */,
 				EF17F7401F7EFC0600E7159A /* GOOGLE PLACES */,
 				EF17F73F1F7EFBF900E7159A /* AMADEUS */,
