@@ -21,7 +21,7 @@ struct VehicleInfo : Codable {
     let fuel : String
     
     /// The decoded ACRISS air_conditioning information, to let you know if this vehicle has air conditioning, as a true/false boolean.
-    let airConditioning : Bool
+    let airConditioning : Bool?
     
     /// The decoded ACRISS vehicle category (For example: Economy, Luxury, Standard).
     let category : String

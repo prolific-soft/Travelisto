@@ -17,14 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-       // var tsurl = CarURL(withRentalAirport: "search-airport")
-        var tsurl = CarURL(withRentalGeosearch: "search-circle")
-            tsurl.latitude = 35.1504
-            tsurl.longitude = -114.57632
-            tsurl.radius = 42
+       var tsurl = CarURL(withRentalAirport: "search-airport")
+        //var tsurl = CarURL(withRentalGeosearch: "search-circle")
+           // tsurl.latitude = 35.1504
+           // tsurl.longitude = -114.57632
+           // tsurl.radius = 42
         
         
-        //  tsurl.location = "NCE"
+            tsurl.location = "NCE"
             tsurl.pickUp = "2017-12-07"
             tsurl.dropOff = "2017-12-08"
  
@@ -40,26 +40,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(con)
         
         
-        let pickupservice = CarService()
-        pickupservice.getCarRentalGeosearch(urlString: con) { (obj, err) in
-                        if err != nil {
-                            print((err as! CustomError).message)
-                        }else {
-                            print(obj.debugDescription)
-                        }
-        }
-        
-//        let carService = CarService()
-//        carService.getCarRentalAirportSearch(urlString: con) { (data, error) in
-//            
-//            if error != nil {
-//                 print((error as! CustomError).message)
-//            }else {
-//                print(data.debugDescription)
-//            }
+//        let pickupservice = CarService()
+//        pickupservice.getCarRentalGeosearch(urlString: con) { (obj, err) in
+//                        if err != nil {
+//                            print((err as! CustomError).message)
+//                        }else {
+//                            print(obj.debugDescription)
+//                        }
 //        }
-//
-//
+        
+        let carService = CarService()
+        carService.getCarRentalAirportSearch(urlString: con) { (data, error) in
+            
+            if error != nil {
+                 print((error as! CustomError).message)
+            }else {
+                print(data.debugDescription)
+            }
+        }
+
+
 //        let service = FlightService()
 //        service.getFlightInspirationSearch(urlString: con) { (obj, err) in
 //            if err != nil {
