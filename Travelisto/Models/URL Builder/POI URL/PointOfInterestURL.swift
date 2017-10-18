@@ -19,9 +19,9 @@ struct PointsOfInterestURL {
     // enum to avoid typed string
     
     init(){
-        self.base = "https://api.sandbox.amadeus.com/v1.2/points-od-interest/yapq-search-text?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
-        base.append("&apikey=\(apiKey)")
+        self.base = "https://api.sandbox.amadeus.com/v1.2/points-of-interest/yapq-search-circle?"
+        self.apiKey = ""
+        base.append("apikey=\(apiKey)")
     }
     
     /// The name of the supported city for which you are searching, in the selected language.
@@ -39,6 +39,28 @@ struct PointsOfInterestURL {
         }
     }
     
+    
+    /// Latitude of the center of the search, in decimal degrees
+    var latitude : Double? {
+        didSet {
+            base.append("&latitude=\(latitude ?? 49.10)")
+        }
+    }
+    
+    /// Longitude of the center of the search, in decimal degrees
+    var longitude : Double? {
+        didSet {
+            base.append("&longitude=\(longitude ?? -123.11934)")
+        }
+    }
+    
+    /// Radius around the center to look for points-of-interest around
+    /// the given latitude and longitude in kilometers (km)
+    var radius : Int? {
+        didSet {
+            base.append("&radius=\(radius ?? 42)")
+        }
+    }
     
     /// Filters the resulting points_of_interest to include only results
     /// which have a least one category containing the given provided word.

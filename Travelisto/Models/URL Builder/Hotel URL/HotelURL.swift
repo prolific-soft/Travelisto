@@ -23,21 +23,21 @@ struct HotelURL {
     /// Must be set with "search-airport"
     init(withAirportSearch: String){
         self.base = "https://api.sandbox.amadeus.com/v1.2/hotels/\(withAirportSearch)?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
     
     /// Must be set with "search-circle"
     init(withGeosearchCircle: String){
         self.base = "https://api.sandbox.amadeus.com/v1.2/hotels/\(withGeosearchCircle)?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
     
     /// Must be set with "search-box"
     init(withGeosearchBox: String){
         self.base = "https://api.sandbox.amadeus.com/v1.2/hotels/\(withGeosearchBox)?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
     

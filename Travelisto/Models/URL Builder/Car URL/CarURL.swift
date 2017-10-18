@@ -24,14 +24,14 @@ struct CarURL {
     /// Must be set with "search-airport"
     init(withRentalAirport: String){
         self.base = "https://api.sandbox.amadeus.com/v1.2/cars/\(withRentalAirport)?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
     
     /// Must be set with "search-circle"
     init(withRentalGeosearch: String){
         self.base = "https://api.sandbox.amadeus.com/v1.2/cars/\(withRentalGeosearch)?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
 

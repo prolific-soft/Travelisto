@@ -21,7 +21,7 @@ struct AirportAutoCompleteURL {
     
     init(){
         self.base = "https://api.sandbox.amadeus.com/v1.2/airports/autocomplete?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
     

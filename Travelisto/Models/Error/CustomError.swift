@@ -15,13 +15,13 @@ struct CustomError : Codable {
     
     let status : Int
     let message : String
-//    let messageInfo : String
-//    
-//    private enum CodingKeys : String, CodingKey {
-//        case status
-//        case message
-//        case messageInfo = "message_info"
-//    }
+    let messageInfo : String?
+    
+    private enum CodingKeys : String, CodingKey {
+        case status
+        case message
+        case messageInfo = "message_info"
+    }
     
 }
 

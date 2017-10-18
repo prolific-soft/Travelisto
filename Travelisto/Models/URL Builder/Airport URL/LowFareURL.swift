@@ -20,7 +20,7 @@ struct LowFareURL {
     
     init(){
         self.base = "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
     

@@ -23,14 +23,14 @@ struct AirportAreaURL {
     ///Provided with "nearest-relevant"
     init(nearestRelevant: String){
         self.base = "https://api.sandbox.amadeus.com/v1.2/airports/\(nearestRelevant)?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
     
     //IATA Code EG. PAR (Paris), CMH (Columbus)
     init(IATALocationCode: String){
         self.base = "https://api.sandbox.amadeus.com/v1.2/location/\(IATALocationCode)?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
     

@@ -25,14 +25,14 @@ struct InspirationURL {
     
     init(){
         self.base = "https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
     }
     
     //Should be initialized with "extensive-search"
     init(extensiveSearch : String){
         self.base = "https://api.sandbox.amadeus.com/v1.2/flights/\(extensiveSearch)?"
-        self.apiKey = "Yg5pezGj2nLv0n2KlUNuD0rVRAC03GzC"
+        self.apiKey = ""
         base.append("&apikey=\(apiKey)")
         
     }

@@ -36,8 +36,8 @@ struct PointsOfInterestResult : Codable {
         let categories : [String]
         
         struct Grade : Codable {
-            let cityGrade : String
-            let yapqGrade : String
+            let cityGrade : Int
+            let yapqGrade : Double?
             
             private enum CodingKeys : String, CodingKey {
                 case cityGrade = "city_grade"
@@ -64,7 +64,7 @@ struct PointsOfInterestResult : Codable {
         
         let details : Detail
         
-        struct Location : Codable {
+        struct InterestLocation : Codable {
             let longitude : Double
             let latitude : Double
             let googleMapsLink : URL?
@@ -76,8 +76,8 @@ struct PointsOfInterestResult : Codable {
             }
         }
         
-        let location : Location
-        let walkTime : Double?
+        let location : InterestLocation
+        //let walkTime : Double?
         
         private enum CodingKeys : String, CodingKey {
             case title
@@ -87,11 +87,11 @@ struct PointsOfInterestResult : Codable {
             case mainImage = "main_image"
             case details
             case location
-            case walkTime = "walk_time"
+            //case walkTime = "walk_time"
         }
     }
     
-    let pointsOfInterest : [City]
+    let pointsOfInterest : [PointOfInterest]
     
     private enum CodingKeys : String, CodingKey {
         case currentCity = "current_city"

@@ -29,6 +29,7 @@ class PointsOfInterestNetworkProcessor {
         let dataTask = session.dataTask(with: request) { (data, response, error) in
             if error == nil {
                 if let httpResponse = response as? HTTPURLResponse {
+
                     switch httpResponse.statusCode {
                     case 200:
                         print("Success")
@@ -36,7 +37,9 @@ class PointsOfInterestNetworkProcessor {
                             do{
                                 var downloadedObject : Codable?
                                 switch withStructType {
+                                    
                                 case POIAPISearchBy.PointsOfInterestResult.rawValue:
+                                    
                                     downloadedObject = try JSONDecoder().decode(PointsOfInterestResult.self, from: successResponseData)
                                 default:
                                     print("No conformable case was found!")
