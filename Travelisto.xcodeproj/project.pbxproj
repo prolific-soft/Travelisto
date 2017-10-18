@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1A14D741113BFD837DB27AF4 /* Pods_Travelisto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49E5941D13FCEBE2197F61A /* Pods_Travelisto.framework */; };
+		EF156B8D1F97C49B00924A89 /* RestuarantSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */; };
+		EF156B8F1F97C60800924A89 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8E1F97C60800924A89 /* Restuarant.swift */; };
+		EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B901F98153E00924A89 /* ReviewResult.swift */; };
+		EF156B931F98174400924A89 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B921F98174400924A89 /* Review.swift */; };
 		EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */; };
 		EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */; };
 		EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */; };
@@ -64,6 +68,10 @@
 		C4E22AF323C0F0A0B367ECD2 /* Pods-Travelisto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travelisto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travelisto/Pods-Travelisto.release.xcconfig"; sourceTree = "<group>"; };
 		E49E5941D13FCEBE2197F61A /* Pods_Travelisto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travelisto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1557991F968A3C00B63F85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantSearch.swift; sourceTree = "<group>"; };
+		EF156B8E1F97C60800924A89 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
+		EF156B901F98153E00924A89 /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResult.swift; sourceTree = "<group>"; };
+		EF156B921F98174400924A89 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNetworkProcessor.swift; sourceTree = "<group>"; };
@@ -305,6 +313,10 @@
 		EF17F7411F7EFC1B00E7159A /* ZOMATO */ = {
 			isa = PBXGroup;
 			children = (
+				EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */,
+				EF156B8E1F97C60800924A89 /* Restuarant.swift */,
+				EF156B901F98153E00924A89 /* ReviewResult.swift */,
+				EF156B921F98174400924A89 /* Review.swift */,
 			);
 			path = ZOMATO;
 			sourceTree = "<group>";
@@ -532,6 +544,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF156B8D1F97C49B00924A89 /* RestuarantSearch.swift in Sources */,
+				EF156B8F1F97C60800924A89 /* Restuarant.swift in Sources */,
 				EF7208561F82992100E1824D /* LowFareURL.swift in Sources */,
 				EF17CAE11F7C02EA00E938AC /* HotelNetworkProcessor.swift in Sources */,
 				EF17F7471F7F0B1D00E7159A /* FlightAPISearchBy.swift in Sources */,
@@ -550,6 +564,7 @@
 				EF17F72B1F7EB69E00E7159A /* Amount.swift in Sources */,
 				EF17CAEE1F7C0C5400E938AC /* PointsOfInterestService.swift in Sources */,
 				EF17CAF21F7C702D00E938AC /* LowPriceFlight.swift in Sources */,
+				EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */,
 				EF43F8A61F904A70008A1040 /* CarURL.swift in Sources */,
 				EF43F8AA1F9058AF008A1040 /* PointOfInterestURL.swift in Sources */,
 				EF17F73E1F7EFB0400E7159A /* FlightTraffic.swift in Sources */,
@@ -576,6 +591,7 @@
 				EF17F7431F7F087400E7159A /* NearestRelevantAirport.swift in Sources */,
 				EF17F72F1F7EBC3200E7159A /* Provider.swift in Sources */,
 				EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */,
+				EF156B931F98174400924A89 /* Review.swift in Sources */,
 				EF17CAF61F7C8F0700E938AC /* Outbound.swift in Sources */,
 				EF17F72D1F7EB7AC00E7159A /* Image.swift in Sources */,
 				EF17F74B1F7F216000E7159A /* CarAPISearchBy.swift in Sources */,
