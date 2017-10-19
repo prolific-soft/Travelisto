@@ -10,7 +10,7 @@ import Foundation
 
 //A Restuarant as defined by API
 
-struct Restuarant {
+struct Restuarant : Codable {
     
     struct ZomatoRestuarant : Codable {
         
@@ -83,34 +83,34 @@ struct Restuarant {
         let eventUrl : URL?
         let establishmentTypes : [String]
         
-    }
-    
-    
-    private enum CodingKeys : String, CodingKey {
-        case R
-        case apiKey
-        case id
-        case name
-        case url
-        case location
-        case switchToOrderMenu = "switch_to_order_menu"
-        case cuisines
-        case averageCostForTwo = "average_cost_for_two"
-        case priceRange = "price_range"
-        case currency
-        case offers
-        case thumb
-        case userRating = "user_rating"
-        case photosUrl = "photos_url"
-        case menuUrl = "menu_url"
-        case featuredImage = "featured_image"
-        case hasOnlineDelivery = "has_online_delivery"
-        case isDeliveringNow = "is_delivering_now"
-        case deeplink
-        case hasTableBooking = "has_table_booking"
-        case eventUrl = "event_url"
-        case establishmentTypes = "establishment_types"
-    }
+        
+        private enum CodingKeys : String, CodingKey {
+            case R
+            case apiKey
+            case id
+            case name
+            case url
+            case location
+            case switchToOrderMenu = "switch_to_order_menu"
+            case cuisines
+            case averageCostForTwo = "average_cost_for_two"
+            case priceRange = "price_range"
+            case currency
+            case offers
+            case thumb
+            case userRating = "user_rating"
+            case photosUrl = "photos_url"
+            case menuUrl = "menu_url"
+            case featuredImage = "featured_image"
+            case hasOnlineDelivery = "has_online_delivery"
+            case isDeliveringNow = "is_delivering_now"
+            case deeplink
+            case hasTableBooking = "has_table_booking"
+            case eventUrl = "event_url"
+            case establishmentTypes = "establishment_types"
+        }
+        
+    }// End ZomatoRestuarant
     
     let restuarant : ZomatoRestuarant
     

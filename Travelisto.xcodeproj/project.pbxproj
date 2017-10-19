@@ -12,6 +12,8 @@
 		EF156B8F1F97C60800924A89 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8E1F97C60800924A89 /* Restuarant.swift */; };
 		EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B901F98153E00924A89 /* ReviewResult.swift */; };
 		EF156B931F98174400924A89 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B921F98174400924A89 /* Review.swift */; };
+		EF156B961F98514300924A89 /* RestuarantURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B951F98514300924A89 /* RestuarantURL.swift */; };
+		EF156B981F98515500924A89 /* RestuarantReviewURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B971F98515500924A89 /* RestuarantReviewURL.swift */; };
 		EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */; };
 		EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */; };
 		EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */; };
@@ -72,6 +74,8 @@
 		EF156B8E1F97C60800924A89 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		EF156B901F98153E00924A89 /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResult.swift; sourceTree = "<group>"; };
 		EF156B921F98174400924A89 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		EF156B951F98514300924A89 /* RestuarantURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantURL.swift; sourceTree = "<group>"; };
+		EF156B971F98515500924A89 /* RestuarantReviewURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantReviewURL.swift; sourceTree = "<group>"; };
 		EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNetworkProcessor.swift; sourceTree = "<group>"; };
@@ -161,6 +165,15 @@
 			children = (
 			);
 			path = WIKIPEDIA;
+			sourceTree = "<group>";
+		};
+		EF156B941F98512600924A89 /* Restuarant */ = {
+			isa = PBXGroup;
+			children = (
+				EF156B951F98514300924A89 /* RestuarantURL.swift */,
+				EF156B971F98515500924A89 /* RestuarantReviewURL.swift */,
+			);
+			path = Restuarant;
 			sourceTree = "<group>";
 		};
 		EF17CAD11F7BE6CD00E938AC /* Models */ = {
@@ -404,6 +417,7 @@
 		EF7208541F8298F800E1824D /* URL Builder */ = {
 			isa = PBXGroup;
 			children = (
+				EF156B941F98512600924A89 /* Restuarant */,
 				EF43F8981F8DD21D008A1040 /* BaseURL.swift */,
 				EF43F8A81F905880008A1040 /* POI URL */,
 				EF43F8A41F9049D6008A1040 /* Car URL */,
@@ -578,10 +592,12 @@
 				EF17F7291F7EB36E00E7159A /* Car.swift in Sources */,
 				EF43F8A31F9026F1008A1040 /* HotelURL.swift in Sources */,
 				EF7208581F83E55000E1824D /* CustomError.swift in Sources */,
+				EF156B961F98514300924A89 /* RestuarantURL.swift in Sources */,
 				EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */,
 				EF17F7491F7F1EC700E7159A /* HotelAPISearchBy.swift in Sources */,
 				EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */,
 				EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */,
+				EF156B981F98515500924A89 /* RestuarantReviewURL.swift in Sources */,
 				EF43F89F1F8FF461008A1040 /* AirportAreaURL.swift in Sources */,
 				EF17F7371F7EE39000E7159A /* PointsOfInterestResult.swift in Sources */,
 				EF17CAEC1F7C0C3900E938AC /* HotelService.swift in Sources */,
