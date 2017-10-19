@@ -39,12 +39,12 @@ struct RestuarantURL {
       //  base.append("apikey=\(apiKey)")
     }
     
-    /// location id
-    var userKey : String? {
-        didSet {
-            base.append("user-key=\(userKey ?? "")")
-        }
-    }
+//    /// location id
+//    var userKey : String? {
+//        didSet {
+//            base.append("user-key=\(userKey ?? "")")
+//        }
+//    }
     
     /// location id
     var entityID : Int? {

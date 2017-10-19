@@ -25,12 +25,12 @@ struct RestuarantReviewURL {
         //  base.append("apikey=\(apiKey)")
     }
     
-    /// location id
-    var userKey : String? {
-        didSet {
-            base.append("user-key=\(userKey ?? "")")
-        }
-    }
+//    /// location id
+//    var userKey : String? {
+//        didSet {
+//            base.append("user-key=\(userKey ?? "")")
+//        }
+//    }
     
     /// id of restaurant whose details are requested
     var resID : Int? {
