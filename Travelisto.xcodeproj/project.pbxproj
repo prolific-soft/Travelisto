@@ -16,6 +16,7 @@
 		EF156B981F98515500924A89 /* RestuarantReviewURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B971F98515500924A89 /* RestuarantReviewURL.swift */; };
 		EF156B9A1F9859D500924A89 /* RestuarantAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B991F9859D500924A89 /* RestuarantAPISearchBy.swift */; };
 		EF156B9C1F985AD300924A89 /* RestuarantProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B9B1F985AD300924A89 /* RestuarantProcessor.swift */; };
+		EF156B9E1F985EBB00924A89 /* RestuarantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B9D1F985EBB00924A89 /* RestuarantService.swift */; };
 		EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */; };
 		EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */; };
 		EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */; };
@@ -80,6 +81,7 @@
 		EF156B971F98515500924A89 /* RestuarantReviewURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantReviewURL.swift; sourceTree = "<group>"; };
 		EF156B991F9859D500924A89 /* RestuarantAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantAPISearchBy.swift; sourceTree = "<group>"; };
 		EF156B9B1F985AD300924A89 /* RestuarantProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantProcessor.swift; sourceTree = "<group>"; };
+		EF156B9D1F985EBB00924A89 /* RestuarantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantService.swift; sourceTree = "<group>"; };
 		EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNetworkProcessor.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				EF17CAE91F7C0BFD00E938AC /* CarService.swift */,
 				EF17CAEB1F7C0C3900E938AC /* HotelService.swift */,
 				EF17CAED1F7C0C5400E938AC /* PointsOfInterestService.swift */,
+				EF156B9D1F985EBB00924A89 /* RestuarantService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				EF17F72F1F7EBC3200E7159A /* Provider.swift in Sources */,
 				EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */,
 				EF156B931F98174400924A89 /* Review.swift in Sources */,
+				EF156B9E1F985EBB00924A89 /* RestuarantService.swift in Sources */,
 				EF17CAF61F7C8F0700E938AC /* Outbound.swift in Sources */,
 				EF17F72D1F7EB7AC00E7159A /* Image.swift in Sources */,
 				EF17F74B1F7F216000E7159A /* CarAPISearchBy.swift in Sources */,
