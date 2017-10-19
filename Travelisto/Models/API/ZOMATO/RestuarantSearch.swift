@@ -15,7 +15,7 @@ struct RestuarantSearch : Codable {
     let resultsFound : Int
     let resultsStart : Int
     let resultsShown : Int
-    let restaurants : [Restuarant]
+    let restaurants : [Restuarant]?
     
     private enum CodingKeys : String, CodingKey {
         case resultsFound = "results_found"

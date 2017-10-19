@@ -22,7 +22,7 @@ struct Restuarant : Codable {
         }
         
         let R : RType
-        let apiKey : String
+        let apiKey : String?
         let id : String
         let name : String
         let url : URL?
@@ -34,7 +34,7 @@ struct Restuarant : Codable {
             let latitude : String
             let longitude : String
             let zipcode : String
-            let countryID : Int
+            let countryID : Int?
             let localityVerbose : String
             
             private enum CodingKeys : String, CodingKey {
@@ -112,7 +112,7 @@ struct Restuarant : Codable {
         
     }// End ZomatoRestuarant
     
-    let restuarant : ZomatoRestuarant
+    let restaurant : ZomatoRestuarant
     
     
 }//End Struct Restuarant

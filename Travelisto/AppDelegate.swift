@@ -19,33 +19,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
     
-        var poiURL = PointsOfInterestURL()
-        
-        poiURL.cityName = "Boston"
-        poiURL.latitude = 49.10
-        poiURL.longitude = -123.11934
-        poiURL.radius = 42
-    
-        
-        let pon = poiURL.buildUlRL()
-        print(pon)
+//        var poiURL = PointsOfInterestURL()
+//
+//        poiURL.cityName = "Boston"
+//        poiURL.latitude = 49.10
+//        poiURL.longitude = -123.11934
+//        poiURL.radius = 42
+//
+//
+//        let pon = poiURL.buildUlRL()
+//        print(pon)
+//
+//
+//        let poiService = PointsOfInterestService()
+//        poiService.getPointsOfInterestSearch(urlString: pon) { (obj, err) in
+//            if err != nil {
+//                print((err as! CustomError).message)
+//            }else {
+//                print(obj.debugDescription)
+//            }
+//        }
 
+        let key = " "
+        var resurl = RestuarantReviewURL()
+        resurl.resID = 16624739
+        resurl.count = 5
         
-        let poiService = PointsOfInterestService()
-        poiService.getPointsOfInterestSearch(urlString: pon) { (obj, err) in
+        let rurl = resurl.buildUlRL()
+        print(rurl)
+        
+        let rservice = RestuarantService()
+//        rservice.getNearbyRestuarantSearch(urlString: rurl, userKey: key) { (obj, err) in
+//            if err != nil {
+//                print((err as! CustomError).message)
+//            }else {
+//                print(obj.debugDescription)
+//            }
+//        }
+//
+        rservice.getRestuarantReview(urlString: rurl, userKey: key) { (obj, err) in
             if err != nil {
                 print((err as! CustomError).message)
             }else {
                 print(obj.debugDescription)
             }
         }
-
-        
-//        let poiser = POINetworkProcessor(url: URL(string: pon)!)
-//
-//        poiser.downloadJSONFromURL(withStructType: "Testing") { (obj, err) in
-//
-//        }
         
         
         return true

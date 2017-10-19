@@ -14,7 +14,7 @@ import Foundation
 struct Review : Codable {
     
     struct UserReview : Codable {
-        let rating : Int
+        let rating : Double
         let reviewText : String
         let id : String
         let ratingColor : String
@@ -26,7 +26,7 @@ struct Review : Codable {
         
         struct User : Codable {
             let name : String
-            let zomatoHandle : String
+            let zomatoHandle : String?
             let foodieLevel : String
             let foodieLevelNum : Int
             let foodieColor : String
