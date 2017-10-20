@@ -17,6 +17,7 @@
 		EF156B9A1F9859D500924A89 /* RestuarantAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B991F9859D500924A89 /* RestuarantAPISearchBy.swift */; };
 		EF156B9C1F985AD300924A89 /* RestuarantProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B9B1F985AD300924A89 /* RestuarantProcessor.swift */; };
 		EF156B9E1F985EBB00924A89 /* RestuarantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B9D1F985EBB00924A89 /* RestuarantService.swift */; };
+		EF156BA21F9A65DE00924A89 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156BA11F9A65DD00924A89 /* AuthService.swift */; };
 		EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */; };
 		EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */; };
 		EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */; };
@@ -82,6 +83,7 @@
 		EF156B991F9859D500924A89 /* RestuarantAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantAPISearchBy.swift; sourceTree = "<group>"; };
 		EF156B9B1F985AD300924A89 /* RestuarantProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantProcessor.swift; sourceTree = "<group>"; };
 		EF156B9D1F985EBB00924A89 /* RestuarantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantService.swift; sourceTree = "<group>"; };
+		EF156BA11F9A65DD00924A89 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNetworkProcessor.swift; sourceTree = "<group>"; };
@@ -182,6 +184,21 @@
 			path = Restuarant;
 			sourceTree = "<group>";
 		};
+		EF156B9F1F9A659200924A89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF156BA01F9A65A200924A89 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EF156BA11F9A65DD00924A89 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EF17CAD11F7BE6CD00E938AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +225,8 @@
 		EF17CAD31F7BE6E600E938AC /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				EF156BA01F9A65A200924A89 /* Services */,
+				EF156B9F1F9A659200924A89 /* Models */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -547,12 +566,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Travelisto/Pods-Travelisto-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +596,7 @@
 				EF17CAE11F7C02EA00E938AC /* HotelNetworkProcessor.swift in Sources */,
 				EF17F7471F7F0B1D00E7159A /* FlightAPISearchBy.swift in Sources */,
 				EF156B9C1F985AD300924A89 /* RestuarantProcessor.swift in Sources */,
+				EF156BA21F9A65DE00924A89 /* AuthService.swift in Sources */,
 				EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */,
 				EF17CAF01F7C599A00E938AC /* Destinations.swift in Sources */,
 				EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */,
