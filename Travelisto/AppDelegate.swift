@@ -18,54 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
        FirebaseApp.configure()
-        
-        // Override point for customization after application launch.
-    
-//        var poiURL = PointsOfInterestURL()
-//
-//        poiURL.cityName = "Boston"
-//        poiURL.latitude = 49.10
-//        poiURL.longitude = -123.11934
-//        poiURL.radius = 42
-//
-//
-//        let pon = poiURL.buildUlRL()
-//        print(pon)
-//
-//
-//        let poiService = PointsOfInterestService()
-//        poiService.getPointsOfInterestSearch(urlString: pon) { (obj, err) in
-//            if err != nil {
-//                print((err as! CustomError).message)
-//            }else {
-//                print(obj.debugDescription)
-//            }
-//        }
-
-        let key = " "
-        var resurl = RestuarantReviewURL()
-        resurl.resID = 16624739
-        resurl.count = 5
-        
-        let rurl = resurl.buildUlRL()
-        print(rurl)
-        
-        let rservice = RestuarantService()
-//        rservice.getNearbyRestuarantSearch(urlString: rurl, userKey: key) { (obj, err) in
-//            if err != nil {
-//                print((err as! CustomError).message)
-//            }else {
-//                print(obj.debugDescription)
-//            }
-//        }
-//
-        rservice.getRestuarantReview(urlString: rurl, userKey: key) { (obj, err) in
-            if err != nil {
-                print((err as! CustomError).message)
-            }else {
-                print(obj.debugDescription)
-            }
+  
+        //Testing Firebase Service
+        AuthService.signUp(email: "user5@gmail.com", password: "123456", onSuccess: {
+            print("User created")
+        }) { (ErrorMessage) in
+            print(ErrorMessage!)
         }
+        
+
         
         
         return true

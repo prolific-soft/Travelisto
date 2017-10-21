@@ -18,6 +18,7 @@
 		EF156B9C1F985AD300924A89 /* RestuarantProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B9B1F985AD300924A89 /* RestuarantProcessor.swift */; };
 		EF156B9E1F985EBB00924A89 /* RestuarantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B9D1F985EBB00924A89 /* RestuarantService.swift */; };
 		EF156BA21F9A65DE00924A89 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156BA11F9A65DD00924A89 /* AuthService.swift */; };
+		EF156BA61F9A766000924A89 /* GoogleService-Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF156BA51F9A765F00924A89 /* GoogleService-Info.plist */; };
 		EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */; };
 		EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */; };
 		EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */; };
@@ -70,10 +71,22 @@
 		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EF156BA41F9A764C00924A89 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				EF156BA61F9A766000924A89 /* GoogleService-Info.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C4E22AF323C0F0A0B367ECD2 /* Pods-Travelisto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travelisto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travelisto/Pods-Travelisto.release.xcconfig"; sourceTree = "<group>"; };
 		E49E5941D13FCEBE2197F61A /* Pods_Travelisto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travelisto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF1557991F968A3C00B63F85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantSearch.swift; sourceTree = "<group>"; };
 		EF156B8E1F97C60800924A89 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		EF156B901F98153E00924A89 /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResult.swift; sourceTree = "<group>"; };
@@ -84,6 +97,7 @@
 		EF156B9B1F985AD300924A89 /* RestuarantProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantProcessor.swift; sourceTree = "<group>"; };
 		EF156B9D1F985EBB00924A89 /* RestuarantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantService.swift; sourceTree = "<group>"; };
 		EF156BA11F9A65DD00924A89 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		EF156BA51F9A765F00924A89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF17CAD51F7BE72600E938AC /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADC1F7C02BA00E938AC /* FlightNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNetworkProcessor.swift; sourceTree = "<group>"; };
 		EF17CADE1F7C02D800E938AC /* CarNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNetworkProcessor.swift; sourceTree = "<group>"; };
@@ -436,8 +450,8 @@
 				EF53C97D1F795F35009A1DB8 /* Main.storyboard */,
 				EF53C9801F795F35009A1DB8 /* Assets.xcassets */,
 				EF53C9821F795F35009A1DB8 /* LaunchScreen.storyboard */,
+				EF156BA51F9A765F00924A89 /* GoogleService-Info.plist */,
 				EF53C9851F795F35009A1DB8 /* Info.plist */,
-				EF1557991F968A3C00B63F85 /* GoogleService-Info.plist */,
 			);
 			path = Travelisto;
 			sourceTree = "<group>";
@@ -468,6 +482,7 @@
 				EF53C9741F795F35009A1DB8 /* Resources */,
 				B763571ABAECA4C628361487 /* [CP] Embed Pods Frameworks */,
 				B62FDAA8F6A4B5DBD8A50132 /* [CP] Copy Pods Resources */,
+				EF156BA41F9A764C00924A89 /* CopyFiles */,
 			);
 			buildRules = (
 			);
