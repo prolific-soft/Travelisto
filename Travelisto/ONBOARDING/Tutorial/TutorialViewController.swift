@@ -23,7 +23,6 @@ class TutorialViewController: UIViewController,  UIScrollViewDelegate  {
         setUpSlideScrollView(slides: slides!)
         tutorialPageControl.numberOfPages = (slides?.count)!
         tutorialPageControl.currentPage = 0
-        createAccountButton.layer.cornerRadius = createAccountButton.layer.frame.height/2
     }
 
 
@@ -65,9 +64,9 @@ extension TutorialViewController {
     }
     
     func setUpSlideScrollView(slides: [TutorialSlideView]){
-        let widthOfSlide = 301
+        let widthOfSlide = 375
         let heightOfSlide = 490 //353
-        tutorialScrollView.frame = CGRect(x: 37, y: 0, width: widthOfSlide, height: heightOfSlide)
+        tutorialScrollView.frame = CGRect(x: 0, y: 0, width: widthOfSlide, height: heightOfSlide)
         tutorialScrollView.contentSize = CGSize(width: CGFloat(widthOfSlide * 4), height: CGFloat(heightOfSlide))
         
         for i in 0..<slides.count {
@@ -85,7 +84,7 @@ extension TutorialViewController {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let pageIndex = round(scrollView.contentOffset.x/304)
+        let pageIndex = round(scrollView.contentOffset.x/374)
        tutorialPageControl.currentPage = Int(pageIndex)
     }
     

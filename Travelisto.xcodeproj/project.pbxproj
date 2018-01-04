@@ -11,6 +11,9 @@
 		EF1523691FFDC19600ADAD1F /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF1523671FFDC08B00ADAD1F /* SanFranciscoText-Regular.otf */; };
 		EF15236E1FFDCA8200ADAD1F /* TutorialSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15236D1FFDCA8200ADAD1F /* TutorialSlideView.swift */; };
 		EF1523701FFDCA9F00ADAD1F /* TutorialSlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF15236F1FFDCA9F00ADAD1F /* TutorialSlideView.xib */; };
+		EF1523761FFEC1C800ADAD1F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1523751FFEC1C800ADAD1F /* SignInViewController.swift */; };
+		EF15237A1FFEC43000ADAD1F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1523791FFEC43000ADAD1F /* CustomTextField.swift */; };
+		EF15237C1FFECD7000ADAD1F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15237B1FFECD7000ADAD1F /* CustomButton.swift */; };
 		EF156B8D1F97C49B00924A89 /* RestuarantSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */; };
 		EF156B8F1F97C60800924A89 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8E1F97C60800924A89 /* Restuarant.swift */; };
 		EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B901F98153E00924A89 /* ReviewResult.swift */; };
@@ -113,6 +116,9 @@
 		EF1523681FFDC08B00ADAD1F /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
 		EF15236D1FFDCA8200ADAD1F /* TutorialSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSlideView.swift; sourceTree = "<group>"; };
 		EF15236F1FFDCA9F00ADAD1F /* TutorialSlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialSlideView.xib; sourceTree = "<group>"; };
+		EF1523751FFEC1C800ADAD1F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		EF1523791FFEC43000ADAD1F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EF15237B1FFECD7000ADAD1F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantSearch.swift; sourceTree = "<group>"; };
 		EF156B8E1F97C60800924A89 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		EF156B901F98153E00924A89 /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResult.swift; sourceTree = "<group>"; };
@@ -217,6 +223,57 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
+		EF1523711FFEC16600ADAD1F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EF17F7461F7F0B1D00E7159A /* FlightAPISearchBy.swift */,
+				EF17F7481F7F1EC700E7159A /* HotelAPISearchBy.swift */,
+				EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */,
+				EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */,
+				EF156B991F9859D500924A89 /* RestuarantAPISearchBy.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EF1523721FFEC17B00ADAD1F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EF1523731FFEC18400ADAD1F /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Segue;
+			sourceTree = "<group>";
+		};
+		EF1523741FFEC19100ADAD1F /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				EF1523751FFEC1C800ADAD1F /* SignInViewController.swift */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		EF1523771FFEC1D500ADAD1F /* STORYBOARDS */ = {
+			isa = PBXGroup;
+			children = (
+				EF53C97D1F795F35009A1DB8 /* Main.storyboard */,
+			);
+			path = STORYBOARDS;
+			sourceTree = "<group>";
+		};
+		EF1523781FFEC23200ADAD1F /* CUSTOM */ = {
+			isa = PBXGroup;
+			children = (
+				EF1523791FFEC43000ADAD1F /* CustomTextField.swift */,
+				EF15237B1FFECD7000ADAD1F /* CustomButton.swift */,
+			);
+			path = CUSTOM;
+			sourceTree = "<group>";
+		};
 		EF15579A1F96C70500B63F85 /* WIKIPEDIA */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +305,7 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		EF17CAD11F7BE6CD00E938AC /* Models */ = {
+		EF17CAD11F7BE6CD00E938AC /* MODELS */ = {
 			isa = PBXGroup;
 			children = (
 				EF7208541F8298F800E1824D /* URL Builder */,
@@ -257,7 +314,7 @@
 				EF17CAD31F7BE6E600E938AC /* Firebase */,
 				EF17CAD21F7BE6DA00E938AC /* API */,
 			);
-			path = Models;
+			path = MODELS;
 			sourceTree = "<group>";
 		};
 		EF17CAD21F7BE6DA00E938AC /* API */ = {
@@ -280,13 +337,13 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		EF17CAD41F7BE6F600E938AC /* Network */ = {
+		EF17CAD41F7BE6F600E938AC /* NETWORK */ = {
 			isa = PBXGroup;
 			children = (
 				EF17CAE61F7C036700E938AC /* Services */,
 				EF17CAE41F7C033700E938AC /* Network Processors */,
 			);
-			path = Network;
+			path = NETWORK;
 			sourceTree = "<group>";
 		};
 		EF17CAD71F7BFE2800E938AC /* Flight */ = {
@@ -413,11 +470,9 @@
 		EF17F7441F7F0AC600E7159A /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
-				EF17F7461F7F0B1D00E7159A /* FlightAPISearchBy.swift */,
-				EF17F7481F7F1EC700E7159A /* HotelAPISearchBy.swift */,
-				EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */,
-				EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */,
-				EF156B991F9859D500924A89 /* RestuarantAPISearchBy.swift */,
+				EF1523731FFEC18400ADAD1F /* Segue */,
+				EF1523721FFEC17B00ADAD1F /* Cells */,
+				EF1523711FFEC16600ADAD1F /* API */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -425,6 +480,7 @@
 		EF1C9F3F1FFDAB47008084FE /* ONBOARDING */ = {
 			isa = PBXGroup;
 			children = (
+				EF1523741FFEC19100ADAD1F /* Sign In */,
 				EF1C9F401FFDAB62008084FE /* Tutorial */,
 			);
 			path = ONBOARDING;
@@ -524,11 +580,12 @@
 		EF53C9781F795F35009A1DB8 /* Travelisto */ = {
 			isa = PBXGroup;
 			children = (
+				EF1523771FFEC1D500ADAD1F /* STORYBOARDS */,
 				EF1C9F3F1FFDAB47008084FE /* ONBOARDING */,
-				EF17CAD41F7BE6F600E938AC /* Network */,
-				EF17CAD11F7BE6CD00E938AC /* Models */,
+				EF1523781FFEC23200ADAD1F /* CUSTOM */,
+				EF17CAD41F7BE6F600E938AC /* NETWORK */,
+				EF17CAD11F7BE6CD00E938AC /* MODELS */,
 				EF53C9791F795F35009A1DB8 /* AppDelegate.swift */,
-				EF53C97D1F795F35009A1DB8 /* Main.storyboard */,
 				EF53C9801F795F35009A1DB8 /* Assets.xcassets */,
 				EF53C9821F795F35009A1DB8 /* LaunchScreen.storyboard */,
 				EF156BA51F9A765F00924A89 /* GoogleService-Info.plist */,
@@ -712,6 +769,7 @@
 				EF17CAEE1F7C0C5400E938AC /* PointsOfInterestService.swift in Sources */,
 				EF17CAF21F7C702D00E938AC /* LowPriceFlight.swift in Sources */,
 				EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */,
+				EF15237C1FFECD7000ADAD1F /* CustomButton.swift in Sources */,
 				EF43F8A61F904A70008A1040 /* CarURL.swift in Sources */,
 				EF43F8AA1F9058AF008A1040 /* PointOfInterestURL.swift in Sources */,
 				EF17F73E1F7EFB0400E7159A /* FlightTraffic.swift in Sources */,
@@ -732,9 +790,11 @@
 				EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */,
 				EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */,
 				EF156B981F98515500924A89 /* RestuarantReviewURL.swift in Sources */,
+				EF15237A1FFEC43000ADAD1F /* CustomTextField.swift in Sources */,
 				EF43F89F1F8FF461008A1040 /* AirportAreaURL.swift in Sources */,
 				EF17F7371F7EE39000E7159A /* PointsOfInterestResult.swift in Sources */,
 				EF17CAEC1F7C0C3900E938AC /* HotelService.swift in Sources */,
+				EF1523761FFEC1C800ADAD1F /* SignInViewController.swift in Sources */,
 				EF17F7311F7EBC8B00E7159A /* VehicleInfo.swift in Sources */,
 				EF17CAFC1F7C9E4200E938AC /* Coordinates.swift in Sources */,
 				EF17F73A1F7EF34800E7159A /* TopFlights.swift in Sources */,
