@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A14D741113BFD837DB27AF4 /* Pods_Travelisto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49E5941D13FCEBE2197F61A /* Pods_Travelisto.framework */; };
+		EF1523691FFDC19600ADAD1F /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF1523671FFDC08B00ADAD1F /* SanFranciscoText-Regular.otf */; };
+		EF15236E1FFDCA8200ADAD1F /* TutorialSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15236D1FFDCA8200ADAD1F /* TutorialSlideView.swift */; };
+		EF1523701FFDCA9F00ADAD1F /* TutorialSlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF15236F1FFDCA9F00ADAD1F /* TutorialSlideView.xib */; };
 		EF156B8D1F97C49B00924A89 /* RestuarantSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */; };
 		EF156B8F1F97C60800924A89 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8E1F97C60800924A89 /* Restuarant.swift */; };
 		EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B901F98153E00924A89 /* ReviewResult.swift */; };
@@ -64,7 +67,6 @@
 		EF43F8A61F904A70008A1040 /* CarURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F8A51F904A70008A1040 /* CarURL.swift */; };
 		EF43F8AA1F9058AF008A1040 /* PointOfInterestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F8A91F9058AF008A1040 /* PointOfInterestURL.swift */; };
 		EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9791F795F35009A1DB8 /* AppDelegate.swift */; };
-		EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C97B1F795F35009A1DB8 /* ViewController.swift */; };
 		EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C97D1F795F35009A1DB8 /* Main.storyboard */; };
 		EF53C9811F795F35009A1DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9801F795F35009A1DB8 /* Assets.xcassets */; };
 		EF53C9841F795F35009A1DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9821F795F35009A1DB8 /* LaunchScreen.storyboard */; };
@@ -88,6 +90,29 @@
 /* Begin PBXFileReference section */
 		C4E22AF323C0F0A0B367ECD2 /* Pods-Travelisto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travelisto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travelisto/Pods-Travelisto.release.xcconfig"; sourceTree = "<group>"; };
 		E49E5941D13FCEBE2197F61A /* Pods_Travelisto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travelisto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1523541FFDC08800ADAD1F /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
+		EF1523551FFDC08800ADAD1F /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
+		EF1523561FFDC08800ADAD1F /* SanFranciscoText-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-HeavyItalic.otf"; sourceTree = "<group>"; };
+		EF1523571FFDC08900ADAD1F /* SanFranciscoText-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-BoldItalic.otf"; sourceTree = "<group>"; };
+		EF1523581FFDC08900ADAD1F /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
+		EF1523591FFDC08900ADAD1F /* SanFranciscoText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-RegularItalic.otf"; sourceTree = "<group>"; };
+		EF15235A1FFDC08900ADAD1F /* SanFranciscoText-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Heavy.otf"; sourceTree = "<group>"; };
+		EF15235B1FFDC08900ADAD1F /* SanFranciscoText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Light.otf"; sourceTree = "<group>"; };
+		EF15235C1FFDC08900ADAD1F /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
+		EF15235D1FFDC08900ADAD1F /* SanFranciscoText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Bold.otf"; sourceTree = "<group>"; };
+		EF15235E1FFDC08A00ADAD1F /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
+		EF15235F1FFDC08A00ADAD1F /* SanFranciscoText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Semibold.otf"; sourceTree = "<group>"; };
+		EF1523601FFDC08A00ADAD1F /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
+		EF1523611FFDC08A00ADAD1F /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		EF1523621FFDC08A00ADAD1F /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
+		EF1523631FFDC08A00ADAD1F /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
+		EF1523641FFDC08A00ADAD1F /* SanFranciscoText-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-LightItalic.otf"; sourceTree = "<group>"; };
+		EF1523651FFDC08B00ADAD1F /* SanFranciscoText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-MediumItalic.otf"; sourceTree = "<group>"; };
+		EF1523661FFDC08B00ADAD1F /* SanFranciscoText-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		EF1523671FFDC08B00ADAD1F /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
+		EF1523681FFDC08B00ADAD1F /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
+		EF15236D1FFDCA8200ADAD1F /* TutorialSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSlideView.swift; sourceTree = "<group>"; };
+		EF15236F1FFDCA9F00ADAD1F /* TutorialSlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialSlideView.xib; sourceTree = "<group>"; };
 		EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantSearch.swift; sourceTree = "<group>"; };
 		EF156B8E1F97C60800924A89 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		EF156B901F98153E00924A89 /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResult.swift; sourceTree = "<group>"; };
@@ -145,7 +170,6 @@
 		EF43F8A91F9058AF008A1040 /* PointOfInterestURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestURL.swift; sourceTree = "<group>"; };
 		EF53C9761F795F35009A1DB8 /* Travelisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9791F795F35009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF53C97B1F795F35009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF53C97E1F795F35009A1DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF53C9801F795F35009A1DB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF53C9831F795F35009A1DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -182,6 +206,15 @@
 				C4E22AF323C0F0A0B367ECD2 /* Pods-Travelisto.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF15236C1FFDCA4600ADAD1F /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EF15236D1FFDCA8200ADAD1F /* TutorialSlideView.swift */,
+				EF15236F1FFDCA9F00ADAD1F /* TutorialSlideView.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		EF15579A1F96C70500B63F85 /* WIKIPEDIA */ = {
@@ -400,9 +433,38 @@
 		EF1C9F401FFDAB62008084FE /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				EF15236C1FFDCA4600ADAD1F /* Xib */,
 				EF1C9F411FFDB8B9008084FE /* TutorialViewController.swift */,
 			);
 			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		EF1C9F431FFDBDC9008084FE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF1523681FFDC08B00ADAD1F /* SanFranciscoDisplay-Black.otf */,
+				EF1523551FFDC08800ADAD1F /* SanFranciscoDisplay-Bold.otf */,
+				EF1523631FFDC08A00ADAD1F /* SanFranciscoDisplay-Heavy.otf */,
+				EF15235C1FFDC08900ADAD1F /* SanFranciscoDisplay-Light.otf */,
+				EF1523541FFDC08800ADAD1F /* SanFranciscoDisplay-Medium.otf */,
+				EF1523601FFDC08A00ADAD1F /* SanFranciscoDisplay-Regular.otf */,
+				EF1523611FFDC08A00ADAD1F /* SanFranciscoDisplay-Semibold.otf */,
+				EF1523581FFDC08900ADAD1F /* SanFranciscoDisplay-Thin.otf */,
+				EF1523621FFDC08A00ADAD1F /* SanFranciscoDisplay-Ultralight.otf */,
+				EF15235D1FFDC08900ADAD1F /* SanFranciscoText-Bold.otf */,
+				EF1523571FFDC08900ADAD1F /* SanFranciscoText-BoldItalic.otf */,
+				EF15235A1FFDC08900ADAD1F /* SanFranciscoText-Heavy.otf */,
+				EF1523561FFDC08800ADAD1F /* SanFranciscoText-HeavyItalic.otf */,
+				EF15235B1FFDC08900ADAD1F /* SanFranciscoText-Light.otf */,
+				EF1523641FFDC08A00ADAD1F /* SanFranciscoText-LightItalic.otf */,
+				EF15235E1FFDC08A00ADAD1F /* SanFranciscoText-Medium.otf */,
+				EF1523651FFDC08B00ADAD1F /* SanFranciscoText-MediumItalic.otf */,
+				EF1523671FFDC08B00ADAD1F /* SanFranciscoText-Regular.otf */,
+				EF1523591FFDC08900ADAD1F /* SanFranciscoText-RegularItalic.otf */,
+				EF15235F1FFDC08A00ADAD1F /* SanFranciscoText-Semibold.otf */,
+				EF1523661FFDC08B00ADAD1F /* SanFranciscoText-SemiboldItalic.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		EF43F8A01F90264D008A1040 /* Airport URL */ = {
@@ -446,6 +508,7 @@
 				EF53C9781F795F35009A1DB8 /* Travelisto */,
 				EF53C9771F795F35009A1DB8 /* Products */,
 				4921899092502A842DE4EF85 /* Pods */,
+				EF1C9F431FFDBDC9008084FE /* Fonts */,
 				184B5E067B9726467ED675B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -465,7 +528,6 @@
 				EF17CAD41F7BE6F600E938AC /* Network */,
 				EF17CAD11F7BE6CD00E938AC /* Models */,
 				EF53C9791F795F35009A1DB8 /* AppDelegate.swift */,
-				EF53C97B1F795F35009A1DB8 /* ViewController.swift */,
 				EF53C97D1F795F35009A1DB8 /* Main.storyboard */,
 				EF53C9801F795F35009A1DB8 /* Assets.xcassets */,
 				EF53C9821F795F35009A1DB8 /* LaunchScreen.storyboard */,
@@ -551,8 +613,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1523691FFDC19600ADAD1F /* SanFranciscoText-Regular.otf in Resources */,
 				EF53C9841F795F35009A1DB8 /* LaunchScreen.storyboard in Resources */,
 				EF53C9811F795F35009A1DB8 /* Assets.xcassets in Resources */,
+				EF1523701FFDCA9F00ADAD1F /* TutorialSlideView.xib in Resources */,
 				EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,7 +697,6 @@
 				EF156BA21F9A65DE00924A89 /* AuthService.swift in Sources */,
 				EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */,
 				EF17CAF01F7C599A00E938AC /* Destinations.swift in Sources */,
-				EF53C97C1F795F35009A1DB8 /* ViewController.swift in Sources */,
 				EF17CAE31F7C030E00E938AC /* PointsOfInterestNetworkProcessor.swift in Sources */,
 				EF17CAFA1F7C9D1F00E938AC /* Location.swift in Sources */,
 				EF17F7251F7EABAA00E7159A /* Hotel.swift in Sources */,
@@ -641,6 +704,7 @@
 				EF17F73C1F7EF48900E7159A /* TopFlightDestination.swift in Sources */,
 				EF17F74D1F7F23AD00E7159A /* POIAPISearchBy.swift in Sources */,
 				EF1C9F421FFDB8B9008084FE /* TutorialViewController.swift in Sources */,
+				EF15236E1FFDCA8200ADAD1F /* TutorialSlideView.swift in Sources */,
 				EF17CAE81F7C0BA300E938AC /* FlightService.swift in Sources */,
 				EF17CAF81F7C987800E938AC /* AirportAutoComplets.swift in Sources */,
 				EF17CAEA1F7C0BFD00E938AC /* CarService.swift in Sources */,

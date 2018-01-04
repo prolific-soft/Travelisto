@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoText-Regular.otf">
+            <string>SanFranciscoText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TutorialSlideView" customModule="Travelisto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="352"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f0N-g6-8Ym">
+                    <rect key="frame" x="10" y="0.0" width="280" height="280"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="kms-hv-9I0"/>
+                        <constraint firstAttribute="width" secondItem="f0N-g6-8Ym" secondAttribute="height" multiplier="1:1" id="wDW-yz-BqN"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plan your travel anytime, anywhere" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLH-qk-Lco">
+                    <rect key="frame" x="10" y="323" width="280" height="21"/>
+                    <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="15"/>
+                    <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="f0N-g6-8Ym" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="I4P-87-LCa"/>
+                <constraint firstItem="VLH-qk-Lco" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="O31-29-nuq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f0N-g6-8Ym" secondAttribute="trailing" constant="10" id="TKa-ZO-Ju3"/>
+                <constraint firstItem="f0N-g6-8Ym" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="XGu-eJ-ws1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="VLH-qk-Lco" secondAttribute="bottom" constant="8" id="XLJ-8C-EV9"/>
+                <constraint firstItem="VLH-qk-Lco" firstAttribute="top" secondItem="f0N-g6-8Ym" secondAttribute="bottom" constant="43" id="dPk-PA-wN2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VLH-qk-Lco" secondAttribute="trailing" constant="10" id="sAH-r4-Ee2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="tutorialDescriptionLabel" destination="VLH-qk-Lco" id="FRW-Tx-24N"/>
+                <outlet property="tutorialImageView" destination="f0N-g6-8Ym" id="oQl-Xi-DkW"/>
+            </connections>
+            <point key="canvasLocation" x="64" y="-697"/>
+        </view>
+    </objects>
+</document>

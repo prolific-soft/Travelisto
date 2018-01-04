@@ -10,7 +10,8 @@ import UIKit
 
 class TutorialViewController: UIViewController {
 
-    
+    @IBOutlet weak var tutorialScrollView: UIScrollView!
+    @IBOutlet weak var tutorialPageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,5 +19,12 @@ class TutorialViewController: UIViewController {
 
 
 
-
+    @IBAction func createAccountButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func alreadyHaveAccountTapped(_ sender: UIButton) {
+    }
+    
+    
+    
 }
