@@ -27,7 +27,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="EZE-fk-7iA">
                                 <rect key="frame" x="119" y="62" width="137" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ujF-Zg-bTk">
                                 <rect key="frame" x="168" y="499" width="39" height="37"/>
@@ -68,6 +68,7 @@
                         <viewLayoutGuide key="safeArea" id="a9X-mb-9Z6"/>
                     </view>
                     <connections>
+                        <outlet property="createAccountButton" destination="AHM-d4-yRK" id="0rU-he-YHM"/>
                         <outlet property="tutorialPageControl" destination="ujF-Zg-bTk" id="GM1-sl-Gsf"/>
                         <outlet property="tutorialScrollView" destination="z2q-5a-Q6M" id="eKg-eX-kWI"/>
                     </connections>

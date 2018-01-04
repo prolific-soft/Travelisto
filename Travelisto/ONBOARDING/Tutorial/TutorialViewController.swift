@@ -8,20 +8,22 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController, UIScrollViewDelegate {
+class TutorialViewController: UIViewController,  UIScrollViewDelegate  {
 
     @IBOutlet weak var tutorialScrollView: UIScrollView!
     @IBOutlet weak var tutorialPageControl: UIPageControl!
-    
+    @IBOutlet weak var createAccountButton: UIButton!
     var slides : [TutorialSlideView]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tutorialScrollView.delegate = self
         slides = createSlides()
         setUpSlideScrollView(slides: slides!)
         tutorialPageControl.numberOfPages = (slides?.count)!
         tutorialPageControl.currentPage = 0
+        createAccountButton.layer.cornerRadius = createAccountButton.layer.frame.height/2
     }
 
 
@@ -54,7 +56,6 @@ extension TutorialViewController {
             let slide = Bundle.main.loadNibNamed("TutorialSlideView", owner: self, options: nil)?.first as! TutorialSlideView
             image = UIImage(named: imageName)!
             slide.tutorialImageView.image = image
-            slide.tutorialImageView.layer.cornerRadius = slide.tutorialImageView.layer.frame.width/2
             slide.tutorialDescriptionLabel.text = descriptions[count]
             tempSlideViews.append(slide)
             count = count + 1
@@ -71,7 +72,6 @@ extension TutorialViewController {
         
         for i in 0..<slides.count {
             slides[i].frame = CGRect(x: Int(CGFloat(widthOfSlide) * CGFloat(i)), y: 139, width: widthOfSlide, height: heightOfSlide)
-            slides[i].tutorialImageView.layer.cornerRadius =  20
             tutorialScrollView.addSubview(slides[i])
 
         }
@@ -84,9 +84,9 @@ extension TutorialViewController {
 extension TutorialViewController {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("Did Scroll")
+        
         let pageIndex = round(scrollView.contentOffset.x/304)
-        tutorialPageControl.currentPage = Int(pageIndex)
+       tutorialPageControl.currentPage = Int(pageIndex)
     }
     
 }

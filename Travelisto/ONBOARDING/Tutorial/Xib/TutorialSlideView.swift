@@ -13,7 +13,10 @@ class TutorialSlideView: UIView {
     @IBOutlet weak var tutorialImageView: UIImageView!
     @IBOutlet weak var tutorialDescriptionLabel: UILabel!
     
- 
+    override func awakeFromNib() {
+        tutorialImageView.layer.cornerRadius = tutorialImageView.frame.height/2
+        tutorialImageView.layer.masksToBounds = true
+    }
 
     /*
     // Only override draw() if you perform custom drawing.
