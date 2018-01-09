@@ -23,16 +23,26 @@ class TutorialViewController: UIViewController,  UIScrollViewDelegate  {
         setUpSlideScrollView(slides: slides!)
         tutorialPageControl.numberOfPages = (slides?.count)!
         tutorialPageControl.currentPage = 0
+        
+        self.transparentNavBar()
+
     }
-
-
+    
 
     @IBAction func createAccountButtonTapped(_ sender: UIButton) {
     }
     
     @IBAction func alreadyHaveAccountTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: Segue.tutorialToSignIn.rawValue, sender: nil)
     }
     
+    func transparentNavBar(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 20, width: 375, height: 96)
+    }
 
 }
 
@@ -89,3 +99,25 @@ extension TutorialViewController {
     }
     
 }
+
+
+
+//MARK: Segue
+extension TutorialViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ 
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+

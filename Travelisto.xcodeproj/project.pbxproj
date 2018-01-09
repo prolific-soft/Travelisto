@@ -14,6 +14,9 @@
 		EF1523761FFEC1C800ADAD1F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1523751FFEC1C800ADAD1F /* SignInViewController.swift */; };
 		EF15237A1FFEC43000ADAD1F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1523791FFEC43000ADAD1F /* CustomTextField.swift */; };
 		EF15237C1FFECD7000ADAD1F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15237B1FFECD7000ADAD1F /* CustomButton.swift */; };
+		EF15237E1FFED1E700ADAD1F /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15237D1FFED1E700ADAD1F /* PasswordResetViewController.swift */; };
+		EF1523801FFED3AB00ADAD1F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15237F1FFED3AB00ADAD1F /* CreateAccountViewController.swift */; };
+		EF1523C020044A8600ADAD1F /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1523BF20044A8600ADAD1F /* Segue.swift */; };
 		EF156B8D1F97C49B00924A89 /* RestuarantSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */; };
 		EF156B8F1F97C60800924A89 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8E1F97C60800924A89 /* Restuarant.swift */; };
 		EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B901F98153E00924A89 /* ReviewResult.swift */; };
@@ -119,6 +122,9 @@
 		EF1523751FFEC1C800ADAD1F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EF1523791FFEC43000ADAD1F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		EF15237B1FFECD7000ADAD1F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		EF15237D1FFED1E700ADAD1F /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		EF15237F1FFED3AB00ADAD1F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		EF1523BF20044A8600ADAD1F /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantSearch.swift; sourceTree = "<group>"; };
 		EF156B8E1F97C60800924A89 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		EF156B901F98153E00924A89 /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResult.swift; sourceTree = "<group>"; };
@@ -245,6 +251,7 @@
 		EF1523731FFEC18400ADAD1F /* Segue */ = {
 			isa = PBXGroup;
 			children = (
+				EF1523BF20044A8600ADAD1F /* Segue.swift */,
 			);
 			path = Segue;
 			sourceTree = "<group>";
@@ -253,6 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				EF1523751FFEC1C800ADAD1F /* SignInViewController.swift */,
+				EF15237D1FFED1E700ADAD1F /* PasswordResetViewController.swift */,
+				EF15237F1FFED3AB00ADAD1F /* CreateAccountViewController.swift */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -776,16 +785,19 @@
 				EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */,
 				EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */,
 				EF17F7271F7EB06C00E7159A /* CarRental.swift in Sources */,
+				EF1523C020044A8600ADAD1F /* Segue.swift in Sources */,
 				EF43F89B1F8E3975008A1040 /* InspirationURL.swift in Sources */,
 				EF17CAFE1F7CB53000E938AC /* HotelAirports.swift in Sources */,
 				EF17F7331F7EBCE900E7159A /* Rate.swift in Sources */,
 				EF17CB001F7D2E4C00E938AC /* Address.swift in Sources */,
+				EF15237E1FFED1E700ADAD1F /* PasswordResetViewController.swift in Sources */,
 				EF17F7291F7EB36E00E7159A /* Car.swift in Sources */,
 				EF43F8A31F9026F1008A1040 /* HotelURL.swift in Sources */,
 				EF7208581F83E55000E1824D /* CustomError.swift in Sources */,
 				EF156B961F98514300924A89 /* RestuarantURL.swift in Sources */,
 				EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */,
 				EF156B9A1F9859D500924A89 /* RestuarantAPISearchBy.swift in Sources */,
+				EF1523801FFED3AB00ADAD1F /* CreateAccountViewController.swift in Sources */,
 				EF17F7491F7F1EC700E7159A /* HotelAPISearchBy.swift in Sources */,
 				EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */,
 				EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */,

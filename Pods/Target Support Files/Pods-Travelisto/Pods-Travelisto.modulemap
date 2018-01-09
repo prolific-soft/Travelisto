@@ -1,0 +1,6 @@
+framework module Pods_Travelisto {
+  umbrella header "Pods-Travelisto-umbrella.h"
+
+  export *
+  module * { export * }
+}
