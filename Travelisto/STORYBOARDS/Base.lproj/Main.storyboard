@@ -27,18 +27,22 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="EZE-fk-7iA">
                                 <rect key="frame" x="122" y="62" width="131" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2q-5a-Q6M">
+                                <rect key="frame" x="0.5" y="139" width="374.5" height="353"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ujF-Zg-bTk">
                                 <rect key="frame" x="168" y="501" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="pageIndicatorTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHM-d4-yRK" customClass="CustomButton" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="20" y="546" width="335" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.3411764705882353" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="17"/>
                                 <state key="normal" title="Create an account">
@@ -51,7 +55,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-9k-TtI">
                                 <rect key="frame" x="20" y="619" width="335" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="13"/>
                                 <state key="normal" title="Already on Travel? Log in">
                                     <color key="titleColor" red="0.14117647058823529" green="0.14509803921568626" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,10 +64,6 @@
                                     <action selector="alreadyHaveAccountTapped:" destination="ck2-Uu-ykV" eventType="touchUpInside" id="5zR-W7-bNM"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2q-5a-Q6M">
-                                <rect key="frame" x="0.0" y="139" width="375" height="355"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="a9X-mb-9Z6"/>
@@ -90,26 +90,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFo-vn-Utv" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFo-vn-Utv" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="20" y="196" width="335" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="8AM-Y0-6jv"/>
+                                </constraints>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZ4-rj-RGe" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZ4-rj-RGe" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="20" y="130" width="335" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="6kJ-Xn-Rjc"/>
+                                </constraints>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elo-ct-cQ0" customClass="CustomButton" customModule="Travelisto" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elo-ct-cQ0" customClass="CustomButton" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="20" y="282" width="335" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Zp2-25-S9U"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="17"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -118,9 +124,11 @@
                                     <action selector="createAccountButtonTapped:" destination="ck2-Uu-ykV" eventType="touchUpInside" id="cRl-B3-9wd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5al-Wu-Piv">
-                                <rect key="frame" x="116" y="354" width="143" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5al-Wu-Piv">
+                                <rect key="frame" x="115.5" y="354" width="143.5" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Ja0-R5-LFa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="13"/>
                                 <state key="normal" title="Forgot your password?">
                                     <color key="titleColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,6 +140,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vvh-dp-TdT" firstAttribute="trailing" secondItem="elo-ct-cQ0" secondAttribute="trailing" constant="20" id="10S-ka-Ipm"/>
+                            <constraint firstItem="elo-ct-cQ0" firstAttribute="top" secondItem="OFo-vn-Utv" secondAttribute="bottom" constant="29" id="2f8-6d-zIs"/>
+                            <constraint firstItem="OFo-vn-Utv" firstAttribute="top" secondItem="sZ4-rj-RGe" secondAttribute="bottom" constant="9" id="2we-rC-La1"/>
+                            <constraint firstItem="5al-Wu-Piv" firstAttribute="top" secondItem="elo-ct-cQ0" secondAttribute="bottom" constant="16" id="7sF-7N-CQR"/>
+                            <constraint firstItem="5al-Wu-Piv" firstAttribute="leading" secondItem="Vvh-dp-TdT" secondAttribute="leading" constant="116" id="8Fw-h7-H6h"/>
+                            <constraint firstItem="elo-ct-cQ0" firstAttribute="leading" secondItem="Vvh-dp-TdT" secondAttribute="leading" constant="20" id="8KQ-2C-n8I"/>
+                            <constraint firstItem="sZ4-rj-RGe" firstAttribute="leading" secondItem="Vvh-dp-TdT" secondAttribute="leading" constant="20" id="QYT-Z4-B0P"/>
+                            <constraint firstItem="Vvh-dp-TdT" firstAttribute="trailing" secondItem="5al-Wu-Piv" secondAttribute="trailing" constant="116" id="WlA-gB-PbR"/>
+                            <constraint firstItem="sZ4-rj-RGe" firstAttribute="top" secondItem="Vvh-dp-TdT" secondAttribute="top" constant="14" id="e88-Ba-nKq"/>
+                            <constraint firstItem="Vvh-dp-TdT" firstAttribute="trailing" secondItem="OFo-vn-Utv" secondAttribute="trailing" constant="20" id="jko-vx-78g"/>
+                            <constraint firstItem="OFo-vn-Utv" firstAttribute="leading" secondItem="Vvh-dp-TdT" secondAttribute="leading" constant="20" id="kfw-tH-Dgi"/>
+                            <constraint firstItem="Vvh-dp-TdT" firstAttribute="trailing" secondItem="sZ4-rj-RGe" secondAttribute="trailing" constant="20" id="n4z-CR-myV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vvh-dp-TdT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" largeTitleDisplayMode="always" id="gCL-WG-hcE">
@@ -154,18 +176,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jcC-bb-S0H" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jcC-bb-S0H" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="20" y="130" width="335" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="lHx-TH-gZu"/>
+                                </constraints>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7Q-fN-Isu" customClass="CustomButton" customModule="Travelisto" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7Q-fN-Isu" customClass="CustomButton" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="20" y="216" width="335" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="LWK-xk-Cdb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="17"/>
                                 <state key="normal" title="Reset your password">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -176,6 +202,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YUU-SF-xpX" firstAttribute="trailing" secondItem="jcC-bb-S0H" secondAttribute="trailing" constant="20" id="3Ka-K4-EYP"/>
+                            <constraint firstItem="v7Q-fN-Isu" firstAttribute="top" secondItem="jcC-bb-S0H" secondAttribute="bottom" constant="29" id="7yD-Lv-1b6"/>
+                            <constraint firstItem="jcC-bb-S0H" firstAttribute="leading" secondItem="YUU-SF-xpX" secondAttribute="leading" constant="20" id="93d-u0-UZv"/>
+                            <constraint firstItem="v7Q-fN-Isu" firstAttribute="leading" secondItem="YUU-SF-xpX" secondAttribute="leading" constant="20" id="Ecq-Uz-gn5"/>
+                            <constraint firstItem="YUU-SF-xpX" firstAttribute="trailing" secondItem="v7Q-fN-Isu" secondAttribute="trailing" constant="20" id="cir-YH-vUY"/>
+                            <constraint firstItem="jcC-bb-S0H" firstAttribute="top" secondItem="YUU-SF-xpX" secondAttribute="top" constant="14" id="yDr-GL-e2b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YUU-SF-xpX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Reset password" id="1JM-xp-brt">
@@ -198,34 +232,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9m-gu-Mqm" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9m-gu-Mqm" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="20" y="130" width="335" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Hhe-pR-qTA"/>
+                                </constraints>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oza-jk-hVF" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oza-jk-hVF" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="20" y="196" width="335" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="IZu-78-FJO"/>
+                                </constraints>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbt-fY-gqd" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
-                                <rect key="frame" x="20" y="262" width="335" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbt-fY-gqd" customClass="CustomTextField" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="20" y="261.5" width="335" height="57"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Er4-0g-pWF"/>
+                                </constraints>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhW-tD-tuo" customClass="CustomButton" customModule="Travelisto" customModuleProvider="target">
-                                <rect key="frame" x="20" y="348" width="335" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhW-tD-tuo" customClass="CustomButton" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="20" y="347.5" width="335" height="56"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="92P-0p-eM1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="17"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -236,6 +278,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oza-jk-hVF" firstAttribute="top" secondItem="V9m-gu-Mqm" secondAttribute="bottom" constant="9" id="14e-SS-zCJ"/>
+                            <constraint firstItem="dhW-tD-tuo" firstAttribute="top" secondItem="zbt-fY-gqd" secondAttribute="bottom" constant="29" id="5re-y1-xsY"/>
+                            <constraint firstItem="dhW-tD-tuo" firstAttribute="leading" secondItem="hn4-4x-ZFw" secondAttribute="leading" constant="20" id="DI3-O9-E5K"/>
+                            <constraint firstItem="hn4-4x-ZFw" firstAttribute="trailing" secondItem="dhW-tD-tuo" secondAttribute="trailing" constant="20" id="Iv3-X4-lFz"/>
+                            <constraint firstItem="oza-jk-hVF" firstAttribute="leading" secondItem="hn4-4x-ZFw" secondAttribute="leading" constant="20" id="Qkj-ZX-6px"/>
+                            <constraint firstItem="V9m-gu-Mqm" firstAttribute="leading" secondItem="hn4-4x-ZFw" secondAttribute="leading" constant="20" id="Unq-hU-HZL"/>
+                            <constraint firstItem="hn4-4x-ZFw" firstAttribute="trailing" secondItem="V9m-gu-Mqm" secondAttribute="trailing" constant="20" id="gnH-tH-gH7"/>
+                            <constraint firstItem="V9m-gu-Mqm" firstAttribute="top" secondItem="hn4-4x-ZFw" secondAttribute="top" constant="14" id="mkD-D6-ocK"/>
+                            <constraint firstItem="hn4-4x-ZFw" firstAttribute="trailing" secondItem="zbt-fY-gqd" secondAttribute="trailing" constant="20" id="nJX-PR-uob"/>
+                            <constraint firstItem="zbt-fY-gqd" firstAttribute="top" secondItem="oza-jk-hVF" secondAttribute="bottom" constant="9" id="oFJ-lz-K45"/>
+                            <constraint firstItem="zbt-fY-gqd" firstAttribute="leading" secondItem="hn4-4x-ZFw" secondAttribute="leading" constant="20" id="q5c-nW-xT3"/>
+                            <constraint firstItem="hn4-4x-ZFw" firstAttribute="trailing" secondItem="oza-jk-hVF" secondAttribute="trailing" constant="20" id="rSX-Ru-hyf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hn4-4x-ZFw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create new account" id="iaq-Tz-37d">
@@ -266,7 +322,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ck2-Uu-ykV" kind="relationship" relationship="rootViewController" id="MKB-Gv-cNW"/>
+                        <segue destination="ck2-Uu-ykV" kind="relationship" relationship="rootViewController" id="q9H-cL-ujD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTo-eg-ZwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
