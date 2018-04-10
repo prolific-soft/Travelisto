@@ -66,6 +66,10 @@
 		EF17F74B1F7F216000E7159A /* CarAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */; };
 		EF17F74D1F7F23AD00E7159A /* POIAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */; };
 		EF1C9F421FFDB8B9008084FE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C9F411FFDB8B9008084FE /* TutorialViewController.swift */; };
+		EF3656CC207D2ED400B2AB3C /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CB207D2ED400B2AB3C /* Explore.storyboard */; };
+		EF3656CE207D2F3D00B2AB3C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CD207D2F3D00B2AB3C /* Search.storyboard */; };
+		EF3656D0207D2F8E00B2AB3C /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CF207D2F8E00B2AB3C /* Trips.storyboard */; };
+		EF3656D2207D2FC300B2AB3C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656D1207D2FC300B2AB3C /* Settings.storyboard */; };
 		EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F8981F8DD21D008A1040 /* BaseURL.swift */; };
 		EF43F89B1F8E3975008A1040 /* InspirationURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89A1F8E3975008A1040 /* InspirationURL.swift */; };
 		EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */; };
@@ -175,6 +179,10 @@
 		EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPISearchBy.swift; sourceTree = "<group>"; };
 		EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIAPISearchBy.swift; sourceTree = "<group>"; };
 		EF1C9F411FFDB8B9008084FE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		EF3656CB207D2ED400B2AB3C /* Explore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
+		EF3656CD207D2F3D00B2AB3C /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		EF3656CF207D2F8E00B2AB3C /* Trips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
+		EF3656D1207D2FC300B2AB3C /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		EF43F8981F8DD21D008A1040 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		EF43F89A1F8E3975008A1040 /* InspirationURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationURL.swift; sourceTree = "<group>"; };
 		EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAutoCompleteURL.swift; sourceTree = "<group>"; };
@@ -273,6 +281,10 @@
 			children = (
 				EF53C97D1F795F35009A1DB8 /* Main.storyboard */,
 				EF1551E8207CF5BD008DAA89 /* TabBar.storyboard */,
+				EF3656D1207D2FC300B2AB3C /* Settings.storyboard */,
+				EF3656CF207D2F8E00B2AB3C /* Trips.storyboard */,
+				EF3656CD207D2F3D00B2AB3C /* Search.storyboard */,
+				EF3656CB207D2ED400B2AB3C /* Explore.storyboard */,
 			);
 			path = STORYBOARDS;
 			sourceTree = "<group>";
@@ -535,6 +547,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		EF3656CA207D2EA300B2AB3C /* EXPLORE */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EXPLORE;
+			sourceTree = "<group>";
+		};
 		EF43F8A01F90264D008A1040 /* Airport URL */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +611,7 @@
 		EF53C9781F795F35009A1DB8 /* Travelisto */ = {
 			isa = PBXGroup;
 			children = (
+				EF3656CA207D2EA300B2AB3C /* EXPLORE */,
 				EF1523771FFEC1D500ADAD1F /* STORYBOARDS */,
 				EF1C9F3F1FFDAB47008084FE /* ONBOARDING */,
 				EF1523781FFEC23200ADAD1F /* CUSTOM */,
@@ -682,12 +702,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3656D0207D2F8E00B2AB3C /* Trips.storyboard in Resources */,
 				EF1523691FFDC19600ADAD1F /* SanFranciscoText-Regular.otf in Resources */,
 				EF53C9841F795F35009A1DB8 /* LaunchScreen.storyboard in Resources */,
 				EF53C9811F795F35009A1DB8 /* Assets.xcassets in Resources */,
+				EF3656CC207D2ED400B2AB3C /* Explore.storyboard in Resources */,
 				EF1523701FFDCA9F00ADAD1F /* TutorialSlideView.xib in Resources */,
 				EF1551E9207CF5BD008DAA89 /* TabBar.storyboard in Resources */,
+				EF3656CE207D2F3D00B2AB3C /* Search.storyboard in Resources */,
 				EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */,
+				EF3656D2207D2FC300B2AB3C /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
