@@ -17,6 +17,7 @@
 		EF15237E1FFED1E700ADAD1F /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15237D1FFED1E700ADAD1F /* PasswordResetViewController.swift */; };
 		EF1523801FFED3AB00ADAD1F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15237F1FFED3AB00ADAD1F /* CreateAccountViewController.swift */; };
 		EF1523C020044A8600ADAD1F /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1523BF20044A8600ADAD1F /* Segue.swift */; };
+		EF1551E9207CF5BD008DAA89 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1551E8207CF5BD008DAA89 /* TabBar.storyboard */; };
 		EF156B8D1F97C49B00924A89 /* RestuarantSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */; };
 		EF156B8F1F97C60800924A89 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B8E1F97C60800924A89 /* Restuarant.swift */; };
 		EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156B901F98153E00924A89 /* ReviewResult.swift */; };
@@ -125,6 +126,7 @@
 		EF15237D1FFED1E700ADAD1F /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		EF15237F1FFED3AB00ADAD1F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		EF1523BF20044A8600ADAD1F /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		EF1551E8207CF5BD008DAA89 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		EF156B8C1F97C49B00924A89 /* RestuarantSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantSearch.swift; sourceTree = "<group>"; };
 		EF156B8E1F97C60800924A89 /* Restuarant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		EF156B901F98153E00924A89 /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResult.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				EF53C97D1F795F35009A1DB8 /* Main.storyboard */,
+				EF1551E8207CF5BD008DAA89 /* TabBar.storyboard */,
 			);
 			path = STORYBOARDS;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				EF53C9841F795F35009A1DB8 /* LaunchScreen.storyboard in Resources */,
 				EF53C9811F795F35009A1DB8 /* Assets.xcassets in Resources */,
 				EF1523701FFDCA9F00ADAD1F /* TutorialSlideView.xib in Resources */,
+				EF1551E9207CF5BD008DAA89 /* TabBar.storyboard in Resources */,
 				EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

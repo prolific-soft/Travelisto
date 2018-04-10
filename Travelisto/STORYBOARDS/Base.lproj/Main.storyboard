@@ -122,6 +122,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountButtonTapped:" destination="ck2-Uu-ykV" eventType="touchUpInside" id="cRl-B3-9wd"/>
+                                    <action selector="signInButtonTapped:" destination="yip-oH-Jkf" eventType="touchUpInside" id="oyl-Rg-qN9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5al-Wu-Piv">
@@ -163,6 +164,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="b5i-YS-rPD" kind="presentation" identifier="signInToTabBar" id="frC-8p-XL4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvk-Ve-2kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,6 +278,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountButtonTapped:" destination="ck2-Uu-ykV" eventType="touchUpInside" id="gwE-OX-M4K"/>
+                                    <action selector="signUpButtonTapped:" destination="5yu-Gx-tbC" eventType="touchUpInside" id="Tx9-3a-t28"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -301,6 +306,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="b5i-YS-rPD" kind="presentation" identifier="createAccountToTabBar" id="dwz-6n-5KU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1NE-A6-p1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -329,9 +337,20 @@
             </objects>
             <point key="canvasLocation" x="-108" y="90"/>
         </scene>
+        <!--tabBarController-->
+        <scene sceneID="chh-M4-nrN">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="tabBarController" storyboardName="TabBar" referencedIdentifier="tabBarController" id="b5i-YS-rPD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJK-ot-VNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2555" y="987"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Back" width="20" height="20"/>
         <image name="Logo-Text" width="131" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dwz-6n-5KU"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -25,6 +25,9 @@ class CreateAccountViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        
+    }
     
     /*
     // MARK: - Navigation

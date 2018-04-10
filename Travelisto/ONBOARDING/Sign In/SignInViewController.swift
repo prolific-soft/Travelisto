@@ -26,6 +26,11 @@ class SignInViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func signInButtonTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: Segue.signInToTabBar.rawValue, sender: nil)
+    }
+    
 
     //self.navigationController?.popViewController(animated: true)
 
