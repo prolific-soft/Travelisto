@@ -77,6 +77,7 @@
 		EF3656E2207D850500B2AB3C /* PopularDestinationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3656E1207D850500B2AB3C /* PopularDestinationTVCell.swift */; };
 		EF3656E5207D85A000B2AB3C /* DealsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3656E4207D85A000B2AB3C /* DealsTVCell.swift */; };
 		EF3656E7207DAC4F00B2AB3C /* PopularDestinationCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3656E6207DAC4F00B2AB3C /* PopularDestinationCVCell.swift */; };
+		EF3656E9207DB2F300B2AB3C /* DealsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3656E8207DB2F300B2AB3C /* DealsCVCell.swift */; };
 		EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F8981F8DD21D008A1040 /* BaseURL.swift */; };
 		EF43F89B1F8E3975008A1040 /* InspirationURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89A1F8E3975008A1040 /* InspirationURL.swift */; };
 		EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */; };
@@ -197,6 +198,7 @@
 		EF3656E1207D850500B2AB3C /* PopularDestinationTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDestinationTVCell.swift; sourceTree = "<group>"; };
 		EF3656E4207D85A000B2AB3C /* DealsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsTVCell.swift; sourceTree = "<group>"; };
 		EF3656E6207DAC4F00B2AB3C /* PopularDestinationCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDestinationCVCell.swift; sourceTree = "<group>"; };
+		EF3656E8207DB2F300B2AB3C /* DealsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsCVCell.swift; sourceTree = "<group>"; };
 		EF43F8981F8DD21D008A1040 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		EF43F89A1F8E3975008A1040 /* InspirationURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationURL.swift; sourceTree = "<group>"; };
 		EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAutoCompleteURL.swift; sourceTree = "<group>"; };
@@ -624,6 +626,7 @@
 			isa = PBXGroup;
 			children = (
 				EF3656E4207D85A000B2AB3C /* DealsTVCell.swift */,
+				EF3656E8207DB2F300B2AB3C /* DealsCVCell.swift */,
 			);
 			path = Deals;
 			sourceTree = "<group>";
@@ -881,6 +884,7 @@
 				EF17CAF81F7C987800E938AC /* AirportAutoComplets.swift in Sources */,
 				EF17CAEA1F7C0BFD00E938AC /* CarService.swift in Sources */,
 				EF17F72B1F7EB69E00E7159A /* Amount.swift in Sources */,
+				EF3656E9207DB2F300B2AB3C /* DealsCVCell.swift in Sources */,
 				EF17CAEE1F7C0C5400E938AC /* PointsOfInterestService.swift in Sources */,
 				EF17CAF21F7C702D00E938AC /* LowPriceFlight.swift in Sources */,
 				EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */,

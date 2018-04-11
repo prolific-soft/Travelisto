@@ -24,13 +24,15 @@ extension FlightSuggestionTVC {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let popularDestinationCellHeight = CGFloat(263)
-        let dealsCellHeight = CGFloat(300)
+        let dealsCellHeight = CGFloat(195)
         let defaultHeight = CGFloat(100)
         switch indexPath.row {
             case 0:
                 return popularDestinationCellHeight
             case 1:
                 return dealsCellHeight
+            case 2:
+                return popularDestinationCellHeight
             default:
                 break
         }
@@ -49,7 +51,7 @@ extension FlightSuggestionTVC {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,6 +67,10 @@ extension FlightSuggestionTVC {
                 cell = tableView.dequeueReusableCell(withIdentifier: FlightSuggestionCell.dealsTVCell.rawValue) as!
                 DealsTVCell
                 return cell
+            case 2:
+                cell = tableView.dequeueReusableCell(withIdentifier: FlightSuggestionCell.popularDestinationCell.rawValue) as!
+                PopularDestinationTVCell
+            return cell
             default:
                 break
         }

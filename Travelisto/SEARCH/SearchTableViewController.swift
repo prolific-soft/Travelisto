@@ -34,7 +34,7 @@ class SearchTableViewController: UITableViewController {
         
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.hidesSearchBarWhenScrolling = true
         
         tableView.refreshControl = refresher
     

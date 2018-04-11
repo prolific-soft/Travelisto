@@ -8,17 +8,67 @@
 
 import UIKit
 
-class DealsTVCell: UITableViewCell {
+class DealsTVCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource,
+    UICollectionViewDelegateFlowLayout {
 
+    @IBOutlet weak var dealsCollectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        dealsCollectionView.delegate = self
+        dealsCollectionView.dataSource = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
+}
+
+
+
+
+
+
+//MARK: - Layouts
+extension DealsTVCell {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 13
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellDefaultHeight = CGFloat(119)
+        let cellDefaultWidth = CGFloat(323)
+        let size = CGSize(width: cellDefaultWidth, height: cellDefaultHeight)
+        return size
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let inset = UIEdgeInsetsMake(10, 16, 0, 0)
+        return inset
+    }
+    
+}
+
+
+
+//MARK: - Datasource
+extension DealsTVCell {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlightSuggestionCell.dealsCVCell.rawValue, for: indexPath) as! DealsCVCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //Perform Segue
+    }
+    
+    
 }

@@ -14,6 +14,6 @@ enum FlightSuggestionCell : String {
     case dealsTVCell = "dealsTVCell"
     
     case popularDestinationCVCell = "popularDestinationCVCell"
-    
+    case dealsCVCell = "dealsCVCell"
     
 }
