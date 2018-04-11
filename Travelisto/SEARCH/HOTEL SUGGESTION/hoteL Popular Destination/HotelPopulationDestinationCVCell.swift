@@ -8,6 +8,6 @@
 
 import UIKit
 
-class HotelPopulationDestinationCVCell: UICollectionViewCell {
+class HotelPopularDestinationCVCell: UICollectionViewCell {
     
 }
