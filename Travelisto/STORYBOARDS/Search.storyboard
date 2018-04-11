@@ -7,6 +7,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Search-->
         <scene sceneID="s1T-44-PA7">
@@ -16,6 +22,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Uo7-mg-wuM">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swk-nv-SFh" userLabel="HotelSuggestionContainerView">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <segue destination="aHp-Cb-wTO" kind="embed" id="ZWT-5e-Fi8"/>
+                                    </connections>
+                                </containerView>
+                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wub-Lz-YTl" userLabel="FlightSuggestionContainerView">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <segue destination="BzF-fB-Uyq" kind="embed" id="18C-q2-q8j"/>
+                                    </connections>
+                                </containerView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Wub-Lz-YTl" secondAttribute="trailing" id="0ST-be-Rqm"/>
+                                <constraint firstAttribute="bottom" secondItem="swk-nv-SFh" secondAttribute="bottom" id="3a3-mY-Yzb"/>
+                                <constraint firstAttribute="trailing" secondItem="swk-nv-SFh" secondAttribute="trailing" id="YuA-6Y-045"/>
+                                <constraint firstItem="swk-nv-SFh" firstAttribute="top" secondItem="Uo7-mg-wuM" secondAttribute="top" id="gIc-wT-scy"/>
+                                <constraint firstItem="Wub-Lz-YTl" firstAttribute="top" secondItem="Uo7-mg-wuM" secondAttribute="top" id="im2-X4-6ne"/>
+                                <constraint firstAttribute="bottom" secondItem="Wub-Lz-YTl" secondAttribute="bottom" id="kvy-Eg-pkO"/>
+                                <constraint firstItem="swk-nv-SFh" firstAttribute="leading" secondItem="Uo7-mg-wuM" secondAttribute="leading" id="niV-kB-R6s"/>
+                                <constraint firstItem="Wub-Lz-YTl" firstAttribute="leading" secondItem="Uo7-mg-wuM" secondAttribute="leading" id="xCL-ck-mj5"/>
+                            </constraints>
+                        </view>
                         <connections>
                             <outlet property="dataSource" destination="kf0-Jy-ADP" id="eRV-9M-s8V"/>
                             <outlet property="delegate" destination="kf0-Jy-ADP" id="3Ue-UB-WY8"/>
@@ -23,18 +60,27 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Search" id="ZvF-W1-4BA">
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="knM-DC-jqm">
-                            <rect key="frame" x="107" y="7.5" width="161" height="29"/>
+                            <rect key="frame" x="77" y="7" width="221" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="First"/>
-                                <segment title="Second"/>
+                                <segment title="Flight"/>
+                                <segment title="Hotel"/>
                             </segments>
                             <color key="tintColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="searchSegmentedControlSwitched:" destination="kf0-Jy-ADP" eventType="valueChanged" id="m07-U0-NXM"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ug5-qD-bdF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
+                    <connections>
+                        <outlet property="flightSuggestionContaineView" destination="Wub-Lz-YTl" id="Dqq-rQ-j2y"/>
+                        <outlet property="hotelSuggestionContainerView" destination="swk-nv-SFh" id="aeS-ts-gDQ"/>
+                        <outlet property="searchSegmentedControl" destination="knM-DC-jqm" id="oQ6-Jt-d75"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5T-Kp-P4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,8 +105,152 @@
             </objects>
             <point key="canvasLocation" x="3040" y="1990.704647676162"/>
         </scene>
+        <!--Flight SuggestionTVC-->
+        <scene sceneID="RO1-HC-M3o">
+            <objects>
+                <tableViewController storyboardIdentifier="FlightSuggestionTVC" id="BzF-fB-Uyq" customClass="FlightSuggestionTVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JMQ-8G-5wS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="popularDestinationTVCell" rowHeight="263" id="jC2-De-Dmb" customClass="PopularDestinationTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="263"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jC2-De-Dmb" id="XM4-u6-8YU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="262.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HCc-Pn-lrT">
+                                            <rect key="frame" x="0.0" y="58.5" width="375" height="185"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="185" id="Td0-20-WR2"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ICa-Ll-UhI">
+                                                <size key="itemSize" width="135" height="168"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="16" minY="5" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularDestinationCVCell" id="4uV-85-ldh" customClass="PopularDestinationCVCell" customModule="Travelisto" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="11" width="135" height="168"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="168"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Netherlands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gi-dV-F3X">
+                                                                <rect key="frame" x="20" y="127" width="95" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <color key="shadowColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </label>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country_1" translatesAutoresizingMaskIntoConstraints="NO" id="QYb-gx-AI0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="168"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="QYb-gx-AI0" firstAttribute="top" secondItem="4uV-85-ldh" secondAttribute="top" id="Fzo-kQ-rZR"/>
+                                                        <constraint firstItem="QYb-gx-AI0" firstAttribute="leading" secondItem="4uV-85-ldh" secondAttribute="leading" id="IUk-K2-n3l"/>
+                                                        <constraint firstAttribute="bottom" secondItem="QYb-gx-AI0" secondAttribute="bottom" id="k3k-jk-Tq6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QYb-gx-AI0" secondAttribute="trailing" id="s8c-lx-Apd"/>
+                                                    </constraints>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Destinations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwf-oC-OAo">
+                                            <rect key="frame" x="16" y="22" width="178" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="or3-Lx-pEO"/>
+                                                <constraint firstAttribute="width" constant="178" id="yNd-eT-TmJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErD-pn-JVF">
+                                            <rect key="frame" x="246" y="11" width="129" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="2ck-9r-N0j"/>
+                                                <constraint firstAttribute="width" constant="129" id="fgw-I2-UqU"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="Show more">
+                                                <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="HCc-Pn-lrT" firstAttribute="leading" secondItem="XM4-u6-8YU" secondAttribute="leading" id="3LE-vP-czU"/>
+                                        <constraint firstItem="Qwf-oC-OAo" firstAttribute="top" secondItem="XM4-u6-8YU" secondAttribute="top" constant="22" id="9VX-iu-4Yh"/>
+                                        <constraint firstItem="Qwf-oC-OAo" firstAttribute="leading" secondItem="XM4-u6-8YU" secondAttribute="leading" constant="16" id="PSW-wN-t7s"/>
+                                        <constraint firstItem="ErD-pn-JVF" firstAttribute="top" secondItem="XM4-u6-8YU" secondAttribute="top" constant="11" id="Ums-ul-6Fv"/>
+                                        <constraint firstAttribute="bottom" secondItem="HCc-Pn-lrT" secondAttribute="bottom" constant="19" id="gzD-e5-Coo"/>
+                                        <constraint firstAttribute="trailing" secondItem="ErD-pn-JVF" secondAttribute="trailing" id="hNj-Vv-aQy"/>
+                                        <constraint firstAttribute="trailing" secondItem="HCc-Pn-lrT" secondAttribute="trailing" id="ouD-DR-zqx"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="popularDestinationCollectionView" destination="HCc-Pn-lrT" id="2pD-7I-zq0"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dealsTVCell" rowHeight="235" id="zAW-l6-rli" customClass="DealsTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="291" width="375" height="235"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zAW-l6-rli" id="bZv-hr-wgW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="234.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BzF-fB-Uyq" id="w5e-ph-0NP"/>
+                            <outlet property="delegate" destination="BzF-fB-Uyq" id="qHe-tB-X4c"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lD-jk-es1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1581.5999999999999" y="3907.1964017991008"/>
+        </scene>
+        <!--Hotel SuggestionTVC-->
+        <scene sceneID="sUL-hS-GFc">
+            <objects>
+                <tableViewController storyboardIdentifier="HotelSuggestionTVC" id="aHp-Cb-wTO" customClass="HotelSuggestionTVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cag-KW-dee">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6Oe-VY-h38">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Oe-VY-h38" id="I6I-mt-o7M">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aHp-Cb-wTO" id="mBS-7T-kYM"/>
+                            <outlet property="delegate" destination="aHp-Cb-wTO" id="BeH-uJ-spB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Way-7j-Pnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4572" y="3949"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="country_1" width="1280" height="853"/>
         <image name="search" width="22" height="22"/>
     </resources>
 </document>
