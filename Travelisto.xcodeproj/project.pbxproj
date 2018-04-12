@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1A14D741113BFD837DB27AF4 /* Pods_Travelisto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49E5941D13FCEBE2197F61A /* Pods_Travelisto.framework */; };
+		EF138320207F070500FD95C1 /* RelaxationCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13831F207F070500FD95C1 /* RelaxationCVCell.swift */; };
+		EF138322207F072300FD95C1 /* RelaxationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF138321207F072300FD95C1 /* RelaxationTVCell.swift */; };
+		EF138324207F118500FD95C1 /* TripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF138323207F118500FD95C1 /* TripsTableViewController.swift */; };
+		EF138326207F11A400FD95C1 /* TripsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF138325207F11A400FD95C1 /* TripsCells.swift */; };
 		EF140D70207E5F9B00DB8063 /* HotelPopularDestinationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140D6F207E5F9B00DB8063 /* HotelPopularDestinationTVCell.swift */; };
 		EF140D72207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140D71207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift */; };
 		EF140D75207E606500DB8063 /* HotelDealsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140D74207E606500DB8063 /* HotelDealsTVCell.swift */; };
@@ -95,6 +99,10 @@
 		EF53C9841F795F35009A1DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9821F795F35009A1DB8 /* LaunchScreen.storyboard */; };
 		EF7208561F82992100E1824D /* LowFareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208551F82992100E1824D /* LowFareURL.swift */; };
 		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
+		EFFD2787207EF82F004E7191 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD2786207EF82F004E7191 /* ExploreTableViewController.swift */; };
+		EFFD278A207EF97B004E7191 /* TripToTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD2789207EF97B004E7191 /* TripToTVCell.swift */; };
+		EFFD278C207EF9A2004E7191 /* ExploreCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD278B207EF9A2004E7191 /* ExploreCells.swift */; };
+		EFFD278E207EFF03004E7191 /* TripToCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD278D207EFF03004E7191 /* TripToCVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +121,10 @@
 /* Begin PBXFileReference section */
 		C4E22AF323C0F0A0B367ECD2 /* Pods-Travelisto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travelisto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travelisto/Pods-Travelisto.release.xcconfig"; sourceTree = "<group>"; };
 		E49E5941D13FCEBE2197F61A /* Pods_Travelisto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travelisto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF13831F207F070500FD95C1 /* RelaxationCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxationCVCell.swift; sourceTree = "<group>"; };
+		EF138321207F072300FD95C1 /* RelaxationTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxationTVCell.swift; sourceTree = "<group>"; };
+		EF138323207F118500FD95C1 /* TripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewController.swift; sourceTree = "<group>"; };
+		EF138325207F11A400FD95C1 /* TripsCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCells.swift; sourceTree = "<group>"; };
 		EF140D6F207E5F9B00DB8063 /* HotelPopularDestinationTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPopularDestinationTVCell.swift; sourceTree = "<group>"; };
 		EF140D71207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPopulationDestinationCVCell.swift; sourceTree = "<group>"; };
 		EF140D74207E606500DB8063 /* HotelDealsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDealsTVCell.swift; sourceTree = "<group>"; };
@@ -222,6 +234,10 @@
 		EF53C9851F795F35009A1DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF7208551F82992100E1824D /* LowFareURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowFareURL.swift; sourceTree = "<group>"; };
 		EF7208571F83E55000E1824D /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		EFFD2786207EF82F004E7191 /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
+		EFFD2789207EF97B004E7191 /* TripToTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripToTVCell.swift; sourceTree = "<group>"; };
+		EFFD278B207EF9A2004E7191 /* ExploreCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCells.swift; sourceTree = "<group>"; };
+		EFFD278D207EFF03004E7191 /* TripToCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripToCVCell.swift; sourceTree = "<group>"; };
 		FDC629EA89652792E97A0073 /* Pods-Travelisto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travelisto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travelisto/Pods-Travelisto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +268,15 @@
 				C4E22AF323C0F0A0B367ECD2 /* Pods-Travelisto.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF13831E207F06C900FD95C1 /* RELAXATION */ = {
+			isa = PBXGroup;
+			children = (
+				EF138321207F072300FD95C1 /* RelaxationTVCell.swift */,
+				EF13831F207F070500FD95C1 /* RelaxationCVCell.swift */,
+			);
+			path = RELAXATION;
 			sourceTree = "<group>";
 		};
 		EF140D6E207E5D9400DB8063 /* hoteL Popular Destination */ = {
@@ -592,6 +617,10 @@
 		EF3656CA207D2EA300B2AB3C /* EXPLORE */ = {
 			isa = PBXGroup;
 			children = (
+				EFFD2786207EF82F004E7191 /* ExploreTableViewController.swift */,
+				EFFD278B207EF9A2004E7191 /* ExploreCells.swift */,
+				EFFD2788207EF950004E7191 /* TRIP TO */,
+				EF13831E207F06C900FD95C1 /* RELAXATION */,
 			);
 			path = EXPLORE;
 			sourceTree = "<group>";
@@ -602,7 +631,6 @@
 				EF3656D6207D326300B2AB3C /* SearchTableViewController.swift */,
 				EF3656D8207D424C00B2AB3C /* FLIGHT SUGGESTION */,
 				EF3656DB207D46B000B2AB3C /* HOTEL SUGGESTION */,
-				EF3656D4207D320E00B2AB3C /* TRIPS */,
 			);
 			path = SEARCH;
 			sourceTree = "<group>";
@@ -610,6 +638,8 @@
 		EF3656D4207D320E00B2AB3C /* TRIPS */ = {
 			isa = PBXGroup;
 			children = (
+				EF138323207F118500FD95C1 /* TripsTableViewController.swift */,
+				EF138325207F11A400FD95C1 /* TripsCells.swift */,
 			);
 			path = TRIPS;
 			sourceTree = "<group>";
@@ -721,6 +751,7 @@
 				EF1523771FFEC1D500ADAD1F /* STORYBOARDS */,
 				EF3656CA207D2EA300B2AB3C /* EXPLORE */,
 				EF3656D3207D31EF00B2AB3C /* SEARCH */,
+				EF3656D4207D320E00B2AB3C /* TRIPS */,
 				EF3656D5207D322500B2AB3C /* SETTINGS */,
 				EF1523781FFEC23200ADAD1F /* CUSTOM */,
 				EF17CAD41F7BE6F600E938AC /* NETWORK */,
@@ -745,6 +776,15 @@
 				EF43F8A01F90264D008A1040 /* Airport URL */,
 			);
 			path = "URL Builder";
+			sourceTree = "<group>";
+		};
+		EFFD2788207EF950004E7191 /* TRIP TO */ = {
+			isa = PBXGroup;
+			children = (
+				EFFD2789207EF97B004E7191 /* TripToTVCell.swift */,
+				EFFD278D207EFF03004E7191 /* TripToCVCell.swift */,
+			);
+			path = "TRIP TO";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -896,6 +936,7 @@
 				EF17CAE11F7C02EA00E938AC /* HotelNetworkProcessor.swift in Sources */,
 				EF17F7471F7F0B1D00E7159A /* FlightAPISearchBy.swift in Sources */,
 				EF156B9C1F985AD300924A89 /* RestuarantProcessor.swift in Sources */,
+				EF138322207F072300FD95C1 /* RelaxationTVCell.swift in Sources */,
 				EF156BA21F9A65DE00924A89 /* AuthService.swift in Sources */,
 				EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */,
 				EF17CAF01F7C599A00E938AC /* Destinations.swift in Sources */,
@@ -907,6 +948,7 @@
 				EF17F73C1F7EF48900E7159A /* TopFlightDestination.swift in Sources */,
 				EF17F74D1F7F23AD00E7159A /* POIAPISearchBy.swift in Sources */,
 				EF1C9F421FFDB8B9008084FE /* TutorialViewController.swift in Sources */,
+				EFFD278A207EF97B004E7191 /* TripToTVCell.swift in Sources */,
 				EF15236E1FFDCA8200ADAD1F /* TutorialSlideView.swift in Sources */,
 				EF17CAE81F7C0BA300E938AC /* FlightService.swift in Sources */,
 				EF17CAF81F7C987800E938AC /* AirportAutoComplets.swift in Sources */,
@@ -920,18 +962,23 @@
 				EF43F8A61F904A70008A1040 /* CarURL.swift in Sources */,
 				EF43F8AA1F9058AF008A1040 /* PointOfInterestURL.swift in Sources */,
 				EF3656DA207D429600B2AB3C /* FlightSuggestionTVC.swift in Sources */,
+				EF138320207F070500FD95C1 /* RelaxationCVCell.swift in Sources */,
 				EF3656DD207D46DD00B2AB3C /* HotelSuggestionTVC.swift in Sources */,
 				EF17F73E1F7EFB0400E7159A /* FlightTraffic.swift in Sources */,
 				EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */,
 				EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */,
+				EFFD2787207EF82F004E7191 /* ExploreTableViewController.swift in Sources */,
 				EF17F7271F7EB06C00E7159A /* CarRental.swift in Sources */,
 				EF1523C020044A8600ADAD1F /* Segue.swift in Sources */,
 				EF43F89B1F8E3975008A1040 /* InspirationURL.swift in Sources */,
+				EF138324207F118500FD95C1 /* TripsTableViewController.swift in Sources */,
 				EF140D72207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift in Sources */,
+				EFFD278E207EFF03004E7191 /* TripToCVCell.swift in Sources */,
 				EF17CAFE1F7CB53000E938AC /* HotelAirports.swift in Sources */,
 				EF17F7331F7EBCE900E7159A /* Rate.swift in Sources */,
 				EF17CB001F7D2E4C00E938AC /* Address.swift in Sources */,
 				EF15237E1FFED1E700ADAD1F /* PasswordResetViewController.swift in Sources */,
+				EF138326207F11A400FD95C1 /* TripsCells.swift in Sources */,
 				EF17F7291F7EB36E00E7159A /* Car.swift in Sources */,
 				EF140D77207E609200DB8063 /* HotelDealsCVCell.swift in Sources */,
 				EF43F8A31F9026F1008A1040 /* HotelURL.swift in Sources */,
@@ -963,6 +1010,7 @@
 				EF156B9E1F985EBB00924A89 /* RestuarantService.swift in Sources */,
 				EF17CAF61F7C8F0700E938AC /* Outbound.swift in Sources */,
 				EF3656D7207D326300B2AB3C /* SearchTableViewController.swift in Sources */,
+				EFFD278C207EF9A2004E7191 /* ExploreCells.swift in Sources */,
 				EF17F72D1F7EB7AC00E7159A /* Image.swift in Sources */,
 				EF17F74B1F7F216000E7159A /* CarAPISearchBy.swift in Sources */,
 				EF140D75207E606500DB8063 /* HotelDealsTVCell.swift in Sources */,

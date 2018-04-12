@@ -4,18 +4,198 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Explore-->
         <scene sceneID="lcz-JE-Pdv">
             <objects>
-                <tableViewController id="gaH-A5-Zj0" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zBt-6e-tTK">
+                <tableViewController id="gaH-A5-Zj0" customClass="ExploreTableViewController" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zBt-6e-tTK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tripToTVCell" rowHeight="250" id="Wth-CJ-IDx" customClass="TripToTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wth-CJ-IDx" id="MRm-Ns-wlA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="90o-Iv-f7L">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bsJ-BX-NrR">
+                                                <size key="itemSize" width="336" height="201"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="20" minY="20" maxX="0.0" maxY="20"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tripToCVCell" id="GRa-kb-65S" customClass="TripToCVCell" customModule="Travelisto" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="24.5" width="336" height="201"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="201"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country_3" translatesAutoresizingMaskIntoConstraints="NO" id="qD1-ps-zeW">
+                                                                <rect key="frame" x="0.0" y="0.0" width="336" height="201"/>
+                                                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </imageView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xPw-Gw-MDr">
+                                                                <rect key="frame" x="20" y="68" width="296" height="65"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip to Rome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btc-x5-6aS">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="35"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="35" id="LbJ-gR-VXg"/>
+                                                                            <constraint firstAttribute="width" constant="296" id="uU3-33-ZIM"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a journey into the past" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz0-g3-WEY">
+                                                                        <rect key="frame" x="0.0" y="35" width="296" height="30"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="30" id="dee-8A-RK2"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="xPw-Gw-MDr" firstAttribute="centerY" secondItem="GRa-kb-65S" secondAttribute="centerY" id="5Ah-eI-yMd"/>
+                                                        <constraint firstItem="qD1-ps-zeW" firstAttribute="leading" secondItem="GRa-kb-65S" secondAttribute="leading" id="Iig-cQ-ziD"/>
+                                                        <constraint firstItem="qD1-ps-zeW" firstAttribute="top" secondItem="GRa-kb-65S" secondAttribute="top" id="LTl-Iw-n6F"/>
+                                                        <constraint firstItem="xPw-Gw-MDr" firstAttribute="centerX" secondItem="GRa-kb-65S" secondAttribute="centerX" id="a4n-zt-kzi"/>
+                                                        <constraint firstAttribute="bottom" secondItem="qD1-ps-zeW" secondAttribute="bottom" id="nXp-u7-NWR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qD1-ps-zeW" secondAttribute="trailing" id="oS0-ta-BrF"/>
+                                                    </constraints>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="90o-Iv-f7L" secondAttribute="bottom" id="29A-SX-qWV"/>
+                                        <constraint firstItem="90o-Iv-f7L" firstAttribute="leading" secondItem="MRm-Ns-wlA" secondAttribute="leading" id="pDG-me-Ihy"/>
+                                        <constraint firstAttribute="trailing" secondItem="90o-Iv-f7L" secondAttribute="trailing" id="rOa-HG-TJj"/>
+                                        <constraint firstItem="90o-Iv-f7L" firstAttribute="top" secondItem="MRm-Ns-wlA" secondAttribute="top" id="rOv-IC-1SM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="tripToCollectionView" destination="90o-Iv-f7L" id="9R9-3c-HQM"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="relaxationTVCell" rowHeight="233" id="dDN-HF-pcJ" customClass="RelaxationTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="278" width="375" height="233"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dDN-HF-pcJ" id="0gd-UR-rhv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Ok-NM-XTm">
+                                            <rect key="frame" x="0.0" y="44" width="375" height="189"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="189" id="8ZH-wp-tGh"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n0b-op-FFu">
+                                                <size key="itemSize" width="135" height="160"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="20" minY="2" maxX="0.0" maxY="2"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="relaxationCVCell" id="Hb7-IO-HPU" customClass="RelaxationCVCell" customModule="Travelisto" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="14.5" width="135" height="160"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="160"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country_5" translatesAutoresizingMaskIntoConstraints="NO" id="0hZ-HA-66d">
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="160"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="France" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYP-qy-jfk">
+                                                                <rect key="frame" x="5" y="118" width="125" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="dQD-aD-S0g"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="jYP-qy-jfk" secondAttribute="trailing" constant="5" id="6dx-8l-mh8"/>
+                                                        <constraint firstItem="0hZ-HA-66d" firstAttribute="top" secondItem="Hb7-IO-HPU" secondAttribute="top" id="CaM-Qh-K6K"/>
+                                                        <constraint firstItem="jYP-qy-jfk" firstAttribute="leading" secondItem="Hb7-IO-HPU" secondAttribute="leading" constant="5" id="FmB-uS-heI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0hZ-HA-66d" secondAttribute="trailing" id="Zff-Ku-M8A"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0hZ-HA-66d" secondAttribute="bottom" id="a2n-WP-RhF"/>
+                                                        <constraint firstItem="0hZ-HA-66d" firstAttribute="leading" secondItem="Hb7-IO-HPU" secondAttribute="leading" id="c8W-oD-N5R"/>
+                                                        <constraint firstAttribute="bottom" secondItem="jYP-qy-jfk" secondAttribute="bottom" constant="12" id="swV-gm-j9j"/>
+                                                    </constraints>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZS-Vs-ftU">
+                                            <rect key="frame" x="238" y="12" width="129" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="djL-8y-Ncg"/>
+                                                <constraint firstAttribute="width" constant="129" id="vjm-ew-HW8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="Show more">
+                                                <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relaxation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPM-Uc-Hzk">
+                                            <rect key="frame" x="20" y="13" width="190" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="XTc-et-jYz"/>
+                                                <constraint firstAttribute="width" constant="190" id="zBU-hv-llb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="0ZS-Vs-ftU" firstAttribute="top" secondItem="0gd-UR-rhv" secondAttribute="top" constant="12" id="5sX-WT-mjR"/>
+                                        <constraint firstAttribute="trailing" secondItem="0Ok-NM-XTm" secondAttribute="trailing" id="Ogm-Nw-jEH"/>
+                                        <constraint firstItem="cPM-Uc-Hzk" firstAttribute="top" secondItem="0gd-UR-rhv" secondAttribute="top" constant="13" id="Xrf-97-9dN"/>
+                                        <constraint firstItem="0Ok-NM-XTm" firstAttribute="leading" secondItem="0gd-UR-rhv" secondAttribute="leading" id="eV2-Fe-ugh"/>
+                                        <constraint firstAttribute="bottom" secondItem="0Ok-NM-XTm" secondAttribute="bottom" id="hOh-8m-Q4M"/>
+                                        <constraint firstItem="cPM-Uc-Hzk" firstAttribute="leading" secondItem="0gd-UR-rhv" secondAttribute="leading" constant="20" id="saL-h8-0O9"/>
+                                        <constraint firstAttribute="trailing" secondItem="0ZS-Vs-ftU" secondAttribute="trailing" constant="8" id="wfS-la-KGY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="relaxationCollectionView" destination="0Ok-NM-XTm" id="FAA-sI-6Mu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="gaH-A5-Zj0" id="yRf-Rs-mY7"/>
                             <outlet property="delegate" destination="gaH-A5-Zj0" id="n5U-Mo-48S"/>
@@ -25,7 +205,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsD-Rk-frL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="2925"/>
+            <point key="canvasLocation" x="1656.8" y="2924.8875562218891"/>
         </scene>
         <!--Explore-->
         <scene sceneID="QVb-wO-mId">
@@ -48,6 +228,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="country_3" width="1280" height="853"/>
+        <image name="country_5" width="1280" height="853"/>
         <image name="explore" width="22" height="22"/>
     </resources>
 </document>
