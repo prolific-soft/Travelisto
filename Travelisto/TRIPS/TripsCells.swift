@@ -11,10 +11,9 @@ import Foundation
 
 //TableView Cell names
 enum TripsCells : String {
+    //Trips
+    case tripsTVCell = "tripsTVCell"
     
-    //Flight
-    case popularDestinationCell = "popularDestinationTVCell"
-    case dealsTVCell = "dealsTVCell"
-    case popularDestinationCVCell = "popularDestinationCVCell"
-    case dealsCVCell = "dealsCVCell"
+    //HeaderView
+    case tripHeaderView = "TripHeaderView"
 }
