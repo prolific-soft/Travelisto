@@ -65,7 +65,7 @@ extension TripsTableViewController {
 extension TripsTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let tripsCellHeight = CGFloat(161)
+        let tripsCellHeight = CGFloat(225)
         return tripsCellHeight
     }
     
