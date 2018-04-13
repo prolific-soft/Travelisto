@@ -11,8 +11,12 @@ import Foundation
 
 enum Segue : String {
     case tutorialToSignIn = "tutorialToSignIn"
-    
+    //@ Login
     case createAccountToTabBar = "createAccountToTabBar"
     case signInToTabBar = "signInToTabBar"
+    
+    //@ Setting
+    case toSettingSelectionTVC = "toSettingSelectionTVC"
+    case toPrivacyTVC = "toPrivacyTVC"
     
 }

@@ -12,4 +12,7 @@ import Foundation
 enum SettingsCells : String {
     case languageTVCell = "languageTVCell"
     case remindersTVCell = "remindersTVCell"
+    
+    case privacyTVCell = "privacyTVCell"
+    case settingSelectionTVCell = "settingSelectionTVCell"
 }

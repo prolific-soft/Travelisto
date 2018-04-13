@@ -10,6 +10,13 @@ import UIKit
 
 class LanguageTVCell: UITableViewCell {
 
+    //UI Properties
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var accessoryIcon: UIImageView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,6 +10,10 @@ import UIKit
 
 class RemindersTVCell: UITableViewCell {
 
+    //UI Properties
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var reminderSwitch: UISwitch!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

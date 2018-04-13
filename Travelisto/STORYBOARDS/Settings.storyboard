@@ -169,6 +169,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="accessoryIcon" destination="Y0o-mU-oxC" id="Hed-pi-WkD"/>
+                                    <outlet property="subtitleLabel" destination="cjn-ta-YzR" id="s85-gN-xlJ"/>
+                                    <outlet property="valueLabel" destination="PHG-s6-S2O" id="Rps-FX-pv6"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="remindersTVCell" rowHeight="67" id="K89-MM-oTM" customClass="RemindersTVCell" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="253" width="375" height="67"/>
@@ -203,6 +208,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="reminderSwitch" destination="H75-Wv-JJv" id="zCq-tg-AIA"/>
+                                    <outlet property="subtitleLabel" destination="wwB-BW-4cr" id="r9A-FB-HCA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -223,19 +232,69 @@
         <!--Language-->
         <scene sceneID="5S6-da-RJz">
             <objects>
-                <tableViewController id="L9H-l9-IiN" sceneMemberID="viewController">
+                <tableViewController id="L9H-l9-IiN" customClass="SettingSelectionTVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q8d-jM-gAB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="l7y-dh-GV3">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingSelectionTVCell" rowHeight="61" id="l7y-dh-GV3" customClass="SettingSelectionTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l7y-dh-GV3" id="3r4-XQ-BHk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="soS-U3-6BT">
+                                            <rect key="frame" x="16" y="18" width="301" height="25"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qet-Aj-ojA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="SMm-Pe-SvI"/>
+                                                        <constraint firstAttribute="width" constant="150" id="ddH-tM-Mhr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3R-ev-dbN">
+                                                    <rect key="frame" x="152" y="0.0" width="149" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="149" id="2PE-8y-H0z"/>
+                                                        <constraint firstAttribute="height" constant="25" id="SyR-KW-tGA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="301" id="Lli-uG-bM7"/>
+                                            </constraints>
+                                        </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark-24" translatesAutoresizingMaskIntoConstraints="NO" id="04L-b0-VZD">
+                                            <rect key="frame" x="334" y="23" width="15" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="32M-AR-UR7"/>
+                                                <constraint firstAttribute="width" constant="15" id="aLb-HX-Oa2"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="04L-b0-VZD" secondAttribute="trailing" constant="26" id="48f-Yg-MHz"/>
+                                        <constraint firstItem="soS-U3-6BT" firstAttribute="leading" secondItem="3r4-XQ-BHk" secondAttribute="leading" constant="16" id="8Vc-ak-GcV"/>
+                                        <constraint firstAttribute="bottom" secondItem="04L-b0-VZD" secondAttribute="bottom" constant="22.5" id="DJC-XZ-EAk"/>
+                                        <constraint firstAttribute="bottom" secondItem="soS-U3-6BT" secondAttribute="bottom" constant="18" id="Qwc-PL-LG0"/>
+                                        <constraint firstItem="04L-b0-VZD" firstAttribute="top" secondItem="3r4-XQ-BHk" secondAttribute="top" constant="23" id="RZZ-IE-rQ4"/>
+                                        <constraint firstItem="soS-U3-6BT" firstAttribute="top" secondItem="3r4-XQ-BHk" secondAttribute="top" constant="18" id="Ta6-Ii-wMb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="accessoryIcon" destination="04L-b0-VZD" id="Fc3-Sl-UZ4"/>
+                                    <outlet property="subtitleLabel" destination="qet-Aj-ojA" id="tOJ-vM-nJ6"/>
+                                    <outlet property="valueLabel" destination="Z3R-ev-dbN" id="cnJ-Ff-lnF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -251,23 +310,88 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRa-AS-rqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7270" y="2925"/>
+            <point key="canvasLocation" x="7269.6000000000004" y="2924.8875562218891"/>
         </scene>
         <!--Privacy-->
         <scene sceneID="GgH-fR-Kn5">
             <objects>
-                <tableViewController id="wLv-Bs-1dh" sceneMemberID="viewController">
+                <tableViewController id="wLv-Bs-1dh" customClass="PrivacyTVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gbr-Cj-kEP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ipr-mj-8xX">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="privacyTVCell" rowHeight="483" id="Ipr-mj-8xX" customClass="PrivacyTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="483"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ipr-mj-8xX" id="9mj-yp-eSe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="482.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FMB-Ks-xId">
+                                            <rect key="frame" x="25" y="0.0" width="325" height="482.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <mutableString key="text">        Travelisto Terms of Service
+
+1. Terms
+
+  By accessing the website at http://travelisto.com, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.
+
+2. Use License
+
+  
+    
+      Permission is granted to temporarily download one copy of the materials (information or software) on Travelisto's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+
+      
+        modify or copy the materials;
+        use the materials for any commercial purpose, or for any public display (commercial or non-commercial);
+        attempt to decompile or reverse engineer any software contained on Travelisto's website;
+        remove any copyright or other proprietary notations from the materials; or
+        transfer the materials to another person or "mirror" the materials on any other server.
+      
+    
+    This license shall automatically terminate if you violate any of these restrictions and may be terminated by Travelisto at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+  
+
+3. Disclaimer
+
+  
+    The materials on Travelisto's website are provided on an 'as is' basis. Travelisto makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+    Further, Travelisto does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
+  
+
+4. Limitations
+
+  In no event shall Travelisto or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Travelisto's website, even if Travelisto or a Travelisto authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+
+5. Accuracy of materials
+
+  The materials appearing on Travelisto's website could include technical, typographical, or photographic errors. Travelisto does not warrant that any of the materials on its website are accurate, complete or current. Travelisto may make changes to the materials contained on its website at any time without notice. However Travelisto does not make any commitment to update the materials.
+
+6. Links
+
+  Travelisto has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Travelisto of the site. Use of any such linked website is at the user's own risk.
+
+7. Modifications
+
+  Travelisto may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
+
+8. Governing Law
+
+  These terms and conditions are governed by and construed in accordance with the laws of Los Angeles, California and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
+
+						</mutableString>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FMB-Ks-xId" firstAttribute="leading" secondItem="9mj-yp-eSe" secondAttribute="leading" constant="25" id="CRb-eB-4EH"/>
+                                        <constraint firstItem="FMB-Ks-xId" firstAttribute="top" secondItem="9mj-yp-eSe" secondAttribute="top" id="Gro-bi-lTH"/>
+                                        <constraint firstAttribute="trailing" secondItem="FMB-Ks-xId" secondAttribute="trailing" constant="25" id="MK0-mD-gBf"/>
+                                        <constraint firstAttribute="bottom" secondItem="FMB-Ks-xId" secondAttribute="bottom" id="ko5-Ck-Wfg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -277,14 +401,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Privacy" id="b8F-Ju-FcT">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="Back" id="tQs-TY-KvQ">
+                        <barButtonItem key="leftBarButtonItem" image="Back" id="tQs-TY-KvQ">
                             <color key="tintColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jml-Gb-MVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8028" y="2925"/>
+            <point key="canvasLocation" x="8109.6000000000004" y="2924.8875562218891"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Qmc-qI-Mpf">
@@ -309,6 +433,7 @@
     <resources>
         <image name="Back" width="20" height="20"/>
         <image name="Logo-Text" width="131" height="40"/>
+        <image name="checkmark-24" width="24" height="24"/>
         <image name="chillybean" width="352" height="352"/>
         <image name="email" width="48" height="48"/>
         <image name="forward-52" width="52" height="52"/>
