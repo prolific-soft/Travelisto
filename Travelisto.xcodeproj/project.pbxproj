@@ -26,6 +26,7 @@
 		EF13834620803A1E00FD95C1 /* languages.json in Resources */ = {isa = PBXBuildFile; fileRef = EF13834520803A1E00FD95C1 /* languages.json */; };
 		EF13834820803B4100FD95C1 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = EF13834720803B4100FD95C1 /* airports.json */; };
 		EF13834A20803D4C00FD95C1 /* currency.json in Resources */ = {isa = PBXBuildFile; fileRef = EF13834920803D4C00FD95C1 /* currency.json */; };
+		EF13834C2081444300FD95C1 /* Codables.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13834B2081444300FD95C1 /* Codables.swift */; };
 		EF140D70207E5F9B00DB8063 /* HotelPopularDestinationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140D6F207E5F9B00DB8063 /* HotelPopularDestinationTVCell.swift */; };
 		EF140D72207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140D71207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift */; };
 		EF140D75207E606500DB8063 /* HotelDealsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140D74207E606500DB8063 /* HotelDealsTVCell.swift */; };
@@ -153,6 +154,7 @@
 		EF13834520803A1E00FD95C1 /* languages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = languages.json; sourceTree = "<group>"; };
 		EF13834720803B4100FD95C1 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 		EF13834920803D4C00FD95C1 /* currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currency.json; sourceTree = "<group>"; };
+		EF13834B2081444300FD95C1 /* Codables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codables.swift; sourceTree = "<group>"; };
 		EF140D6F207E5F9B00DB8063 /* HotelPopularDestinationTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPopularDestinationTVCell.swift; sourceTree = "<group>"; };
 		EF140D71207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPopulationDestinationCVCell.swift; sourceTree = "<group>"; };
 		EF140D74207E606500DB8063 /* HotelDealsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDealsTVCell.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				EF13834720803B4100FD95C1 /* airports.json */,
 				EF13834920803D4C00FD95C1 /* currency.json */,
 				EF13834520803A1E00FD95C1 /* languages.json */,
+				EF13834B2081444300FD95C1 /* Codables.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -1105,6 +1108,7 @@
 				EF17CAFC1F7C9E4200E938AC /* Coordinates.swift in Sources */,
 				EF17F73A1F7EF34800E7159A /* TopFlights.swift in Sources */,
 				EF17F7431F7F087400E7159A /* NearestRelevantAirport.swift in Sources */,
+				EF13834C2081444300FD95C1 /* Codables.swift in Sources */,
 				EF3656E5207D85A000B2AB3C /* DealsTVCell.swift in Sources */,
 				EF17F72F1F7EBC3200E7159A /* Provider.swift in Sources */,
 				EF17CADF1F7C02D800E938AC /* CarNetworkProcessor.swift in Sources */,

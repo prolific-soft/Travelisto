@@ -15,6 +15,8 @@ class SettingsTableViewController: UITableViewController {
     let keyArray = ["Language", "Currency", "Reminders", "Units", "Privacy"]
     let valueArray = ["English", "USD", " ", "Imperial", " "]
     
+    var languages : [Clanguage]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -104,6 +106,21 @@ extension SettingsTableViewController {
                              "Reminders" : "",
                              "Privacy" : ""]
         self.settingsData = tableViewData
+        
+        //Load Languages
+        let filePath = Bundle.main.path(forResource: "languages", ofType: "json")
+        let url = URL(fileURLWithPath: filePath!)
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let loadedLanguages = try JSONDecoder().decode([Clanguage].self, from: data)
+            languages = loadedLanguages
+        }catch let error as NSError {
+            print("Error Loading Languages : \(error)")
+        }
+        
+        
+        
     }
 }
 
@@ -115,32 +132,37 @@ extension SettingsTableViewController {
             
             guard let indexPath = sender as? NSIndexPath else { return }
             
+            //Reminder
             if indexPath.row == 2 {
                 _ = tableView.cellForRow(at: indexPath as IndexPath) as? RemindersTVCell
                 if let remindersTVC = segue.destination as? SettingSelectionTVC {
                     remindersTVC.navigationItem.title =  keyArray[indexPath.row]
                 }
-                
+               
+              //Privacy
             } else if indexPath.row == 4 {
                 _ = tableView.cellForRow(at: indexPath as IndexPath) as? LanguageTVCell
                 if let privacyTVC = segue.destination as? PrivacyTVC {
                     privacyTVC.navigationItem.title =  keyArray[indexPath.row]
                 }
-                
+              
+                //Language, Unit & Currency
             }else {
                 _ = tableView.cellForRow(at: indexPath as IndexPath) as? LanguageTVCell
-                if let remindersTVC = segue.destination as? SettingSelectionTVC {
-                    remindersTVC.navigationItem.title =  keyArray[indexPath.row]
+                if let settingSelectionTVC = segue.destination as? SettingSelectionTVC {
+                    settingSelectionTVC.navigationItem.title =  keyArray[indexPath.row]
+                    settingSelectionTVC.data = languages
                 }
             }
-            
-
         }
-    }// End prepare for Segue
+    }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 2 {
+        if indexPath.row == 4 {
             self.performSegue(withIdentifier: Segue.toPrivacyTVC.rawValue, sender: indexPath)
+        }else if indexPath.row == 2 {
+            return
         }else {
             self.performSegue(withIdentifier: Segue.toSettingSelectionTVC.rawValue, sender: indexPath)
         }
