@@ -19,6 +19,10 @@
 		EF13833220800FC200FD95C1 /* SettingsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13833120800FC200FD95C1 /* SettingsCells.swift */; };
 		EF1383342080102200FD95C1 /* LanguageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1383332080102200FD95C1 /* LanguageTVCell.swift */; };
 		EF138337208010DD00FD95C1 /* RemindersTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF138336208010DD00FD95C1 /* RemindersTVCell.swift */; };
+		EF13833C208036FE00FD95C1 /* SettingSelectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13833B208036FE00FD95C1 /* SettingSelectionTVC.swift */; };
+		EF13833E2080371E00FD95C1 /* SettingSelectionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13833D2080371E00FD95C1 /* SettingSelectionTVCell.swift */; };
+		EF1383412080376A00FD95C1 /* PrivacyTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1383402080376A00FD95C1 /* PrivacyTVCell.swift */; };
+		EF1383432080378C00FD95C1 /* PrivacyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1383422080378C00FD95C1 /* PrivacyTVC.swift */; };
 		EF140D70207E5F9B00DB8063 /* HotelPopularDestinationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140D6F207E5F9B00DB8063 /* HotelPopularDestinationTVCell.swift */; };
 		EF140D72207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140D71207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift */; };
 		EF140D75207E606500DB8063 /* HotelDealsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF140D74207E606500DB8063 /* HotelDealsTVCell.swift */; };
@@ -139,6 +143,10 @@
 		EF13833120800FC200FD95C1 /* SettingsCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCells.swift; sourceTree = "<group>"; };
 		EF1383332080102200FD95C1 /* LanguageTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTVCell.swift; sourceTree = "<group>"; };
 		EF138336208010DD00FD95C1 /* RemindersTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTVCell.swift; sourceTree = "<group>"; };
+		EF13833B208036FE00FD95C1 /* SettingSelectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSelectionTVC.swift; sourceTree = "<group>"; };
+		EF13833D2080371E00FD95C1 /* SettingSelectionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSelectionTVCell.swift; sourceTree = "<group>"; };
+		EF1383402080376A00FD95C1 /* PrivacyTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTVCell.swift; sourceTree = "<group>"; };
+		EF1383422080378C00FD95C1 /* PrivacyTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTVC.swift; sourceTree = "<group>"; };
 		EF140D6F207E5F9B00DB8063 /* HotelPopularDestinationTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPopularDestinationTVCell.swift; sourceTree = "<group>"; };
 		EF140D71207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelPopulationDestinationCVCell.swift; sourceTree = "<group>"; };
 		EF140D74207E606500DB8063 /* HotelDealsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDealsTVCell.swift; sourceTree = "<group>"; };
@@ -316,6 +324,24 @@
 				EF138336208010DD00FD95C1 /* RemindersTVCell.swift */,
 			);
 			path = REMINDERS;
+			sourceTree = "<group>";
+		};
+		EF13833A208036C100FD95C1 /* SETTING SELECTION */ = {
+			isa = PBXGroup;
+			children = (
+				EF13833B208036FE00FD95C1 /* SettingSelectionTVC.swift */,
+				EF13833D2080371E00FD95C1 /* SettingSelectionTVCell.swift */,
+			);
+			path = "SETTING SELECTION";
+			sourceTree = "<group>";
+		};
+		EF13833F2080374A00FD95C1 /* PRIVACY */ = {
+			isa = PBXGroup;
+			children = (
+				EF1383402080376A00FD95C1 /* PrivacyTVCell.swift */,
+				EF1383422080378C00FD95C1 /* PrivacyTVC.swift */,
+			);
+			path = PRIVACY;
 			sourceTree = "<group>";
 		};
 		EF140D6E207E5D9400DB8063 /* hoteL Popular Destination */ = {
@@ -692,6 +718,8 @@
 				EF13833120800FC200FD95C1 /* SettingsCells.swift */,
 				EF13833020800F9F00FD95C1 /* LANGUAGE  */,
 				EF138335208010C100FD95C1 /* REMINDERS */,
+				EF13833A208036C100FD95C1 /* SETTING SELECTION */,
+				EF13833F2080374A00FD95C1 /* PRIVACY */,
 			);
 			path = SETTINGS;
 			sourceTree = "<group>";
@@ -1030,8 +1058,11 @@
 				EF15237E1FFED1E700ADAD1F /* PasswordResetViewController.swift in Sources */,
 				EF138326207F11A400FD95C1 /* TripsCells.swift in Sources */,
 				EF17F7291F7EB36E00E7159A /* Car.swift in Sources */,
+				EF13833C208036FE00FD95C1 /* SettingSelectionTVC.swift in Sources */,
 				EF140D77207E609200DB8063 /* HotelDealsCVCell.swift in Sources */,
 				EF43F8A31F9026F1008A1040 /* HotelURL.swift in Sources */,
+				EF1383412080376A00FD95C1 /* PrivacyTVCell.swift in Sources */,
+				EF13833E2080371E00FD95C1 /* SettingSelectionTVCell.swift in Sources */,
 				EF7208581F83E55000E1824D /* CustomError.swift in Sources */,
 				EF156B961F98514300924A89 /* RestuarantURL.swift in Sources */,
 				EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */,
@@ -1043,6 +1074,7 @@
 				EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */,
 				EF156B981F98515500924A89 /* RestuarantReviewURL.swift in Sources */,
 				EF3656E7207DAC4F00B2AB3C /* PopularDestinationCVCell.swift in Sources */,
+				EF1383432080378C00FD95C1 /* PrivacyTVC.swift in Sources */,
 				EF15237A1FFEC43000ADAD1F /* CustomTextField.swift in Sources */,
 				EF43F89F1F8FF461008A1040 /* AirportAreaURL.swift in Sources */,
 				EF17F7371F7EE39000E7159A /* PointsOfInterestResult.swift in Sources */,
