@@ -29,7 +29,7 @@ class PrivacyTVC: UITableViewController {
 extension PrivacyTVC {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 600
+        return UITableViewAutomaticDimension
     }
     
 }

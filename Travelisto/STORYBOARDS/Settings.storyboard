@@ -131,41 +131,43 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjn-ta-YzR">
-                                            <rect key="frame" x="27" y="21" width="189" height="25"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-oo-d3y">
+                                            <rect key="frame" x="27" y="21" width="303" height="24"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjn-ta-YzR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="179" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="179" id="nka-5b-OW7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHG-s6-S2O">
+                                                    <rect key="frame" x="189" y="0.0" width="114" height="24"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="189" id="3uj-dG-54C"/>
+                                                <constraint firstAttribute="width" constant="303" id="Krw-Q6-Bi6"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHG-s6-S2O">
-                                            <rect key="frame" x="214" y="21" width="114" height="24"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="114" id="I7S-Ca-CH0"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        </stackView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forward-52" translatesAutoresizingMaskIntoConstraints="NO" id="Y0o-mU-oxC">
                                             <rect key="frame" x="338" y="25" width="15" height="15"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="15" id="UFu-rQ-1Ym"/>
+                                                <constraint firstAttribute="width" constant="15" id="bAK-6Y-uoD"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Y0o-mU-oxC" firstAttribute="top" secondItem="5RV-4J-sIm" secondAttribute="top" constant="25" id="A1k-fk-ShA"/>
-                                        <constraint firstAttribute="bottom" secondItem="Y0o-mU-oxC" secondAttribute="bottom" constant="26.5" id="DpB-oF-6ve"/>
-                                        <constraint firstAttribute="trailing" secondItem="Y0o-mU-oxC" secondAttribute="trailing" constant="22" id="Hos-jk-hiU"/>
-                                        <constraint firstItem="PHG-s6-S2O" firstAttribute="leading" secondItem="cjn-ta-YzR" secondAttribute="trailing" constant="-2" id="Qzq-sp-blc"/>
-                                        <constraint firstAttribute="bottom" secondItem="PHG-s6-S2O" secondAttribute="bottom" constant="21" id="aiq-ku-LFY"/>
-                                        <constraint firstItem="cjn-ta-YzR" firstAttribute="top" secondItem="5RV-4J-sIm" secondAttribute="top" constant="21" id="eSy-sG-7u7"/>
-                                        <constraint firstItem="PHG-s6-S2O" firstAttribute="top" secondItem="5RV-4J-sIm" secondAttribute="top" constant="21" id="gQh-eQ-5dF"/>
-                                        <constraint firstItem="cjn-ta-YzR" firstAttribute="leading" secondItem="5RV-4J-sIm" secondAttribute="leading" constant="27" id="vMv-B4-dEs"/>
-                                        <constraint firstAttribute="bottom" secondItem="cjn-ta-YzR" secondAttribute="bottom" constant="21" id="ywL-eS-XY4"/>
+                                        <constraint firstAttribute="bottom" secondItem="Y0o-mU-oxC" secondAttribute="bottom" constant="26.5" id="Bce-m5-qwv"/>
+                                        <constraint firstAttribute="trailing" secondItem="Y0o-mU-oxC" secondAttribute="trailing" constant="22" id="EmA-j9-Dea"/>
+                                        <constraint firstItem="Y0o-mU-oxC" firstAttribute="top" secondItem="5RV-4J-sIm" secondAttribute="top" constant="25" id="GjO-Fs-cZk"/>
+                                        <constraint firstItem="5Cr-oo-d3y" firstAttribute="leading" secondItem="5RV-4J-sIm" secondAttribute="leading" constant="27" id="VFh-k4-9WF"/>
+                                        <constraint firstAttribute="bottom" secondItem="5Cr-oo-d3y" secondAttribute="bottom" constant="21" id="cWa-ab-4XV"/>
+                                        <constraint firstItem="5Cr-oo-d3y" firstAttribute="top" secondItem="5RV-4J-sIm" secondAttribute="top" constant="21" id="qNc-CP-of4"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -314,23 +316,21 @@
         <scene sceneID="GgH-fR-Kn5">
             <objects>
                 <tableViewController id="wLv-Bs-1dh" customClass="PrivacyTVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gbr-Cj-kEP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gbr-Cj-kEP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <inset key="scrollIndicatorInsets" minX="25" minY="20" maxX="0.0" maxY="20"/>
+                        <inset key="scrollIndicatorInsets" minX="10" minY="20" maxX="10" maxY="20"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="privacyTVCell" rowHeight="483" id="Ipr-mj-8xX" customClass="PrivacyTVCell" customModule="Travelisto" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="483"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="privacyTVCell" rowHeight="228" id="Ipr-mj-8xX" customClass="PrivacyTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="228"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ipr-mj-8xX" id="9mj-yp-eSe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="482.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="227.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FMB-Ks-xId">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="482.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <inset key="scrollIndicatorInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oth-Ls-JL9">
+                                            <rect key="frame" x="25" y="10" width="325" height="207.5"/>
                                             <mutableString key="text">                          Travelisto Terms of Service
 
 1. Terms
@@ -339,28 +339,15 @@
 
 2. Use License
 
-  
-    
-      Permission is granted to temporarily download one copy of the materials (information or software) on Travelisto's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
-
-      
-        modify or copy the materials;
-        use the materials for any commercial purpose, or for any public display (commercial or non-commercial);
-        attempt to decompile or reverse engineer any software contained on Travelisto's website;
-        remove any copyright or other proprietary notations from the materials; or
-        transfer the materials to another person or "mirror" the materials on any other server.
-      
-    
+      Permission is granted to temporarily download one copy of the materials (information or software) on Travelisto's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials;
+use the materials for any commercial purpose, or for any public display (commercial or non commercial); attempt to decompile or reverse engineer any software contained on Travelisto's website; remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or "mirror" the materials on any other server.  
     This license shall automatically terminate if you violate any of these restrictions and may be terminated by Travelisto at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
   
-
 3. Disclaimer
 
-  
     The materials on Travelisto's website are provided on an 'as is' basis. Travelisto makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
     Further, Travelisto does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
   
-
 4. Limitations
 
   In no event shall Travelisto or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Travelisto's website, even if Travelisto or a Travelisto authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
@@ -383,14 +370,15 @@
 
 						</mutableString>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="FMB-Ks-xId" firstAttribute="leading" secondItem="9mj-yp-eSe" secondAttribute="leading" constant="16" id="CRb-eB-4EH"/>
-                                        <constraint firstItem="FMB-Ks-xId" firstAttribute="top" secondItem="9mj-yp-eSe" secondAttribute="top" id="Gro-bi-lTH"/>
-                                        <constraint firstAttribute="trailing" secondItem="FMB-Ks-xId" secondAttribute="trailing" constant="16" id="MK0-mD-gBf"/>
-                                        <constraint firstAttribute="bottom" secondItem="FMB-Ks-xId" secondAttribute="bottom" id="ko5-Ck-Wfg"/>
+                                        <constraint firstAttribute="bottom" secondItem="oth-Ls-JL9" secondAttribute="bottom" constant="10" id="KqW-xh-kbK"/>
+                                        <constraint firstAttribute="trailing" secondItem="oth-Ls-JL9" secondAttribute="trailing" constant="25" id="QhN-TY-HMQ"/>
+                                        <constraint firstItem="oth-Ls-JL9" firstAttribute="leading" secondItem="9mj-yp-eSe" secondAttribute="leading" constant="25" id="ele-Je-NM7"/>
+                                        <constraint firstItem="oth-Ls-JL9" firstAttribute="top" secondItem="9mj-yp-eSe" secondAttribute="top" constant="10" id="tPm-kd-ku5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
