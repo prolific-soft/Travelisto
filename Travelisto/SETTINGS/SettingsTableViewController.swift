@@ -16,6 +16,8 @@ class SettingsTableViewController: UITableViewController {
     let valueArray = ["English", "USD", " ", "Imperial", " "]
     
     var languages : [Clanguage]?
+    var currencies : CcurrencyStruct?
+    var moneyType = [String : Ccurrency]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,6 +121,18 @@ extension SettingsTableViewController {
             print("Error Loading Languages : \(error)")
         }
         
+        //Load Currency
+        let currencyfilePath = Bundle.main.path(forResource: "currency", ofType: "json")
+        let currencyUrl = URL(fileURLWithPath: currencyfilePath!)
+        
+        do {
+            let currencyData = try Data(contentsOf: currencyUrl)
+            let money = try JSONDecoder().decode([String : Ccurrency].self, from: currencyData)
+            currencies = CcurrencyStruct(data: money)
+        }catch let error as NSError {
+            print("Error Loading Currency : \(error)")
+        }
+        
         
         
     }
@@ -132,8 +146,18 @@ extension SettingsTableViewController {
             
             guard let indexPath = sender as? NSIndexPath else { return }
             
+            //Currency
+            if indexPath.row == 1 {
+                _ = tableView.cellForRow(at: indexPath as IndexPath) as? LanguageTVCell
+                if let settingSelectionTVC = segue.destination as? SettingSelectionTVC {
+                    settingSelectionTVC.navigationItem.title =  keyArray[indexPath.row]
+                    guard let loadedCurrencies = self.currencies?.data else { return }
+                    settingSelectionTVC.currencies = loadedCurrencies
+                }
+            }
+            
             //Reminder
-            if indexPath.row == 2 {
+            else if indexPath.row == 2 {
                 _ = tableView.cellForRow(at: indexPath as IndexPath) as? RemindersTVCell
                 if let remindersTVC = segue.destination as? SettingSelectionTVC {
                     remindersTVC.navigationItem.title =  keyArray[indexPath.row]
@@ -151,7 +175,7 @@ extension SettingsTableViewController {
                 _ = tableView.cellForRow(at: indexPath as IndexPath) as? LanguageTVCell
                 if let settingSelectionTVC = segue.destination as? SettingSelectionTVC {
                     settingSelectionTVC.navigationItem.title =  keyArray[indexPath.row]
-                    settingSelectionTVC.data = languages
+                    settingSelectionTVC.languages = languages
                 }
             }
         }

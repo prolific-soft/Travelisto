@@ -18,3 +18,30 @@ struct Clanguage : Codable {
     let nativeName : String
 
 }
+
+//Currency
+struct Csymbol : Codable {
+    let grapheme : String
+    let template : String
+    let rtl : Bool
+}
+//struct CuniqueSymbol : Codable {
+//    let grapheme : String
+//    let template : String
+//    let rtl : Bool
+//}
+struct Ccurrency : Codable {
+    let name : String
+    let fractionSize : Int
+    let symbol : Csymbol?
+    let uniqSymbol : Csymbol?
+}
+
+struct CcurrencyStruct : Codable {
+    let data : [String : Ccurrency]
+    
+    init(data : [String : Ccurrency] ) {
+        self.data = data
+    }
+}
+//Airports

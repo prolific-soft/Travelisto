@@ -15,22 +15,34 @@ class SettingSelectionTVC: UITableViewController, UISearchBarDelegate {
         
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
+        searchController.dimsBackgroundDuringPresentation = true
         searchController.searchBar.delegate = self
         navigationItem.hidesSearchBarWhenScrolling = true
-        
-        if let dData = data {
-            currentData = dData
-        }
+ 
         
     }
     
-    var currentData = [Codable]()
-    var data : [Codable]?{
+    var dataCount = 0
+
+    //Languages
+    var languages : [Clanguage]?{
         didSet {
-            print("Data was set @ Setting Selection")
-            
+            dataCount = languages?.count ?? 0
+            filteredLanguages = languages
         }
     }
+    var filteredLanguages : [Clanguage]?
+    
+    
+    
+    //Currencies
+    var currencies : [String : Ccurrency]?{
+        didSet {
+            dataCount = currencies?.count ?? 0
+            filteredCurrency = currencies
+        }
+    }
+    var filteredCurrency : [String : Ccurrency]?
     
 
     
@@ -47,17 +59,36 @@ class SettingSelectionTVC: UITableViewController, UISearchBarDelegate {
 extension SettingSelectionTVC {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if(currentData is [Clanguage]){
-            guard !searchText.isEmpty else {
-                currentData = data!
-                tableView.reloadData()
-                return
+       
+        //Filter languages
+        if languages != nil {
+            if !searchText.isEmpty {
+                filteredLanguages = languages?.filter { language in
+                    return language.name.lowercased().contains(searchText.lowercased())
+                }
+                dataCount = (filteredLanguages?.count)!
+            } else {
+                filteredLanguages = languages
+                dataCount = (filteredLanguages?.count)!
             }
-            currentData = data!.filter({ (word) -> Bool in
-                return (word as! Clanguage).name.lowercased().contains(searchText.lowercased())
-            })
             tableView.reloadData()
         }
+        
+        //Filter Currencies
+        if currencies != nil {
+            if !searchText.isEmpty {
+                filteredCurrency = currencies?.filter({ (currencyDict) -> Bool in
+                    return currencyDict.value.name.lowercased().contains(searchText.lowercased())
+                })
+                dataCount = (filteredCurrency?.count)!
+            } else {
+                filteredCurrency = currencies
+                dataCount = (filteredCurrency?.count)!
+            }
+            tableView.reloadData()
+        }
+
+        
     }
 
     
@@ -84,18 +115,27 @@ extension SettingSelectionTVC {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentData.count
+        return dataCount
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SettingsCells.settingSelectionTVCell.rawValue) as!
         SettingSelectionTVCell
         
-        let singleData = currentData[indexPath.row]
         
-        if singleData is Clanguage {
-            cell.subtitleLabel.text = (singleData as! Clanguage).name
-            cell.valueLabel.text = (singleData as! Clanguage).nativeName
+        if let loadedLanguages = filteredLanguages {
+            let singleLanguage = loadedLanguages[indexPath.row]
+            cell.subtitleLabel.text = singleLanguage.name
+            cell.valueLabel.text = singleLanguage.nativeName
+            cell.accessoryIcon.isHidden = true
+        }
+        
+        
+        if let loadedCurrencies = filteredCurrency {
+            let singleCurrencyKey = Array(loadedCurrencies.keys)[indexPath.row]
+            let currency = loadedCurrencies[singleCurrencyKey]
+            cell.subtitleLabel.text = currency?.name
+            cell.valueLabel.text = "\(currency?.symbol?.grapheme  ?? " ") (\(singleCurrencyKey))"
             cell.accessoryIcon.isHidden = true
         }
         
