@@ -45,11 +45,20 @@ class SettingSelectionTVC: UITableViewController, UISearchBarDelegate {
     var filteredCurrency : [String : Ccurrency]?
     
 
+    //Units
+    var units : [String : Cunit]?{
+        didSet {
+            dataCount = units?.count ?? 0
+            filteredUnit = units
+        }
+    }
+    var filteredUnit : [String : Cunit]?
+    
     
     var isSelected = false
     
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
-    navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
  
 }
@@ -84,6 +93,21 @@ extension SettingSelectionTVC {
             } else {
                 filteredCurrency = currencies
                 dataCount = (filteredCurrency?.count)!
+            }
+            tableView.reloadData()
+        }
+        
+        
+        //Filter Units
+        if units != nil {
+            if !searchText.isEmpty {
+                filteredUnit = units?.filter({ (unitDict) -> Bool in
+                    return unitDict.value.name.lowercased().contains(searchText.lowercased())
+                })
+                dataCount = (filteredUnit?.count)!
+            } else {
+                filteredUnit = units
+                dataCount = (filteredUnit?.count)!
             }
             tableView.reloadData()
         }
@@ -136,6 +160,14 @@ extension SettingSelectionTVC {
             let currency = loadedCurrencies[singleCurrencyKey]
             cell.subtitleLabel.text = currency?.name
             cell.valueLabel.text = "\(currency?.symbol?.grapheme  ?? " ") (\(singleCurrencyKey))"
+            cell.accessoryIcon.isHidden = true
+        }
+        
+        if let loadedUnits = filteredUnit {
+            let singleUnitKey = Array(loadedUnits.keys)[indexPath.row]
+            let unit = loadedUnits[singleUnitKey]
+            cell.subtitleLabel.text = singleUnitKey
+            cell.valueLabel.text = unit?.name
             cell.accessoryIcon.isHidden = true
         }
         

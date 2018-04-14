@@ -10,15 +10,17 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+    
+    //Class Properties
     var settingsData : [String : String]!
-
     let keyArray = ["Language", "Currency", "Reminders", "Units", "Privacy"]
     let valueArray = ["English", "USD", " ", "Imperial", " "]
-    
     var languages : [Clanguage]?
     var currencies : CcurrencyStruct?
-    var moneyType = [String : Ccurrency]()
+    var units : CunitStruct?
     
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -133,6 +135,17 @@ extension SettingsTableViewController {
             print("Error Loading Currency : \(error)")
         }
         
+        //Load Units
+        let unitfilePath = Bundle.main.path(forResource: "units", ofType: "json")
+        let unitUrl = URL(fileURLWithPath: unitfilePath!)
+        
+        do {
+            let unitData = try Data(contentsOf: unitUrl)
+            let unitType = try JSONDecoder().decode([String : Cunit].self, from: unitData)
+            units = CunitStruct(data: unitType)
+        }catch let error as NSError {
+            print("Error Loading U : \(error)")
+        }
         
         
     }
@@ -169,8 +182,17 @@ extension SettingsTableViewController {
                 if let privacyTVC = segue.destination as? PrivacyTVC {
                     privacyTVC.navigationItem.title =  keyArray[indexPath.row]
                 }
+                
+                //Units
+            } else if indexPath.row == 3 {
+                _ = tableView.cellForRow(at: indexPath as IndexPath) as? LanguageTVCell
+                if let settingSelectionTVC = segue.destination as? SettingSelectionTVC {
+                    settingSelectionTVC.navigationItem.title =  keyArray[indexPath.row]
+                    guard let loadedUnit = self.units?.data else { return }
+                    settingSelectionTVC.units = loadedUnit
+                }
               
-                //Language, Unit & Currency
+                //Language
             }else {
                 _ = tableView.cellForRow(at: indexPath as IndexPath) as? LanguageTVCell
                 if let settingSelectionTVC = segue.destination as? SettingSelectionTVC {

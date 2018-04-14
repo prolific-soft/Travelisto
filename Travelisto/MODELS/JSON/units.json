@@ -1,0 +1,176 @@
+{
+   "metric":{
+      "name":"Metric System",
+      "notes":"Should become a category!"
+   },
+   "si":{
+      "name":"International System of Units",
+      "inherits":"metric"
+   },
+   "astronomical":{
+      "name":"Astronomical Units",
+      "inherits":"si"
+   },
+   "siCommon":{
+      "name":"Common Non-Scientific Metric (SI)",
+      "inherits":"si"
+   },
+   "australia":{
+      "name":"Common Australian Metric (SI)",
+      "inherits":"siCommon"
+   },
+   "canada":{
+      "name":"Common Canadian Metric (SI)",
+      "inherits":"siCommon"
+   },
+   "legacyMetric":{
+      "name":"Legacy Metric Systems",
+      "historical":true,
+      "inherits":"metric"
+   },
+   "cgs":{
+      "name":"Centimetre-Gram-Second Unit System",
+      "historical":true,
+      "inherits":"legacyMetric"
+   },
+   "mts":{
+      "name":"Metre-Tonne-Second Unit System",
+      "historical":true,
+      "inherits":"legacyMetric"
+   },
+   "mks":{
+      "name":"Metre-Kilogramme-Second Unit System",
+      "historical":true,
+      "inherits":"legacyMetric"
+   },
+   "gravitational":{
+      "name":"Gravitational Metric System",
+      "historical":true,
+      "inherits":"legacyMetric"
+   },
+   "naturalUnitSystems":{
+      "name":"Natural Unit Systems",
+      "category":true,
+      "notes":"A set of systems that hold certain universal constants to 1"
+   },
+   "planck":{
+      "name":"Planck Units",
+      "inherits":"naturalUnitSystems",
+      "notes":"Sets c = G = ħ = kB = 1"
+   },
+   "natural":{
+      "name":"Natural Units",
+      "inherits":"naturalUnitSystems",
+      "notes":"Sets c = ħ = kB = 1"
+   },
+   "stoney":{
+      "name":"Stoney Units",
+      "inherits":"naturalUnitSystems",
+      "notes":"Sets c = G = e = kB = 1; c = 1/α"
+   },
+   "hartree":{
+      "name":"Hartree Atomic Units",
+      "inherits":"naturalUnitSystems",
+      "notes":"Sets e = mₑ = ħ = kB = 1; c = 1/α"
+   },
+   "rydberg":{
+      "name":"Rydberg Atomic Units",
+      "inherits":"naturalUnitSystems",
+      "notes":"Sets e/√2 = 2mₑ = ħ = kB = 1; c = 2/α"
+   },
+   "qcd":{
+      "name":"Quantum Chromodynamics Units (QCD)",
+      "inherits":"naturalUnitSystems",
+      "notes":"Sets c = mp = ħ = kB = 1"
+   },
+   "internationalNautical":{
+      "name":"International Nautical Measure"
+   },
+   "imperial":{
+      "name":"UK Imperial Units"
+   },
+   "imperialNautical":{
+      "name":"Imperial Nautical Units",
+      "historical":true,
+      "inherits":"imperial"
+   },
+   "englishEngineering":{
+      "name":"English Engineering System",
+      "historical":true,
+      "inherits":"imperial"
+   },
+   "britishGravitational":{
+      "name":"British Gravitational System",
+      "historical":true,
+      "inherits":"imperial"
+   },
+   "absoluteEnglish":{
+      "name":"Absolute English System",
+      "historical":true,
+      "inherits":"imperial"
+   },
+   "usCustomary":{
+      "name":"US Customary Units",
+      "notes":"The American System of Measures"
+   },
+   "avoirdupois":{
+      "name":"Avoirdupois Units",
+      "inherits":"usCustomary"
+   },
+   "usSurvey":{
+      "name":"US Survey Units",
+      "inherits":"usCustomary"
+   },
+   "usNautical":{
+      "name":"International Nautical Units",
+      "inherits":"usCustomary"
+   },
+   "usFoodNutrition":{
+      "name":"US Food Nutrition Labeling Units",
+      "inherits":"usCustomary"
+   },
+   "englishUnits":{
+      "name":"Traditional English Units",
+      "historical":true,
+      "notes":"..."
+   },
+   "apothecaries":{
+      "name":"Apothecaries' Units",
+      "historical":true,
+      "inherits":"englishUnits"
+   },
+   "troy":{
+      "name":"Troy Weight",
+      "historical":true,
+      "inherits":"englishUnits"
+   },
+   "nonStandard":{
+      "name":"Non-Standard Units",
+      "notes":"Units that don't fit into a specific system"
+   },
+   "traditionalChinese":{
+      "name":"Traditional Chinese Units",
+      "historical":true,
+      "notes":"..."
+   },
+   "oldEuropean":{
+      "name":"Old European Units",
+      "historical":true,
+      "notes":"..."
+   },
+   "ancient":{
+      "name":"Ancient Units",
+      "historical":true,
+      "notes":"..."
+   },
+   "biblical":{
+      "name":"Biblical Units",
+      "historical":true,
+      "inherits":"ancient"
+   },
+   "ancientRoman":{
+      "name":"Ancient Roman Units",
+      "historical":true,
+      "inherits":"ancient"
+   }
+}

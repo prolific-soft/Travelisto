@@ -25,11 +25,6 @@ struct Csymbol : Codable {
     let template : String
     let rtl : Bool
 }
-//struct CuniqueSymbol : Codable {
-//    let grapheme : String
-//    let template : String
-//    let rtl : Bool
-//}
 struct Ccurrency : Codable {
     let name : String
     let fractionSize : Int
@@ -44,4 +39,31 @@ struct CcurrencyStruct : Codable {
         self.data = data
     }
 }
-//Airports
+
+//Units
+struct Cunit : Codable {
+    let name : String
+    let historical : Bool?
+    let inherits : String?
+}
+
+struct CunitStruct : Codable {
+    let data : [String : Cunit]
+    
+    init(data : [String : Cunit] ) {
+        self.data = data
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
