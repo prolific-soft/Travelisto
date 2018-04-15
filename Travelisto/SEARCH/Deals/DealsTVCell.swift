@@ -13,6 +13,10 @@ class DealsTVCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
 
     @IBOutlet weak var dealsCollectionView: UICollectionView!
     
+    
+    var dummyDataCount : Int?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         dealsCollectionView.delegate = self
@@ -58,11 +62,11 @@ extension DealsTVCell {
 extension DealsTVCell {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return dummyDataCount!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlightSuggestionCell.dealsCVCell.rawValue, for: indexPath) as! DealsCVCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCells.dealsCVCell.rawValue, for: indexPath) as! DealsCVCell
         return cell
     }
     

@@ -102,6 +102,9 @@
 		EF3656E5207D85A000B2AB3C /* DealsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3656E4207D85A000B2AB3C /* DealsTVCell.swift */; };
 		EF3656E7207DAC4F00B2AB3C /* PopularDestinationCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3656E6207DAC4F00B2AB3C /* PopularDestinationCVCell.swift */; };
 		EF3656E9207DB2F300B2AB3C /* DealsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3656E8207DB2F300B2AB3C /* DealsCVCell.swift */; };
+		EF37482420837E7A00A45AB7 /* DestinationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37482320837E7A00A45AB7 /* DestinationTVCell.swift */; };
+		EF37482620837E9800A45AB7 /* DestinationCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37482520837E9800A45AB7 /* DestinationCVCell.swift */; };
+		EF37482A2083831B00A45AB7 /* SearchCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3748292083831B00A45AB7 /* SearchCells.swift */; };
 		EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F8981F8DD21D008A1040 /* BaseURL.swift */; };
 		EF43F89B1F8E3975008A1040 /* InspirationURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89A1F8E3975008A1040 /* InspirationURL.swift */; };
 		EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */; };
@@ -251,6 +254,9 @@
 		EF3656E4207D85A000B2AB3C /* DealsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsTVCell.swift; sourceTree = "<group>"; };
 		EF3656E6207DAC4F00B2AB3C /* PopularDestinationCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDestinationCVCell.swift; sourceTree = "<group>"; };
 		EF3656E8207DB2F300B2AB3C /* DealsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsCVCell.swift; sourceTree = "<group>"; };
+		EF37482320837E7A00A45AB7 /* DestinationTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationTVCell.swift; sourceTree = "<group>"; };
+		EF37482520837E9800A45AB7 /* DestinationCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCVCell.swift; sourceTree = "<group>"; };
+		EF3748292083831B00A45AB7 /* SearchCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCells.swift; sourceTree = "<group>"; };
 		EF43F8981F8DD21D008A1040 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		EF43F89A1F8E3975008A1040 /* InspirationURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationURL.swift; sourceTree = "<group>"; };
 		EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAutoCompleteURL.swift; sourceTree = "<group>"; };
@@ -717,6 +723,9 @@
 			isa = PBXGroup;
 			children = (
 				EF3656D6207D326300B2AB3C /* SearchTableViewController.swift */,
+				EF3748292083831B00A45AB7 /* SearchCells.swift */,
+				EF37482120837DC800A45AB7 /* Destination */,
+				EF3656E3207D856500B2AB3C /* Deals */,
 				EF3656D8207D424C00B2AB3C /* FLIGHT SUGGESTION */,
 				EF3656DB207D46B000B2AB3C /* HOTEL SUGGESTION */,
 			);
@@ -753,7 +762,6 @@
 				EF3656D9207D429600B2AB3C /* FlightSuggestionTVC.swift */,
 				EF3656DF207D845400B2AB3C /* FlightSuggestionCell.swift */,
 				EF3656DE207D841800B2AB3C /* Popular Destination Cell */,
-				EF3656E3207D856500B2AB3C /* Deals */,
 			);
 			path = "FLIGHT SUGGESTION";
 			sourceTree = "<group>";
@@ -784,6 +792,15 @@
 				EF3656E8207DB2F300B2AB3C /* DealsCVCell.swift */,
 			);
 			path = Deals;
+			sourceTree = "<group>";
+		};
+		EF37482120837DC800A45AB7 /* Destination */ = {
+			isa = PBXGroup;
+			children = (
+				EF37482320837E7A00A45AB7 /* DestinationTVCell.swift */,
+				EF37482520837E9800A45AB7 /* DestinationCVCell.swift */,
+			);
+			path = Destination;
 			sourceTree = "<group>";
 		};
 		EF43F8A01F90264D008A1040 /* Airport URL */ = {
@@ -1041,6 +1058,7 @@
 				EF138322207F072300FD95C1 /* RelaxationTVCell.swift in Sources */,
 				EF156BA21F9A65DE00924A89 /* AuthService.swift in Sources */,
 				EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */,
+				EF37482620837E9800A45AB7 /* DestinationCVCell.swift in Sources */,
 				EF17CAF01F7C599A00E938AC /* Destinations.swift in Sources */,
 				EF17CAE31F7C030E00E938AC /* PointsOfInterestNetworkProcessor.swift in Sources */,
 				EF3656E2207D850500B2AB3C /* PopularDestinationTVCell.swift in Sources */,
@@ -1077,6 +1095,7 @@
 				EF13832F20800F2300FD95C1 /* SettingsTableViewController.swift in Sources */,
 				EF43F89B1F8E3975008A1040 /* InspirationURL.swift in Sources */,
 				EF138324207F118500FD95C1 /* TripsTableViewController.swift in Sources */,
+				EF37482A2083831B00A45AB7 /* SearchCells.swift in Sources */,
 				EF140D72207E5FF800DB8063 /* HotelPopulationDestinationCVCell.swift in Sources */,
 				EFFD278E207EFF03004E7191 /* TripToCVCell.swift in Sources */,
 				EF17CAFE1F7CB53000E938AC /* HotelAirports.swift in Sources */,
@@ -1093,6 +1112,7 @@
 				EF7208581F83E55000E1824D /* CustomError.swift in Sources */,
 				EF156B961F98514300924A89 /* RestuarantURL.swift in Sources */,
 				EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */,
+				EF37482420837E7A00A45AB7 /* DestinationTVCell.swift in Sources */,
 				EF156B9A1F9859D500924A89 /* RestuarantAPISearchBy.swift in Sources */,
 				EF1523801FFED3AB00ADAD1F /* CreateAccountViewController.swift in Sources */,
 				EF138337208010DD00FD95C1 /* RemindersTVCell.swift in Sources */,
@@ -1266,7 +1286,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8V82X98L5Q;
 				INFOPLIST_FILE = Travelisto/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.chidiemeh184.Travelisto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1283,7 +1303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8V82X98L5Q;
 				INFOPLIST_FILE = Travelisto/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.chidiemeh184.Travelisto;
 				PRODUCT_NAME = "$(TARGET_NAME)";

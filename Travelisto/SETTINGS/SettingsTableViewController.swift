@@ -13,16 +13,25 @@ class SettingsTableViewController: UITableViewController {
     
     //Class Properties
     var settingsData : [String : String]!
-    let keyArray = ["Language", "Currency", "Reminders", "Units", "Privacy"]
+    let keyArray = ["Language", "Currency", "Reminders", "Units", "Privacy Policy"]
     let valueArray = ["English", "USD", " ", "Imperial", " "]
     var languages : [Clanguage]?
     var currencies : CcurrencyStruct?
     var units : CunitStruct?
     
     
-
+    @IBOutlet weak var proifleImageViev: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Set Up Profile Image
+        proifleImageViev.layer.borderWidth = 0.5
+        proifleImageViev.layer.masksToBounds = false
+        proifleImageViev.layer.borderColor = UIColor.lightGray.cgColor
+        proifleImageViev.layer.cornerRadius = proifleImageViev.frame.height/2
+        proifleImageViev.clipsToBounds = true
+        
         loadData()
     }
     
