@@ -5,4 +5,4 @@ framework module FirebaseStorage {
   link "z"
   link framework "MobileCoreServices"
   link framework "Security"
-}
+  link framework "SystemConfiguration"}

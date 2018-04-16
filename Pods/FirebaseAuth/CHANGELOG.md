@@ -1,3 +1,70 @@
+# v4.6.0
+- Adds `getIDTokenResultWithCompletion:` and `getIDTokenResultForcingRefresh:completion:` APIs which
+  call back with an AuthTokenResult object. The Auth token result object contains the ID token JWT string and other properties associated with the token including the decoded available payload claims (#1004).
+
+- Adds the `updateCurrentUser:completion:` API which sets the currentUser on the calling Auth instance to the provided user object (#1018).
+
+- Adds client-side validation to prevent setting `handleCodeInApp` to false when performing
+  email-link authentication. If `handleCodeInApp` is set to false an invalid argument exception
+  is thrown (#931).
+
+- Adds support for passing the deep link (which is embedded in the sign-in link sent via email) to the
+  `signInWithEmail:link:completion:` and `isSignInWithEmailLink:` methods during an
+  email/link sign-in flow (#1023).
+
+# v4.5.0
+- Adds new API which provides a way to determine the sign-in methods associated with an
+  email address.
+- Adds new API which allows authentication using only an email link (Passwordless Authentication
+  with email link).
+
+# v4.4.4
+- Addresses CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF warnings that surface in newer versions of
+  Xcode and CocoaPods.
+- Improves FIRUser documentation with clear message explaining when Firebase Auth attempts to validate
+  users and what happens when an invalidated user is detected (#694) .
+
+# v4.4.3
+- Adds an explicit dependency on CoreGraphics from Firebase Auth.
+
+# v4.4.2
+- Fixes bug where the FIRAuthResult object returned following a Phone Number authentication
+  always contained a nil FIRAdditionalUserInfo object. Now the FIRAdditionalUserInfo object is
+  never nil and its newUser field is populated correctly.
+
+# v4.4.0
+- Adds new APIs which return an AuthDataResult object after successfully creating an
+  Email/Password user, signing in anonymously, signing in with Email/Password and signing
+  in with Custom Token. The AuthDataResult object contains the new user and additional
+  information pertaining to the new user.
+
+# v4.3.2
+- Improves error handling for the phone number sign-in reCAPTCHA flow.
+- Improves error handling for phone number linking flow.
+- Fixes issue where after linking an anonymous user to a phone number the user remained
+  anonymous.
+
+# v4.3.1
+- Internal clean up.
+
+# v4.3.0
+- Provides account creation and last sign-in dates as metadata to the user
+  object.
+- Returns more descriptive errors for some error cases of the phone number
+  sign-in reCAPTCHA flow.
+- Fixes an issue that invalid users were not automatically signed out earlier.
+- Fixes an issue that ID token listeners were not fired in some cases.
+
+# v4.2.1
+- Fixes a threading issue in phone number auth that completion block was not
+  executed on the main thread in some error cases.
+
+# v4.2.0
+- Adds new phone number verification API which makes use of an intelligent reCAPTCHA to verify the application.
+
+# v4.1.1
+- Improves some method documentation in headers.
+
 # v4.1.0
 - Allows the app to handle continue URL natively, e.g., from password reset
   email.

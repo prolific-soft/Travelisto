@@ -16,8 +16,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "FIRStorageSwiftNameSupport.h"
-
 @class FIRStorageReference;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -29,8 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
  * Objects#resource docs.
  * @see https://cloud.google.com/storage/docs/json_api/v1/objects#resource
  */
-FIR_SWIFT_NAME(StorageMetadata)
-@interface FIRStorageMetadata : NSObject<NSCopying>
+NS_SWIFT_NAME(StorageMetadata)
+@interface FIRStorageMetadata : NSObject <NSCopying>
 
 /**
  * The name of the bucket containing this object.
@@ -61,6 +59,11 @@ FIR_SWIFT_NAME(StorageMetadata)
  * Content-Type of the object data.
  */
 @property(copy, nonatomic, nullable) NSString *contentType;
+
+/**
+ * MD5 hash of the data; encoded using base64.
+ */
+@property(copy, nonatomic, nullable, readonly) NSString *md5Hash;
 
 /**
  * The content generation of this object. Used for object versioning.
@@ -112,20 +115,21 @@ FIR_SWIFT_NAME(StorageMetadata)
 /**
  * An array containing all download URLs available for the object.
  */
-@property(strong, nonatomic, readonly, nullable) NSArray<NSURL *> *downloadURLs;
+@property(strong, nonatomic, readonly, nullable) NSArray<NSURL *> *downloadURLs __deprecated_msg(
+    "Use `StorageReference.downloadURLWithCompletion()` to obtain a current download URL.");
 
 /**
  * Creates an instanece of FIRStorageMetadata from the contents of a dictionary.
  * @return An instance of FIRStorageMetadata that represents the contents of a dictionary.
  */
-- (nullable instancetype)initWithDictionary:(NSDictionary <NSString *, id>*)dictionary
+- (nullable instancetype)initWithDictionary:(NSDictionary<NSString *, id> *)dictionary
     NS_DESIGNATED_INITIALIZER;
 
 /**
  * Creates an NSDictionary from the contents of the metadata.
  * @return An NSDictionary that represents the contents of the metadata.
  */
-- (NSDictionary <NSString *, id>*)dictionaryRepresentation;
+- (NSDictionary<NSString *, id> *)dictionaryRepresentation;
 
 /**
  * Determines if the current metadata represents a "file".
@@ -142,7 +146,8 @@ FIR_SWIFT_NAME(StorageMetadata)
  * Note that if there are many valid download tokens, this will always return the first
  * valid token created.
  */
-- (nullable NSURL *)downloadURL;
+- (nullable NSURL *)downloadURL __deprecated_msg(
+    "Use `StorageReference.downloadURLWithCompletion()` to obtain a current download URL.");
 
 @end
 
