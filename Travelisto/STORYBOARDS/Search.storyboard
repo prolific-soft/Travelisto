@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Medium</string>
-            <string>AvenirNext-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Search-->
         <scene sceneID="s1T-44-PA7">
@@ -80,7 +74,6 @@
                                                 <constraint firstAttribute="width" constant="178" id="eGn-T1-4pw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utu-XY-BE7">
@@ -154,7 +147,6 @@
                                                                                             <constraint firstAttribute="width" constant="117" id="u8r-tg-10i"/>
                                                                                         </constraints>
                                                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$125" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iR2-dg-2h0">
@@ -163,7 +155,6 @@
                                                                                             <constraint firstAttribute="width" constant="46" id="VwT-yZ-RgI"/>
                                                                                         </constraints>
                                                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
@@ -217,7 +208,6 @@
                                                 <constraint firstAttribute="width" constant="178" id="aoX-ft-h71"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELC-eD-nFW">
@@ -354,66 +344,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6WB-yH-ze7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="6WB-yH-ze7" secondAttribute="height" multiplier="75:64" id="0Cw-Zk-55c"/>
-                                    <constraint firstAttribute="height" constant="320" id="zHe-iq-zr7"/>
-                                </constraints>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6WB-yH-ze7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="442"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="ytB-UF-PcS" id="mJA-9Y-2hN"/>
                                 </connections>
                             </mapView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSM-Sf-lyZ">
-                                <rect key="frame" x="16" y="328" width="343" height="38"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port Columbus International Airport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kyk-6Z-FFn">
-                                        <rect key="frame" x="0.0" y="0.0" width="262" height="38"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CMH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aho-vG-gpR">
-                                        <rect key="frame" x="262" y="0.0" width="81" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="81" id="6wC-M8-z5a"/>
-                                            <constraint firstAttribute="height" constant="38" id="mxI-o9-1db"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="6zc-pR-WaZ"/>
-                                </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port Columbus International Airport, Airport road, Columbus Ohio, United States" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJk-KZ-9Cv">
-                                <rect key="frame" x="16" y="374" width="182" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="182" id="wC1-bG-ljI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Port Columbus International Airport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kyk-6Z-FFn">
+                                <rect key="frame" x="33" y="450" width="237" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CMH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aho-vG-gpR">
+                                <rect key="frame" x="272" y="454" width="87" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6WB-yH-ze7" firstAttribute="top" secondItem="S7l-Em-Zb6" secondAttribute="top" id="6fl-o0-QVS"/>
-                            <constraint firstItem="eJk-KZ-9Cv" firstAttribute="top" secondItem="oSM-Sf-lyZ" secondAttribute="bottom" constant="8" id="8jn-6o-yXL"/>
-                            <constraint firstItem="oSM-Sf-lyZ" firstAttribute="top" secondItem="6WB-yH-ze7" secondAttribute="bottom" constant="8" id="C27-vE-Oqm"/>
-                            <constraint firstItem="eJk-KZ-9Cv" firstAttribute="leading" secondItem="rgl-oq-HoP" secondAttribute="leading" constant="16" id="Ddh-Ao-xT3"/>
-                            <constraint firstItem="rgl-oq-HoP" firstAttribute="bottom" secondItem="eJk-KZ-9Cv" secondAttribute="bottom" constant="225" id="MxF-Oc-6gs"/>
-                            <constraint firstItem="oSM-Sf-lyZ" firstAttribute="leading" secondItem="rgl-oq-HoP" secondAttribute="leading" constant="16" id="PyR-E8-Mw9"/>
-                            <constraint firstAttribute="trailing" secondItem="oSM-Sf-lyZ" secondAttribute="trailing" constant="16" id="d4m-s4-7hg"/>
-                            <constraint firstItem="6WB-yH-ze7" firstAttribute="leading" secondItem="rgl-oq-HoP" secondAttribute="leading" id="otL-An-VfJ"/>
-                            <constraint firstItem="6WB-yH-ze7" firstAttribute="trailing" secondItem="rgl-oq-HoP" secondAttribute="trailing" id="pCV-2f-Z8N"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rgl-oq-HoP"/>
                     </view>
                     <connections>
-                        <outlet property="destinationAddress" destination="eJk-KZ-9Cv" id="wIK-x8-hDX"/>
                         <outlet property="destinationCode" destination="Aho-vG-gpR" id="Vp8-nS-MnW"/>
                         <outlet property="destinationNameLabel" destination="kyk-6Z-FFn" id="lE4-ma-OY4"/>
                         <outlet property="detailMapView" destination="6WB-yH-ze7" id="UL0-5j-Tqy"/>

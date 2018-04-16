@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Medium</string>
-            <string>AvenirNext-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Settings-->
         <scene sceneID="MP3-Kw-nvq">
@@ -86,9 +81,9 @@
                                     </subviews>
                                 </stackView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chillybean" translatesAutoresizingMaskIntoConstraints="NO" id="8Iz-FZ-mo7">
-                                    <rect key="frame" x="24" y="32" width="114" height="106"/>
+                                    <rect key="frame" x="24" y="32" width="106" height="106"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="114" id="Id5-vN-Mc0"/>
+                                        <constraint firstAttribute="width" constant="106" id="Id5-vN-Mc0"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
@@ -98,7 +93,7 @@
                                 <constraint firstAttribute="trailing" secondItem="alK-Hc-OCN" secondAttribute="trailing" constant="49" id="8PX-og-3Eq"/>
                                 <constraint firstItem="alK-Hc-OCN" firstAttribute="top" secondItem="uau-Jy-ZwM" secondAttribute="top" constant="49" id="I2W-Zu-Wcb"/>
                                 <constraint firstItem="8Iz-FZ-mo7" firstAttribute="top" secondItem="uau-Jy-ZwM" secondAttribute="top" constant="32" id="Uav-Ex-bnT"/>
-                                <constraint firstItem="alK-Hc-OCN" firstAttribute="leading" secondItem="8Iz-FZ-mo7" secondAttribute="trailing" constant="17" id="ffb-mg-VvO"/>
+                                <constraint firstItem="alK-Hc-OCN" firstAttribute="leading" secondItem="8Iz-FZ-mo7" secondAttribute="trailing" constant="25" id="ffb-mg-VvO"/>
                                 <constraint firstAttribute="bottom" secondItem="8Iz-FZ-mo7" secondAttribute="bottom" constant="20" id="oua-4w-h8o"/>
                                 <constraint firstAttribute="bottom" secondItem="alK-Hc-OCN" secondAttribute="bottom" constant="36" id="yWt-dH-Ymx"/>
                             </constraints>

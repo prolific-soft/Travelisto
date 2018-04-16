@@ -77,7 +77,7 @@ extension SearchCodeTVC {
         let dataToSend = filteredCodes[indexPath.row] as! Cairport
         detailVC.data = dataToSend
         
-        detailVC.preferredContentSize = CGSize(width: 0.0, height: 300)
+        detailVC.preferredContentSize = CGSize(width: 0.0, height: 500)
         
         previewingContext.sourceRect = cell.frame
         return detailVC

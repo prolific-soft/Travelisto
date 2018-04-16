@@ -24,7 +24,7 @@ final class destinationAnnotation: NSObject, MKAnnotation{
     }
     
     var region: MKCoordinateRegion {
-        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let span = MKCoordinateSpanMake(0.01, 0.01)
         return MKCoordinateRegion(center: coordinate, span: span)
     }
     
@@ -37,7 +37,7 @@ class DetailPeekVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var detailMapView: MKMapView!
     @IBOutlet weak var destinationNameLabel: UILabel!
     @IBOutlet weak var destinationCode: UILabel!
-    @IBOutlet weak var destinationAddress: UILabel!
+   // @IBOutlet weak var destinationAddress: UILabel!
     
     var data : Cairport? {
         didSet {
@@ -54,18 +54,19 @@ class DetailPeekVC: UIViewController, MKMapViewDelegate {
         guard let title = data?.name else {return}
         let subtitle = "Airport"
         guard let code = data?.code else {return}
-        guard let state = data?.state else {return}
-        guard let city = data?.city else {return}
-        guard let country = data?.country else {return}
+//        guard let state = data?.state else {return}
+//        guard let city = data?.city else {return}
+//        guard let country = data?.country else {return}
         
         
         let destinationCoordinate = CLLocationCoordinate2D(latitude: Double(lat)! , longitude: Double(lon)!)
         let da = destinationAnnotation(coordinate: destinationCoordinate, title: title, subtitle: subtitle)
         detailMapView.addAnnotation(da)
+        detailMapView.setRegion(da.region, animated: true)
         
         destinationCode.text = code
         destinationNameLabel.text = title
-        destinationAddress.text = "\(city), \(state) \(country)"
+        //destinationAddress.text = "\(city), \(state) \(country)"
         
         
     }
