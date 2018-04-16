@@ -42,13 +42,14 @@ class SearchCodeTVC: UITableViewController, UISearchBarDelegate, UISearchControl
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Where to?"
         searchController.searchBar.tintColor = UIColor(red: 253/255, green: 87/255, blue: 57/255, alpha: 1)
+        searchController.searchBar.setValue("Done", forKey: "_cancelButtonText")
         customSearch = searchController
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
-            self.delayDisplaySearchBar()
-        })
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
+//            self.delayDisplaySearchBar()
+//        })
     }
 
     
@@ -163,7 +164,7 @@ extension SearchCodeTVC {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        self.performSegue(withIdentifier: SearchSegue.toDestinationOptionsVC.rawValue, sender: indexPath)
     }
     
     

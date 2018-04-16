@@ -24,7 +24,7 @@ final class destinationAnnotation: NSObject, MKAnnotation{
     }
     
     var region: MKCoordinateRegion {
-        let span = MKCoordinateSpanMake(0.005, 0.005)
+        let span = MKCoordinateSpanMake(0.01, 0.01)
         return MKCoordinateRegion(center: coordinate, span: span)
     }
     

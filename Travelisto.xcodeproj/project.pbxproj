@@ -86,6 +86,8 @@
 		EF17F74B1F7F216000E7159A /* CarAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */; };
 		EF17F74D1F7F23AD00E7159A /* POIAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */; };
 		EF1C9F421FFDB8B9008084FE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C9F411FFDB8B9008084FE /* TutorialViewController.swift */; };
+		EF2C1E992084F8FA003CEC8D /* DestinationOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C1E982084F8FA003CEC8D /* DestinationOptionsVC.swift */; };
+		EF2C1E9B2084FAE0003CEC8D /* SearchSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C1E9A2084FAE0003CEC8D /* SearchSegue.swift */; };
 		EF3656CC207D2ED400B2AB3C /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CB207D2ED400B2AB3C /* Explore.storyboard */; };
 		EF3656CE207D2F3D00B2AB3C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CD207D2F3D00B2AB3C /* Search.storyboard */; };
 		EF3656D0207D2F8E00B2AB3C /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CF207D2F8E00B2AB3C /* Trips.storyboard */; };
@@ -232,6 +234,8 @@
 		EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPISearchBy.swift; sourceTree = "<group>"; };
 		EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIAPISearchBy.swift; sourceTree = "<group>"; };
 		EF1C9F411FFDB8B9008084FE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		EF2C1E982084F8FA003CEC8D /* DestinationOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationOptionsVC.swift; sourceTree = "<group>"; };
+		EF2C1E9A2084FAE0003CEC8D /* SearchSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSegue.swift; sourceTree = "<group>"; };
 		EF3656CB207D2ED400B2AB3C /* Explore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
 		EF3656CD207D2F3D00B2AB3C /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		EF3656CF207D2F8E00B2AB3C /* Trips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
@@ -678,6 +682,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		EF2C1E972084F8CB003CEC8D /* Destination OPTIONS */ = {
+			isa = PBXGroup;
+			children = (
+				EF2C1E982084F8FA003CEC8D /* DestinationOptionsVC.swift */,
+			);
+			path = "Destination OPTIONS";
+			sourceTree = "<group>";
+		};
 		EF3656CA207D2EA300B2AB3C /* EXPLORE */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,9 +706,11 @@
 			children = (
 				EF3656D6207D326300B2AB3C /* SearchTableViewController.swift */,
 				EF3748292083831B00A45AB7 /* SearchCells.swift */,
+				EF2C1E9A2084FAE0003CEC8D /* SearchSegue.swift */,
 				EF37482120837DC800A45AB7 /* Destination */,
 				EF3656E3207D856500B2AB3C /* Deals */,
 				EF3748392084148600A45AB7 /* SEARCH CODE */,
+				EF2C1E972084F8CB003CEC8D /* Destination OPTIONS */,
 			);
 			path = SEARCH;
 			sourceTree = "<group>";
@@ -987,6 +1001,7 @@
 				EF7208561F82992100E1824D /* LowFareURL.swift in Sources */,
 				EF17CAE11F7C02EA00E938AC /* HotelNetworkProcessor.swift in Sources */,
 				EF17F7471F7F0B1D00E7159A /* FlightAPISearchBy.swift in Sources */,
+				EF2C1E9B2084FAE0003CEC8D /* SearchSegue.swift in Sources */,
 				EF156B9C1F985AD300924A89 /* RestuarantProcessor.swift in Sources */,
 				EF13832D207F228000FD95C1 /* TripsTVCell.swift in Sources */,
 				EF138322207F072300FD95C1 /* RelaxationTVCell.swift in Sources */,
@@ -1058,6 +1073,7 @@
 				EF17F7371F7EE39000E7159A /* PointsOfInterestResult.swift in Sources */,
 				EF17CAEC1F7C0C3900E938AC /* HotelService.swift in Sources */,
 				EF1523761FFEC1C800ADAD1F /* SignInViewController.swift in Sources */,
+				EF2C1E992084F8FA003CEC8D /* DestinationOptionsVC.swift in Sources */,
 				EF17F7311F7EBC8B00E7159A /* VehicleInfo.swift in Sources */,
 				EF17CAFC1F7C9E4200E938AC /* Coordinates.swift in Sources */,
 				EF17F73A1F7EF34800E7159A /* TopFlights.swift in Sources */,
