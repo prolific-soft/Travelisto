@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -273,11 +272,48 @@
                     </refreshControl>
                     <connections>
                         <outlet property="searchSegmentedControl" destination="knM-DC-jqm" id="oQ6-Jt-d75"/>
+                        <segue destination="EVT-ZX-ChA" kind="presentation" identifier="toSearchCountrySelectionTVC" modalPresentationStyle="fullScreen" id="thG-88-Y2e"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5T-Kp-P4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3039" y="2860"/>
+        </scene>
+        <!--Destination-->
+        <scene sceneID="5oC-zd-gS5">
+            <objects>
+                <tableViewController storyboardIdentifier="SearchCodeTVC" id="pRq-wz-kP1" customClass="SearchCodeTVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ctu-NV-uHL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="fd9-gP-6cV">
+                                <rect key="frame" x="0.0" y="28" width="375" height="77"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fd9-gP-6cV" id="x3t-Wm-gDm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pRq-wz-kP1" id="q7a-SG-mbc"/>
+                            <outlet property="delegate" destination="pRq-wz-kP1" id="fnw-3i-BFF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Destination" id="Y1Q-5O-RG6">
+                        <barButtonItem key="rightBarButtonItem" image="Cross" id="qc6-9r-Hoz">
+                            <color key="tintColor" red="0.99215686274509807" green="0.3411764705882353" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="pRq-wz-kP1" id="HMq-h7-8bT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fxj-X2-UQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4360.8000000000002" y="2865.5172413793107"/>
         </scene>
         <!--Search-->
         <scene sceneID="BEz-Ck-mTn">
@@ -298,252 +334,29 @@
             </objects>
             <point key="canvasLocation" x="3040" y="1990.704647676162"/>
         </scene>
-        <!--Hotel SuggestionTVC-->
-        <scene sceneID="sUL-hS-GFc">
+        <!--Navigation Controller-->
+        <scene sceneID="TW4-Qf-m6Q">
             <objects>
-                <tableViewController storyboardIdentifier="HotelSuggestionTVC" id="aHp-Cb-wTO" customClass="HotelSuggestionTVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cag-KW-dee">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hotelPopularDestinationTVCell" rowHeight="263" id="6Oe-VY-h38" customClass="HotelPopularDestinationTVCell" customModule="Travelisto" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="263"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Oe-VY-h38" id="I6I-mt-o7M">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="263"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SHC-5p-2ar">
-                                            <rect key="frame" x="0.0" y="58" width="375" height="185"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="185" id="vlN-bn-ClW"/>
-                                            </constraints>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iz0-yd-x20">
-                                                <size key="itemSize" width="135" height="168"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="16" minY="5" maxX="0.0" maxY="0.0"/>
-                                            </collectionViewFlowLayout>
-                                            <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hotelPopularDestinationCVCell" id="was-U8-ChX" customClass="HotelPopularDestinationCVCell" customModule="Travelisto" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="11" width="135" height="168"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="168"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Netherlands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIb-IT-fvk">
-                                                                <rect key="frame" x="20" y="127" width="95" height="21"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <color key="shadowColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h2" translatesAutoresizingMaskIntoConstraints="NO" id="hmk-ln-gXB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="168"/>
-                                                            </imageView>
-                                                        </subviews>
-                                                    </view>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="hmk-ln-gXB" secondAttribute="bottom" id="4ET-at-IjB"/>
-                                                        <constraint firstItem="hmk-ln-gXB" firstAttribute="top" secondItem="was-U8-ChX" secondAttribute="top" id="9by-i7-o3n"/>
-                                                        <constraint firstAttribute="trailing" secondItem="hmk-ln-gXB" secondAttribute="trailing" id="hIC-PQ-wUj"/>
-                                                        <constraint firstItem="hmk-ln-gXB" firstAttribute="leading" secondItem="was-U8-ChX" secondAttribute="leading" id="i1X-w6-yag"/>
-                                                    </constraints>
-                                                </collectionViewCell>
-                                            </cells>
-                                        </collectionView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Destinations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwQ-5R-K3u">
-                                            <rect key="frame" x="16" y="22" width="178" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="178" id="6Qf-Qx-5ym"/>
-                                                <constraint firstAttribute="height" constant="21" id="YuX-sw-cal"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJm-EL-1m6">
-                                            <rect key="frame" x="246" y="11" width="129" height="35"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="5Gw-HQ-zpj"/>
-                                                <constraint firstAttribute="width" constant="129" id="ciz-fg-nUN"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                            <state key="normal" title="Show more">
-                                                <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="IJm-EL-1m6" secondAttribute="trailing" id="DYr-Kt-MqL"/>
-                                        <constraint firstItem="dwQ-5R-K3u" firstAttribute="leading" secondItem="I6I-mt-o7M" secondAttribute="leading" constant="16" id="Nmu-Ux-baX"/>
-                                        <constraint firstItem="SHC-5p-2ar" firstAttribute="leading" secondItem="I6I-mt-o7M" secondAttribute="leading" id="SRT-zz-rIA"/>
-                                        <constraint firstItem="IJm-EL-1m6" firstAttribute="top" secondItem="I6I-mt-o7M" secondAttribute="top" constant="11" id="Xxj-Au-RHc"/>
-                                        <constraint firstItem="dwQ-5R-K3u" firstAttribute="top" secondItem="I6I-mt-o7M" secondAttribute="top" constant="22" id="Ydg-Ad-bTT"/>
-                                        <constraint firstAttribute="bottom" secondItem="SHC-5p-2ar" secondAttribute="bottom" constant="20" id="cJz-9s-V02"/>
-                                        <constraint firstAttribute="trailing" secondItem="SHC-5p-2ar" secondAttribute="trailing" id="t5E-9P-2qN"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="hotelPopularDestinationCollectionView" destination="SHC-5p-2ar" id="dXE-Dz-e50"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hotelDealsTVCell" rowHeight="195" id="Fyn-hz-o6n" customClass="HotelDealsTVCell" customModule="Travelisto" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="291" width="375" height="195"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fyn-hz-o6n" id="E0g-1V-vog">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="snf-Zb-VQi">
-                                            <rect key="frame" x="0.0" y="32" width="375" height="154"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="154" id="PqM-io-co6"/>
-                                            </constraints>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kPf-we-7ny">
-                                                <size key="itemSize" width="323" height="119"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="16" minY="5" maxX="0.0" maxY="0.0"/>
-                                            </collectionViewFlowLayout>
-                                            <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hotelDealsCVCell" id="O0y-6b-fBh" customClass="HotelDealsCVCell" customModule="Travelisto" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="20" width="323" height="119"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="323" height="119"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2L-hg-8P1">
-                                                                <rect key="frame" x="9" y="7" width="305" height="104"/>
-                                                                <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7.5" translatesAutoresizingMaskIntoConstraints="NO" id="sTq-1g-FLg">
-                                                                        <rect key="frame" x="120" y="8" width="173" height="83"/>
-                                                                        <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A8h-Uu-dLs">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="173" height="21"/>
-                                                                                <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PnW-bz-OO4">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="21"/>
-                                                                                        <constraints>
-                                                                                            <constraint firstAttribute="width" constant="117" id="TGF-ew-iMM"/>
-                                                                                            <constraint firstAttribute="height" constant="21" id="e73-eT-ChG"/>
-                                                                                        </constraints>
-                                                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                        <nil key="highlightedColor"/>
-                                                                                    </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$125" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mpy-fq-2uB">
-                                                                                        <rect key="frame" x="127" y="0.0" width="46" height="21"/>
-                                                                                        <constraints>
-                                                                                            <constraint firstAttribute="width" constant="46" id="xnq-Ue-A30"/>
-                                                                                        </constraints>
-                                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                        <nil key="highlightedColor"/>
-                                                                                    </label>
-                                                                                </subviews>
-                                                                            </stackView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fly now to Paris for as low as $125 if you book now." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wbk-xg-mLn">
-                                                                                <rect key="frame" x="0.0" y="28.5" width="173" height="33"/>
-                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 Deals left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7Ie-by-r6H">
-                                                                                <rect key="frame" x="0.0" y="69" width="173" height="14"/>
-                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
-                                                                                <color key="textColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                        </subviews>
-                                                                    </stackView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country_6" translatesAutoresizingMaskIntoConstraints="NO" id="i64-ei-TId">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="104" id="yCk-Rf-E1T"/>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                </subviews>
-                                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="i64-ei-TId" firstAttribute="bottom" secondItem="x98-44-NcB" secondAttribute="bottom" id="IPO-Uv-KBw"/>
-                                                                    <constraint firstItem="sTq-1g-FLg" firstAttribute="leading" secondItem="y2L-hg-8P1" secondAttribute="leading" constant="120" id="RLx-sU-9sd"/>
-                                                                    <constraint firstItem="i64-ei-TId" firstAttribute="top" secondItem="x98-44-NcB" secondAttribute="top" id="Ztk-5S-0th"/>
-                                                                    <constraint firstItem="sTq-1g-FLg" firstAttribute="top" secondItem="y2L-hg-8P1" secondAttribute="top" constant="8" id="aEN-jz-h34"/>
-                                                                    <constraint firstItem="i64-ei-TId" firstAttribute="leading" secondItem="x98-44-NcB" secondAttribute="leading" id="ruL-QL-YxD"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="sTq-1g-FLg" secondAttribute="bottom" constant="13" id="tRF-Kh-u1Z"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="sTq-1g-FLg" secondAttribute="trailing" constant="12" id="vdC-6A-anc"/>
-                                                                </constraints>
-                                                                <viewLayoutGuide key="safeArea" id="x98-44-NcB"/>
-                                                            </view>
-                                                        </subviews>
-                                                    </view>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="y2L-hg-8P1" secondAttribute="trailing" constant="9" id="2cr-UH-eJh"/>
-                                                        <constraint firstItem="y2L-hg-8P1" firstAttribute="top" secondItem="O0y-6b-fBh" secondAttribute="top" constant="7" id="BGX-XO-zYG"/>
-                                                        <constraint firstItem="y2L-hg-8P1" firstAttribute="leading" secondItem="O0y-6b-fBh" secondAttribute="leading" constant="9" id="gY3-sh-AKA"/>
-                                                        <constraint firstAttribute="bottom" secondItem="y2L-hg-8P1" secondAttribute="bottom" constant="8" id="neL-Ds-raV"/>
-                                                    </constraints>
-                                                </collectionViewCell>
-                                            </cells>
-                                        </collectionView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ull-jP-cYx">
-                                            <rect key="frame" x="16" y="4" width="178" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Amj-be-iPN"/>
-                                                <constraint firstAttribute="width" constant="178" id="JSh-eG-Sbc"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De4-ED-yWn">
-                                            <rect key="frame" x="246" y="5" width="129" height="23"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="23" id="JYP-Nw-9vc"/>
-                                                <constraint firstAttribute="width" constant="129" id="Kg6-Ai-8J1"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                            <state key="normal" title="Show more">
-                                                <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="De4-ED-yWn" secondAttribute="trailing" id="H3i-2x-9DZ"/>
-                                        <constraint firstItem="Ull-jP-cYx" firstAttribute="top" secondItem="E0g-1V-vog" secondAttribute="top" constant="4" id="ZmD-9j-SiA"/>
-                                        <constraint firstAttribute="trailing" secondItem="snf-Zb-VQi" secondAttribute="trailing" id="bLb-mS-PyK"/>
-                                        <constraint firstItem="snf-Zb-VQi" firstAttribute="leading" secondItem="E0g-1V-vog" secondAttribute="leading" id="quQ-FZ-IqV"/>
-                                        <constraint firstAttribute="bottom" secondItem="snf-Zb-VQi" secondAttribute="bottom" constant="9" id="vAJ-0R-svH"/>
-                                        <constraint firstItem="Ull-jP-cYx" firstAttribute="leading" secondItem="E0g-1V-vog" secondAttribute="leading" constant="16" id="wzB-xi-OZC"/>
-                                        <constraint firstItem="De4-ED-yWn" firstAttribute="top" secondItem="E0g-1V-vog" secondAttribute="top" constant="5" id="zch-0w-bCv"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="aHp-Cb-wTO" id="mBS-7T-kYM"/>
-                            <outlet property="delegate" destination="aHp-Cb-wTO" id="BeH-uJ-spB"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Way-7j-Pnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EVT-ZX-ChA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2lC-n8-YJC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pRq-wz-kP1" kind="relationship" relationship="rootViewController" id="jVj-ur-EFP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOe-VC-kQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5588" y="2925"/>
+            <point key="canvasLocation" x="4361" y="1990"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Cross" width="16" height="16"/>
         <image name="country_1" width="1280" height="853"/>
         <image name="country_6" width="1280" height="849"/>
-        <image name="h2" width="1280" height="856"/>
         <image name="search" width="22" height="22"/>
     </resources>
 </document>

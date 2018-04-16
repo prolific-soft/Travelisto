@@ -8,10 +8,11 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate {
     
     //UI Properties
     @IBOutlet weak var searchSegmentedControl: UISegmentedControl!
+    var customSearch : UISearchController?
 
     //var data = [[""], [""]]()
     var position : Int!
@@ -30,15 +31,22 @@ class SearchTableViewController: UITableViewController {
         
         position = 0
         
+        //Destination SearchCodeTVC
+        let searchStoryboard = UIStoryboard(name: "Search", bundle: nil)
+        let destinationVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchCodeTVC")
+        
         //Search Bar
-        let searchController = UISearchController(searchResultsController: nil)
+        let searchController = UISearchController(searchResultsController: destinationVC)
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
         tableView.refreshControl = refresher
         searchController.searchBar.placeholder = "Where to?"
+        customSearch = searchController
     
     }
-    
+
 
     @objc
     private func requestData(){
@@ -50,12 +58,16 @@ class SearchTableViewController: UITableViewController {
     
     //Search Type tapped
     @IBAction func searchSegmentedControlSwitched(_ sender: UISegmentedControl) {
-        
         position = sender.selectedSegmentIndex
         tableView.reloadData()
-
     }
-
+    
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+        //TODO: Need to fix so cursor is removed after screen shows
+        self.performSegue(withIdentifier: "toSearchCountrySelectionTVC", sender: nil)
+    }
+    
 }
 
 
