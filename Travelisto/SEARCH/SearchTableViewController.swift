@@ -15,8 +15,11 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     var customSearch : UISearchController?
 
     //var data = [[""], [""]]()
+    var searchCodes : [[Codable]]!
     var position : Int!
     var dummyCount = [["one", "two", "three", "four"], [" one", "two"]]
+    var toSearchCountrySelectionTVC = "toSearchCountrySelectionTVC"
+    
     //Refresh Control
     lazy var refresher: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -43,8 +46,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
         navigationItem.hidesSearchBarWhenScrolling = true
         tableView.refreshControl = refresher
         searchController.searchBar.placeholder = "Where to?"
+        searchController.searchBar.tintColor = UIColor(red: 253/255, green: 87/255, blue: 57/255, alpha: 1)
         customSearch = searchController
     
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadData()
     }
 
 
@@ -65,12 +73,24 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     
     func willPresentSearchController(_ searchController: UISearchController) {
         //TODO: Need to fix so cursor is removed after screen shows
-        self.performSegue(withIdentifier: "toSearchCountrySelectionTVC", sender: nil)
+        self.performSegue(withIdentifier: toSearchCountrySelectionTVC, sender: nil)
     }
     
 }
 
-
+//MARK : Prepare for Segue
+extension SearchTableViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == toSearchCountrySelectionTVC {
+            if let searchCodeNavController = segue.destination as? UINavigationController {
+                guard let searchCodeTVC = searchCodeNavController.childViewControllers[0] as? SearchCodeTVC else { return }
+                let codesToSend = searchCodes[position]
+                searchCodeTVC.codes = codesToSend
+            }
+        }
+    }
+    
+}
 
 //MARK: Row Height
 extension SearchTableViewController {
@@ -130,6 +150,25 @@ extension SearchTableViewController {
             break
         }
         return cell
+    }
+}
+
+//MARK: - Load Data
+extension SearchTableViewController {
+    func loadData(){
+        
+        //Load Currency
+        let airportfilePath = Bundle.main.path(forResource: "airports", ofType: "json")
+        let airportUrl = URL(fileURLWithPath: airportfilePath!)
+        
+        do {
+            let airportJSONCodes = try Data(contentsOf: airportUrl)
+            let airportCodes = try JSONDecoder().decode([Cairport].self, from: airportJSONCodes)
+            let codeCopy = airportCodes
+            searchCodes = [airportCodes, codeCopy]
+        }catch let error as NSError {
+            print("Error Loading Cairports : \(error)")
+        }
     }
     
 }

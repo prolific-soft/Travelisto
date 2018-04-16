@@ -97,6 +97,8 @@
 		EF37482620837E9800A45AB7 /* DestinationCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37482520837E9800A45AB7 /* DestinationCVCell.swift */; };
 		EF37482A2083831B00A45AB7 /* SearchCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3748292083831B00A45AB7 /* SearchCells.swift */; };
 		EF37483B208414C800A45AB7 /* SearchCodeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37483A208414C800A45AB7 /* SearchCodeTVC.swift */; };
+		EF37483D20843A2300A45AB7 /* SearchCodeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37483C20843A2300A45AB7 /* SearchCodeTVCell.swift */; };
+		EF37483F20844C5E00A45AB7 /* DetailPeekVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37483E20844C5E00A45AB7 /* DetailPeekVC.swift */; };
 		EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F8981F8DD21D008A1040 /* BaseURL.swift */; };
 		EF43F89B1F8E3975008A1040 /* InspirationURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89A1F8E3975008A1040 /* InspirationURL.swift */; };
 		EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */; };
@@ -241,6 +243,8 @@
 		EF37482520837E9800A45AB7 /* DestinationCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCVCell.swift; sourceTree = "<group>"; };
 		EF3748292083831B00A45AB7 /* SearchCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCells.swift; sourceTree = "<group>"; };
 		EF37483A208414C800A45AB7 /* SearchCodeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodeTVC.swift; sourceTree = "<group>"; };
+		EF37483C20843A2300A45AB7 /* SearchCodeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodeTVCell.swift; sourceTree = "<group>"; };
+		EF37483E20844C5E00A45AB7 /* DetailPeekVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeekVC.swift; sourceTree = "<group>"; };
 		EF43F8981F8DD21D008A1040 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		EF43F89A1F8E3975008A1040 /* InspirationURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationURL.swift; sourceTree = "<group>"; };
 		EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAutoCompleteURL.swift; sourceTree = "<group>"; };
@@ -743,6 +747,8 @@
 			isa = PBXGroup;
 			children = (
 				EF37483A208414C800A45AB7 /* SearchCodeTVC.swift */,
+				EF37483C20843A2300A45AB7 /* SearchCodeTVCell.swift */,
+				EF37483E20844C5E00A45AB7 /* DetailPeekVC.swift */,
 			);
 			path = "SEARCH CODE";
 			sourceTree = "<group>";
@@ -1034,6 +1040,7 @@
 				EF17F7271F7EB06C00E7159A /* CarRental.swift in Sources */,
 				EF1523C020044A8600ADAD1F /* Segue.swift in Sources */,
 				EF13832F20800F2300FD95C1 /* SettingsTableViewController.swift in Sources */,
+				EF37483F20844C5E00A45AB7 /* DetailPeekVC.swift in Sources */,
 				EF43F89B1F8E3975008A1040 /* InspirationURL.swift in Sources */,
 				EF138324207F118500FD95C1 /* TripsTableViewController.swift in Sources */,
 				EF37482A2083831B00A45AB7 /* SearchCells.swift in Sources */,
@@ -1054,6 +1061,7 @@
 				EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */,
 				EF37482420837E7A00A45AB7 /* DestinationTVCell.swift in Sources */,
 				EF156B9A1F9859D500924A89 /* RestuarantAPISearchBy.swift in Sources */,
+				EF37483D20843A2300A45AB7 /* SearchCodeTVCell.swift in Sources */,
 				EF1523801FFED3AB00ADAD1F /* CreateAccountViewController.swift in Sources */,
 				EF138337208010DD00FD95C1 /* RemindersTVCell.swift in Sources */,
 				EF17F7491F7F1EC700E7159A /* HotelAPISearchBy.swift in Sources */,

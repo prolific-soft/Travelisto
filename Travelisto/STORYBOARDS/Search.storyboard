@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -288,13 +290,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="fd9-gP-6cV">
-                                <rect key="frame" x="0.0" y="28" width="375" height="77"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="searchCodeTVCell" rowHeight="67" id="fd9-gP-6cV" customClass="SearchCodeTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fd9-gP-6cV" id="x3t-Wm-gDm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zxt-Jd-NnK">
+                                            <rect key="frame" x="24" y="22" width="327" height="22.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Rome Ciampino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWt-Y6-hCr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="232.5" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3d-Dt-uzf">
+                                                    <rect key="frame" x="292.5" y="0.0" width="34.5" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zxt-Jd-NnK" firstAttribute="top" secondItem="x3t-Wm-gDm" secondAttribute="top" constant="22" id="Cfm-d1-X5P"/>
+                                        <constraint firstAttribute="bottom" secondItem="zxt-Jd-NnK" secondAttribute="bottom" constant="22" id="VhH-MS-Avq"/>
+                                        <constraint firstItem="zxt-Jd-NnK" firstAttribute="leading" secondItem="x3t-Wm-gDm" secondAttribute="leading" constant="24" id="ker-dX-5yA"/>
+                                        <constraint firstAttribute="trailing" secondItem="zxt-Jd-NnK" secondAttribute="trailing" constant="24" id="nqo-64-NgD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countryCode" destination="z3d-Dt-uzf" id="t41-Uf-gKD"/>
+                                    <outlet property="countryLabel" destination="RWt-Y6-hCr" id="wnT-qQ-hLZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -314,6 +345,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxj-X2-UQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4360.8000000000002" y="2865.5172413793107"/>
+        </scene>
+        <!--Detail PeekVC-->
+        <scene sceneID="QXE-CO-x6M">
+            <objects>
+                <viewController storyboardIdentifier="DetailPeekVC" id="ytB-UF-PcS" customClass="DetailPeekVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S7l-Em-Zb6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6WB-yH-ze7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6WB-yH-ze7" secondAttribute="height" multiplier="75:64" id="0Cw-Zk-55c"/>
+                                    <constraint firstAttribute="height" constant="320" id="zHe-iq-zr7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="ytB-UF-PcS" id="mJA-9Y-2hN"/>
+                                </connections>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSM-Sf-lyZ">
+                                <rect key="frame" x="16" y="328" width="343" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port Columbus International Airport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kyk-6Z-FFn">
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="38"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CMH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aho-vG-gpR">
+                                        <rect key="frame" x="262" y="0.0" width="81" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="81" id="6wC-M8-z5a"/>
+                                            <constraint firstAttribute="height" constant="38" id="mxI-o9-1db"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="6zc-pR-WaZ"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port Columbus International Airport, Airport road, Columbus Ohio, United States" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJk-KZ-9Cv">
+                                <rect key="frame" x="16" y="374" width="182" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="wC1-bG-ljI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6WB-yH-ze7" firstAttribute="top" secondItem="S7l-Em-Zb6" secondAttribute="top" id="6fl-o0-QVS"/>
+                            <constraint firstItem="eJk-KZ-9Cv" firstAttribute="top" secondItem="oSM-Sf-lyZ" secondAttribute="bottom" constant="8" id="8jn-6o-yXL"/>
+                            <constraint firstItem="oSM-Sf-lyZ" firstAttribute="top" secondItem="6WB-yH-ze7" secondAttribute="bottom" constant="8" id="C27-vE-Oqm"/>
+                            <constraint firstItem="eJk-KZ-9Cv" firstAttribute="leading" secondItem="rgl-oq-HoP" secondAttribute="leading" constant="16" id="Ddh-Ao-xT3"/>
+                            <constraint firstItem="rgl-oq-HoP" firstAttribute="bottom" secondItem="eJk-KZ-9Cv" secondAttribute="bottom" constant="225" id="MxF-Oc-6gs"/>
+                            <constraint firstItem="oSM-Sf-lyZ" firstAttribute="leading" secondItem="rgl-oq-HoP" secondAttribute="leading" constant="16" id="PyR-E8-Mw9"/>
+                            <constraint firstAttribute="trailing" secondItem="oSM-Sf-lyZ" secondAttribute="trailing" constant="16" id="d4m-s4-7hg"/>
+                            <constraint firstItem="6WB-yH-ze7" firstAttribute="leading" secondItem="rgl-oq-HoP" secondAttribute="leading" id="otL-An-VfJ"/>
+                            <constraint firstItem="6WB-yH-ze7" firstAttribute="trailing" secondItem="rgl-oq-HoP" secondAttribute="trailing" id="pCV-2f-Z8N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rgl-oq-HoP"/>
+                    </view>
+                    <connections>
+                        <outlet property="destinationAddress" destination="eJk-KZ-9Cv" id="wIK-x8-hDX"/>
+                        <outlet property="destinationCode" destination="Aho-vG-gpR" id="Vp8-nS-MnW"/>
+                        <outlet property="destinationNameLabel" destination="kyk-6Z-FFn" id="lE4-ma-OY4"/>
+                        <outlet property="detailMapView" destination="6WB-yH-ze7" id="UL0-5j-Tqy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDk-xm-5Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5373.6000000000004" y="1989.3553223388308"/>
         </scene>
         <!--Search-->
         <scene sceneID="BEz-Ck-mTn">
@@ -342,6 +450,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2lC-n8-YJC">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
