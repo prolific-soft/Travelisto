@@ -14,6 +14,7 @@ class SearchCodeTVCell: UITableViewCell {
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var countryCode: UILabel!
     
+    var airport : Cairport?
     
     override func awakeFromNib() {
         super.awakeFromNib()

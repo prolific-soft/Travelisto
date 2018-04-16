@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate {
+class SearchTableViewController: UITableViewController {
     
     //UI Properties
     @IBOutlet weak var searchSegmentedControl: UISegmentedControl!
@@ -18,7 +18,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     var searchCodes : [[Codable]]!
     var position : Int!
     var dummyCount = [["one", "two", "three", "four"], [" one", "two"]]
-    var toSearchCountrySelectionTVC = "toSearchCountrySelectionTVC"
+ 
     
     //Refresh Control
     lazy var refresher: UIRefreshControl = {
@@ -31,31 +31,18 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         position = 0
-        
-        //Destination SearchCodeTVC
-        let searchStoryboard = UIStoryboard(name: "Search", bundle: nil)
-        let destinationVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchCodeTVC")
-        
-        //Search Bar
-        let searchController = UISearchController(searchResultsController: destinationVC)
-        searchController.delegate = self
-        searchController.searchBar.delegate = self
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = true
         tableView.refreshControl = refresher
-        searchController.searchBar.placeholder = "Where to?"
-        searchController.searchBar.tintColor = UIColor(red: 253/255, green: 87/255, blue: 57/255, alpha: 1)
-        customSearch = searchController
-    
     }
     
     override func viewDidAppear(_ animated: Bool) {
         loadData()
     }
 
-
+    @IBAction func searchIconTapped(_ sender: UIBarButtonItem) {
+         self.performSegue(withIdentifier: SearchSegue.toSearchCodeTVC.rawValue, sender: nil)
+    }
+    
     @objc
     private func requestData(){
         refreshControl?.beginRefreshing()
@@ -64,32 +51,26 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
         refreshControl?.endRefreshing()
     }
     
-    //Search Type tapped
     @IBAction func searchSegmentedControlSwitched(_ sender: UISegmentedControl) {
         position = sender.selectedSegmentIndex
         tableView.reloadData()
     }
-    
-    
-    func willPresentSearchController(_ searchController: UISearchController) {
-        //TODO: Need to fix so cursor is removed after screen shows
-        self.performSegue(withIdentifier: toSearchCountrySelectionTVC, sender: nil)
-    }
+
     
 }
 
 //MARK : Prepare for Segue
 extension SearchTableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == toSearchCountrySelectionTVC {
-            if let searchCodeNavController = segue.destination as? UINavigationController {
-                guard let searchCodeTVC = searchCodeNavController.childViewControllers[0] as? SearchCodeTVC else { return }
+        
+        if segue.identifier == SearchSegue.toSearchCodeTVC.rawValue {
+            if let searchCodeTVC = segue.destination as? SearchCodeTVC {
                 let codesToSend = searchCodes[position]
                 searchCodeTVC.codes = codesToSend
             }
         }
+        
     }
-    
 }
 
 //MARK: Row Height
@@ -157,7 +138,7 @@ extension SearchTableViewController {
 extension SearchTableViewController {
     func loadData(){
         
-        //Load Currency
+        //Load Currency before sending
         let airportfilePath = Bundle.main.path(forResource: "airports", ofType: "json")
         let airportUrl = URL(fileURLWithPath: airportfilePath!)
         

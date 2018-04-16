@@ -86,7 +86,7 @@
 		EF17F74B1F7F216000E7159A /* CarAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */; };
 		EF17F74D1F7F23AD00E7159A /* POIAPISearchBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */; };
 		EF1C9F421FFDB8B9008084FE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C9F411FFDB8B9008084FE /* TutorialViewController.swift */; };
-		EF2C1E992084F8FA003CEC8D /* DestinationOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C1E982084F8FA003CEC8D /* DestinationOptionsVC.swift */; };
+		EF2C1E992084F8FA003CEC8D /* FlightDestinationOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C1E982084F8FA003CEC8D /* FlightDestinationOptionsVC.swift */; };
 		EF2C1E9B2084FAE0003CEC8D /* SearchSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C1E9A2084FAE0003CEC8D /* SearchSegue.swift */; };
 		EF3656CC207D2ED400B2AB3C /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CB207D2ED400B2AB3C /* Explore.storyboard */; };
 		EF3656CE207D2F3D00B2AB3C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CD207D2F3D00B2AB3C /* Search.storyboard */; };
@@ -234,7 +234,7 @@
 		EF17F74A1F7F216000E7159A /* CarAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPISearchBy.swift; sourceTree = "<group>"; };
 		EF17F74C1F7F23AD00E7159A /* POIAPISearchBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIAPISearchBy.swift; sourceTree = "<group>"; };
 		EF1C9F411FFDB8B9008084FE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		EF2C1E982084F8FA003CEC8D /* DestinationOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationOptionsVC.swift; sourceTree = "<group>"; };
+		EF2C1E982084F8FA003CEC8D /* FlightDestinationOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDestinationOptionsVC.swift; sourceTree = "<group>"; };
 		EF2C1E9A2084FAE0003CEC8D /* SearchSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSegue.swift; sourceTree = "<group>"; };
 		EF3656CB207D2ED400B2AB3C /* Explore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
 		EF3656CD207D2F3D00B2AB3C /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -682,12 +682,12 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		EF2C1E972084F8CB003CEC8D /* Destination OPTIONS */ = {
+		EF2C1E972084F8CB003CEC8D /* FlightDestinationOptionsVC */ = {
 			isa = PBXGroup;
 			children = (
-				EF2C1E982084F8FA003CEC8D /* DestinationOptionsVC.swift */,
+				EF2C1E982084F8FA003CEC8D /* FlightDestinationOptionsVC.swift */,
 			);
-			path = "Destination OPTIONS";
+			path = FlightDestinationOptionsVC;
 			sourceTree = "<group>";
 		};
 		EF3656CA207D2EA300B2AB3C /* EXPLORE */ = {
@@ -710,7 +710,7 @@
 				EF37482120837DC800A45AB7 /* Destination */,
 				EF3656E3207D856500B2AB3C /* Deals */,
 				EF3748392084148600A45AB7 /* SEARCH CODE */,
-				EF2C1E972084F8CB003CEC8D /* Destination OPTIONS */,
+				EF2C1E972084F8CB003CEC8D /* FlightDestinationOptionsVC */,
 			);
 			path = SEARCH;
 			sourceTree = "<group>";
@@ -1073,7 +1073,7 @@
 				EF17F7371F7EE39000E7159A /* PointsOfInterestResult.swift in Sources */,
 				EF17CAEC1F7C0C3900E938AC /* HotelService.swift in Sources */,
 				EF1523761FFEC1C800ADAD1F /* SignInViewController.swift in Sources */,
-				EF2C1E992084F8FA003CEC8D /* DestinationOptionsVC.swift in Sources */,
+				EF2C1E992084F8FA003CEC8D /* FlightDestinationOptionsVC.swift in Sources */,
 				EF17F7311F7EBC8B00E7159A /* VehicleInfo.swift in Sources */,
 				EF17CAFC1F7C9E4200E938AC /* Coordinates.swift in Sources */,
 				EF17F73A1F7EF34800E7159A /* TopFlights.swift in Sources */,

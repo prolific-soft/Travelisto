@@ -8,8 +8,15 @@
 
 import UIKit
 
-class DestinationOptionsVC: UIViewController {
+class FlightDestinationOptionsVC: UIViewController {
 
+    
+    var airport : Cairport? {
+        didSet{
+            print("=============Airport was set=====================")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

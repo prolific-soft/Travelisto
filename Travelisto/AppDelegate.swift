@@ -19,12 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        FirebaseApp.configure()
   
-        //Testing Firebase Service
-        AuthService.signUp(email: "user5@gmail.com", password: "123456", onSuccess: {
-            print("User created")
-        }) { (ErrorMessage) in
-            print(ErrorMessage!)
-        }
+//        //Testing Firebase Service
+//        AuthService.signUp(email: "user5@gmail.com", password: "123456", onSuccess: {
+//            print("User created")
+//        }) { (ErrorMessage) in
+//            print(ErrorMessage!)
+//        }
         
 
         

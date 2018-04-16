@@ -8,59 +8,44 @@
 
 import UIKit
 
-class SearchCodeTVC: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate, UIViewControllerPreviewingDelegate {
+class SearchCodeTVC: UITableViewController, UISearchBarDelegate,
+UISearchControllerDelegate, UIViewControllerPreviewingDelegate {
 
     //Data
     var dataCount = 0
     var filteredCodes : [Codable]!
     var codes : [Codable]?{
         didSet{
-           print("Codes to send was set ++++++++++++++")
             filteredCodes = codes
             dataCount = filteredCodes.count
         }
     }
 
     
-    //Search bar
-    var customSearch : UISearchController?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //3D Peek and Pop
+        //3D Peek
         if( traitCollection.forceTouchCapability == .available){
             registerForPreviewing(with: self, sourceView: view)
         }
 
         //Search Bar
         let searchController = UISearchController(searchResultsController: nil)
-        searchController.delegate = self
         searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        searchController.dimsBackgroundDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = true
+        searchController.definesPresentationContext = false
         searchController.searchBar.placeholder = "Where to?"
         searchController.searchBar.tintColor = UIColor(red: 253/255, green: 87/255, blue: 57/255, alpha: 1)
         searchController.searchBar.setValue("Done", forKey: "_cancelButtonText")
-        customSearch = searchController
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
-//            self.delayDisplaySearchBar()
-//        })
-    }
-
-    
-    @IBAction func closeButtonTapped(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        
     }
     
-    private func delayDisplaySearchBar(){
-        customSearch?.isActive = true
-        customSearch?.becomeFirstResponder()
-        //customSearch?.definesPresentationContext = true
+
+    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
     }
 
 }
@@ -114,17 +99,12 @@ extension SearchCodeTVC {
 }
 
 
-
-
 //MARK: Row Height
 extension SearchCodeTVC {
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 63
     }
-    
 }
-
 
 
 //MARK: Data Source
@@ -138,16 +118,13 @@ extension SearchCodeTVC {
         return dataCount
     }
     
-//    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-//        <#code#>
-//    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchCells.searchCodeTVCell.rawValue) as!
         SearchCodeTVCell
         
         if let loadedCodes = filteredCodes {
             let singleCode = loadedCodes[indexPath.row]
+            cell.airport =  (singleCode as! Cairport)
             cell.countryLabel.text = (singleCode as! Cairport).name ?? " "
             cell.countryCode.text = (singleCode as! Cairport).code ?? " "
         }
@@ -160,11 +137,20 @@ extension SearchCodeTVC {
 extension SearchCodeTVC {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == SearchSegue.toFlightDestinationOptionsVC.rawValue {
+            if let fdOptionVC = segue.destination as? FlightDestinationOptionsVC {
+                guard let indexPath = sender as? IndexPath else { return }
+                guard let searchCodeCell = tableView.cellForRow(at: indexPath) as? SearchCodeTVCell else { return }
+                let aiportToSend = searchCodeCell.airport
+                fdOptionVC.airport = aiportToSend
+                
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: SearchSegue.toDestinationOptionsVC.rawValue, sender: indexPath)
+        self.performSegue(withIdentifier: SearchSegue.toFlightDestinationOptionsVC.rawValue, sender: indexPath)
+        
     }
     
     

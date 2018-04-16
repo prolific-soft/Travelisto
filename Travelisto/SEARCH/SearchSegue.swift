@@ -11,5 +11,6 @@ import Foundation
 
 enum SearchSegue : String {
     case toSearchCountrySelectionTVC = "toSearchCountrySelectionTVC"
-    case toDestinationOptionsVC = "toDestinationOptionsVC"
+    case toFlightDestinationOptionsVC = "toFlightDestinationOptionsVC"
+    case toSearchCodeTVC = "toSearchCodeTVC"
 }
