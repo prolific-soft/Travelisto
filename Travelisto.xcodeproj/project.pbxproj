@@ -88,6 +88,7 @@
 		EF1C9F421FFDB8B9008084FE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C9F411FFDB8B9008084FE /* TutorialViewController.swift */; };
 		EF2C1E992084F8FA003CEC8D /* FlightDestinationOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C1E982084F8FA003CEC8D /* FlightDestinationOptionsVC.swift */; };
 		EF2C1E9B2084FAE0003CEC8D /* SearchSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C1E9A2084FAE0003CEC8D /* SearchSegue.swift */; };
+		EF2C1E9E20857531003CEC8D /* PassengerPickerModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C1E9D20857531003CEC8D /* PassengerPickerModalVC.swift */; };
 		EF3656CC207D2ED400B2AB3C /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CB207D2ED400B2AB3C /* Explore.storyboard */; };
 		EF3656CE207D2F3D00B2AB3C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CD207D2F3D00B2AB3C /* Search.storyboard */; };
 		EF3656D0207D2F8E00B2AB3C /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656CF207D2F8E00B2AB3C /* Trips.storyboard */; };
@@ -236,6 +237,7 @@
 		EF1C9F411FFDB8B9008084FE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		EF2C1E982084F8FA003CEC8D /* FlightDestinationOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDestinationOptionsVC.swift; sourceTree = "<group>"; };
 		EF2C1E9A2084FAE0003CEC8D /* SearchSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSegue.swift; sourceTree = "<group>"; };
+		EF2C1E9D20857531003CEC8D /* PassengerPickerModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerPickerModalVC.swift; sourceTree = "<group>"; };
 		EF3656CB207D2ED400B2AB3C /* Explore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
 		EF3656CD207D2F3D00B2AB3C /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		EF3656CF207D2F8E00B2AB3C /* Trips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
@@ -686,8 +688,17 @@
 			isa = PBXGroup;
 			children = (
 				EF2C1E982084F8FA003CEC8D /* FlightDestinationOptionsVC.swift */,
+				EF2C1E9C208574F4003CEC8D /* Passenger Picker Modal */,
 			);
 			path = FlightDestinationOptionsVC;
+			sourceTree = "<group>";
+		};
+		EF2C1E9C208574F4003CEC8D /* Passenger Picker Modal */ = {
+			isa = PBXGroup;
+			children = (
+				EF2C1E9D20857531003CEC8D /* PassengerPickerModalVC.swift */,
+			);
+			path = "Passenger Picker Modal";
 			sourceTree = "<group>";
 		};
 		EF3656CA207D2EA300B2AB3C /* EXPLORE */ = {
@@ -1069,6 +1080,7 @@
 				EF156B981F98515500924A89 /* RestuarantReviewURL.swift in Sources */,
 				EF1383432080378C00FD95C1 /* PrivacyTVC.swift in Sources */,
 				EF15237A1FFEC43000ADAD1F /* CustomTextField.swift in Sources */,
+				EF2C1E9E20857531003CEC8D /* PassengerPickerModalVC.swift in Sources */,
 				EF43F89F1F8FF461008A1040 /* AirportAreaURL.swift in Sources */,
 				EF17F7371F7EE39000E7159A /* PointsOfInterestResult.swift in Sources */,
 				EF17CAEC1F7C0C3900E938AC /* HotelService.swift in Sources */,

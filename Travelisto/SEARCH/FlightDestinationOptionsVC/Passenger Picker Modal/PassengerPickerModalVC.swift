@@ -1,5 +1,5 @@
 //
-//  FlightOptionsVC.swift
+//  PassengerPickerModalVC.swift
 //  Travelisto
 //
 //  Created by Chidi Emeh on 4/16/18.
@@ -8,14 +8,8 @@
 
 import UIKit
 
-class FlightDestinationOptionsVC: UIViewController {
+class PassengerPickerModalVC: UIViewController {
 
-    
-    var airport : Cairport? {
-        didSet{
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,12 +21,15 @@ class FlightDestinationOptionsVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+    @IBAction func doneButtonTapped(_ sender: UIButton) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     
-
     /*
     // MARK: - Navigation
 
