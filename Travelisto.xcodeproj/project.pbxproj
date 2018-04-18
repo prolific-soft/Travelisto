@@ -115,6 +115,8 @@
 		EF53C9841F795F35009A1DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9821F795F35009A1DB8 /* LaunchScreen.storyboard */; };
 		EF7208561F82992100E1824D /* LowFareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208551F82992100E1824D /* LowFareURL.swift */; };
 		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
+		EFC9024C208668A3000B0EA3 /* CalendarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */; };
+		EFC9024E20867252000B0EA3 /* CalendarPickerCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */; };
 		EFFD2787207EF82F004E7191 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD2786207EF82F004E7191 /* ExploreTableViewController.swift */; };
 		EFFD278A207EF97B004E7191 /* TripToTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD2789207EF97B004E7191 /* TripToTVCell.swift */; };
 		EFFD278C207EF9A2004E7191 /* ExploreCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD278B207EF9A2004E7191 /* ExploreCells.swift */; };
@@ -266,6 +268,8 @@
 		EF53C9851F795F35009A1DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF7208551F82992100E1824D /* LowFareURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowFareURL.swift; sourceTree = "<group>"; };
 		EF7208571F83E55000E1824D /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerVC.swift; sourceTree = "<group>"; };
+		EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerCVCell.swift; sourceTree = "<group>"; };
 		EFFD2786207EF82F004E7191 /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		EFFD2789207EF97B004E7191 /* TripToTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripToTVCell.swift; sourceTree = "<group>"; };
 		EFFD278B207EF9A2004E7191 /* ExploreCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCells.swift; sourceTree = "<group>"; };
@@ -688,6 +692,7 @@
 			isa = PBXGroup;
 			children = (
 				EF2C1E982084F8FA003CEC8D /* FlightDestinationOptionsVC.swift */,
+				EFC9024A208667A4000B0EA3 /* CalendarPicker */,
 				EF2C1E9C208574F4003CEC8D /* Passenger Picker Modal */,
 			);
 			path = FlightDestinationOptionsVC;
@@ -866,6 +871,15 @@
 			path = "URL Builder";
 			sourceTree = "<group>";
 		};
+		EFC9024A208667A4000B0EA3 /* CalendarPicker */ = {
+			isa = PBXGroup;
+			children = (
+				EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */,
+				EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */,
+			);
+			path = CalendarPicker;
+			sourceTree = "<group>";
+		};
 		EFFD2788207EF950004E7191 /* TRIP TO */ = {
 			isa = PBXGroup;
 			children = (
@@ -985,6 +999,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Travelisto/Pods-Travelisto-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -992,6 +1007,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -1073,12 +1089,14 @@
 				EF156B9A1F9859D500924A89 /* RestuarantAPISearchBy.swift in Sources */,
 				EF37483D20843A2300A45AB7 /* SearchCodeTVCell.swift in Sources */,
 				EF1523801FFED3AB00ADAD1F /* CreateAccountViewController.swift in Sources */,
+				EFC9024C208668A3000B0EA3 /* CalendarPickerVC.swift in Sources */,
 				EF138337208010DD00FD95C1 /* RemindersTVCell.swift in Sources */,
 				EF17F7491F7F1EC700E7159A /* HotelAPISearchBy.swift in Sources */,
 				EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */,
 				EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */,
 				EF156B981F98515500924A89 /* RestuarantReviewURL.swift in Sources */,
 				EF1383432080378C00FD95C1 /* PrivacyTVC.swift in Sources */,
+				EFC9024E20867252000B0EA3 /* CalendarPickerCVCell.swift in Sources */,
 				EF15237A1FFEC43000ADAD1F /* CustomTextField.swift in Sources */,
 				EF2C1E9E20857531003CEC8D /* PassengerPickerModalVC.swift in Sources */,
 				EF43F89F1F8FF461008A1040 /* AirportAreaURL.swift in Sources */,

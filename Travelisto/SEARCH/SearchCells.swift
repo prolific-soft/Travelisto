@@ -15,5 +15,7 @@ enum SearchCells : String {
     case dealsTVCell = "dealsTVCell"
     case dealsCVCell = "dealsCVCell"
     case searchCodeTVCell = "searchCodeTVCell"
+    //Calendar Cell
+    case calendarPickerCVCell = "myCell"
     
 }
