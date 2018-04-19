@@ -43,6 +43,7 @@ PODS:
     - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)"
   - "GoogleToolboxForMac/NSString+URLArguments (2.1.3)"
   - GTMSessionFetcher/Core (1.1.15)
+  - JTAppleCalendar (7.1.5)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - JTAppleCalendar (~> 7.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -67,6 +69,7 @@ SPEC REPOS:
     - FirebaseStorage
     - GoogleToolboxForMac
     - GTMSessionFetcher
+    - JTAppleCalendar
     - leveldb-library
     - nanopb
 
@@ -80,9 +83,10 @@ SPEC CHECKSUMS:
   FirebaseStorage: 0c223481c8f89ed300cf1239ddd2d9833622c65f
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 73fe2417061358e42993d02ff5bb32598981460e
+PODFILE CHECKSUM: 4694c52a387d115f92a4876975578733ece58ca0
 
 COCOAPODS: 1.5.0
