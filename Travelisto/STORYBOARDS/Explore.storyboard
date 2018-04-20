@@ -300,6 +300,84 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="restuarantsTVCell" rowHeight="234" id="SWW-H3-ype" customClass="RestuarantsTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="440" width="375" height="234"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SWW-H3-ype" id="iC5-6v-j8l">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="234"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restuarants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bh-IZ-ptT">
+                                            <rect key="frame" x="20" y="11" width="166" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="166" id="gcB-uK-oVO"/>
+                                                <constraint firstAttribute="height" constant="21" id="pbD-dZ-Hve"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                                            <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjC-r8-Jp5">
+                                            <rect key="frame" x="241" y="12" width="114" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="114" id="0Ty-eE-YLS"/>
+                                                <constraint firstAttribute="height" constant="21" id="Kg2-7N-Tqj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="14"/>
+                                            <state key="normal" title="Show more">
+                                                <color key="titleColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fFd-bY-Tm9">
+                                            <rect key="frame" x="0.0" y="45" width="375" height="169"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="169" id="m3U-GO-UAq"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="13" minimumInteritemSpacing="13" id="be1-Oa-gik">
+                                                <size key="itemSize" width="136" height="161"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="20" minY="2" maxX="20" maxY="2"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restuarantsCVCell" id="f4r-AV-wGX" customClass="RestuarantsCVCell" customModule="Travelisto" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="4" width="136" height="161"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="161"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country_3" translatesAutoresizingMaskIntoConstraints="NO" id="3b6-LK-JsR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="136" height="161"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="3b6-LK-JsR" secondAttribute="trailing" id="5j5-Nk-LcR"/>
+                                                        <constraint firstItem="3b6-LK-JsR" firstAttribute="leading" secondItem="f4r-AV-wGX" secondAttribute="leading" id="A2T-V4-pkz"/>
+                                                        <constraint firstAttribute="bottom" secondItem="3b6-LK-JsR" secondAttribute="bottom" id="L8d-cT-X83"/>
+                                                        <constraint firstItem="3b6-LK-JsR" firstAttribute="top" secondItem="f4r-AV-wGX" secondAttribute="top" id="pFw-VH-tUb"/>
+                                                    </constraints>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="fFd-bY-Tm9" firstAttribute="leading" secondItem="iC5-6v-j8l" secondAttribute="leading" id="0TH-V6-F0X"/>
+                                        <constraint firstItem="UjC-r8-Jp5" firstAttribute="top" secondItem="iC5-6v-j8l" secondAttribute="top" constant="12" id="B73-Sq-CjB"/>
+                                        <constraint firstItem="2Bh-IZ-ptT" firstAttribute="leading" secondItem="iC5-6v-j8l" secondAttribute="leading" constant="20" id="C3a-yK-MCK"/>
+                                        <constraint firstItem="2Bh-IZ-ptT" firstAttribute="top" secondItem="iC5-6v-j8l" secondAttribute="top" constant="11" id="EBb-zl-i4C"/>
+                                        <constraint firstAttribute="trailing" secondItem="fFd-bY-Tm9" secondAttribute="trailing" id="MDe-hT-wWP"/>
+                                        <constraint firstAttribute="trailing" secondItem="UjC-r8-Jp5" secondAttribute="trailing" constant="20" id="Sta-gZ-7VC"/>
+                                        <constraint firstAttribute="bottom" secondItem="fFd-bY-Tm9" secondAttribute="bottom" constant="20" id="aWF-Q3-PJg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="restuarantCollectionView" destination="fFd-bY-Tm9" id="1Ui-5W-xC1"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="hnN-eN-lz5" id="Swo-wh-W0t"/>

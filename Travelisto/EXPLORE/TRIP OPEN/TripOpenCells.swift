@@ -14,6 +14,9 @@ enum TripOpenCells : String {
     case cityDescriptionTVCell = "cityDescriptionTVCell"
     case cityMapTVCell = "cityMapTVCell"
     case topExperiencesTVCell = "topExperiencesTVCell"
+    case foodDescriptionTVCell = "foodDescriptionTVCell"
+    case restuarantsTVCell = "restuarantsTVCell"
+    case restuarantsCVCell = "restuarantsCVCell"
     
     
 }

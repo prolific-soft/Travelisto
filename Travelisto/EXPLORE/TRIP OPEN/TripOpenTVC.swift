@@ -33,9 +33,10 @@ extension TripOpenTVC {
         tableView.register(UINib(nibName: "CityDescriptionTVCell", bundle: nil), forCellReuseIdentifier: TripOpenCells.cityDescriptionTVCell.rawValue)
         
         tableView.register(UINib(nibName: "TopExperiencesTVCell", bundle: nil), forCellReuseIdentifier: TripOpenCells.topExperiencesTVCell.rawValue)
+        
+        tableView.register(UINib(nibName: "FoodDescriptionTVCell", bundle: nil), forCellReuseIdentifier: TripOpenCells.foodDescriptionTVCell.rawValue)
     }
-    
-    
+
 }
 
 
@@ -46,6 +47,8 @@ extension TripOpenTVC  {
         let cityDescriptionCellHeight = CGFloat(164)
         let cityMapCellHeight = CGFloat(210)
         let topExperiencesCellHeight = CGFloat(231)
+        let foodDescriptionCellHeight = CGFloat(173)
+        let restuarantsCellHeight = CGFloat(234)
         
         switch indexPath.row {
         case 0:
@@ -54,6 +57,10 @@ extension TripOpenTVC  {
             return cityMapCellHeight
         case 2:
             return topExperiencesCellHeight
+        case 3:
+            return foodDescriptionCellHeight
+        case 4:
+            return restuarantsCellHeight
         default:
             break
         }
@@ -67,7 +74,7 @@ extension TripOpenTVC  {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let rowNumber = 3
+        let rowNumber = 5
         return rowNumber
     }
     
@@ -87,6 +94,12 @@ extension TripOpenTVC  {
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: TripOpenCells.topExperiencesTVCell.rawValue, for: indexPath) as! TopExperiencesTVCell
             return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TripOpenCells.foodDescriptionTVCell.rawValue, for: indexPath) as! FoodDescriptionTVCell
+            return cell
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TripOpenCells.restuarantsTVCell.rawValue, for: indexPath) as! RestuarantsTVCell
+            return cell
         default:
             break
         }
@@ -96,10 +109,66 @@ extension TripOpenTVC  {
 }
 
 
-//Register cell Nibs
+//CollectionView Will Display
 extension TripOpenTVC {
 
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if cell.tag == 1 {
+            
+            guard let restuarantTVCell = cell as? RestuarantsTVCell else  { return }
+            let restuarantCollectionView = restuarantTVCell.restuarantCollectionView
+            restuarantCollectionView?.dataSource = self
+            restuarantCollectionView?.dataSource = self
+            
+        }
+    }
     
 }
+
+
+
+
+//MARK: - Layouts
+extension TripOpenTVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 13
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellDefaultHeight = CGFloat(161)
+        let cellDefaultWidth = CGFloat(136)
+        let size = CGSize(width: cellDefaultWidth, height: cellDefaultHeight)
+        return size
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let inset = UIEdgeInsetsMake(2, 20, 2, 20)
+        return inset
+    }
+    
+}
+
+
+
+//MARK: - Datasource
+extension TripOpenTVC {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TripOpenCells.restuarantsCVCell.rawValue, for: indexPath) as! RestuarantsCVCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //Perform Segue
+    }
+    
+}
+
 
 

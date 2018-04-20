@@ -128,6 +128,10 @@
 		EF61FC4C208A0AAC001A9C02 /* CityMapTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC4B208A0AAC001A9C02 /* CityMapTVCell.swift */; };
 		EF61FC4F208A0CFA001A9C02 /* TopExperiencesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC4D208A0CFA001A9C02 /* TopExperiencesTVCell.swift */; };
 		EF61FC50208A0CFA001A9C02 /* TopExperiencesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF61FC4E208A0CFA001A9C02 /* TopExperiencesTVCell.xib */; };
+		EF61FC53208A38C6001A9C02 /* FoodDescriptionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC51208A38C6001A9C02 /* FoodDescriptionTVCell.swift */; };
+		EF61FC54208A38C6001A9C02 /* FoodDescriptionTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF61FC52208A38C6001A9C02 /* FoodDescriptionTVCell.xib */; };
+		EF61FC56208A3CB3001A9C02 /* RestuarantsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC55208A3CB3001A9C02 /* RestuarantsTVCell.swift */; };
+		EF61FC58208A402B001A9C02 /* RestuarantsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC57208A402B001A9C02 /* RestuarantsCVCell.swift */; };
 		EF7208561F82992100E1824D /* LowFareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208551F82992100E1824D /* LowFareURL.swift */; };
 		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
 		EFC9024C208668A3000B0EA3 /* CalendarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */; };
@@ -296,6 +300,10 @@
 		EF61FC4B208A0AAC001A9C02 /* CityMapTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapTVCell.swift; sourceTree = "<group>"; };
 		EF61FC4D208A0CFA001A9C02 /* TopExperiencesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopExperiencesTVCell.swift; sourceTree = "<group>"; };
 		EF61FC4E208A0CFA001A9C02 /* TopExperiencesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopExperiencesTVCell.xib; sourceTree = "<group>"; };
+		EF61FC51208A38C6001A9C02 /* FoodDescriptionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDescriptionTVCell.swift; sourceTree = "<group>"; };
+		EF61FC52208A38C6001A9C02 /* FoodDescriptionTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodDescriptionTVCell.xib; sourceTree = "<group>"; };
+		EF61FC55208A3CB3001A9C02 /* RestuarantsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantsTVCell.swift; sourceTree = "<group>"; };
+		EF61FC57208A402B001A9C02 /* RestuarantsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantsCVCell.swift; sourceTree = "<group>"; };
 		EF7208551F82992100E1824D /* LowFareURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowFareURL.swift; sourceTree = "<group>"; };
 		EF7208571F83E55000E1824D /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerVC.swift; sourceTree = "<group>"; };
@@ -939,6 +947,10 @@
 				EF61FC4B208A0AAC001A9C02 /* CityMapTVCell.swift */,
 				EF61FC4D208A0CFA001A9C02 /* TopExperiencesTVCell.swift */,
 				EF61FC4E208A0CFA001A9C02 /* TopExperiencesTVCell.xib */,
+				EF61FC51208A38C6001A9C02 /* FoodDescriptionTVCell.swift */,
+				EF61FC52208A38C6001A9C02 /* FoodDescriptionTVCell.xib */,
+				EF61FC55208A3CB3001A9C02 /* RestuarantsTVCell.swift */,
+				EF61FC57208A402B001A9C02 /* RestuarantsCVCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1051,6 +1063,7 @@
 				EF3656CE207D2F3D00B2AB3C /* Search.storyboard in Resources */,
 				EF13834620803A1E00FD95C1 /* languages.json in Resources */,
 				EF61FC402089656C001A9C02 /* amenity.json in Resources */,
+				EF61FC54208A38C6001A9C02 /* FoodDescriptionTVCell.xib in Resources */,
 				EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */,
 				EF3656D2207D2FC300B2AB3C /* Settings.storyboard in Resources */,
 				EF13834820803B4100FD95C1 /* airports.json in Resources */,
@@ -1144,6 +1157,7 @@
 				EF13833220800FC200FD95C1 /* SettingsCells.swift in Sources */,
 				EF17CAEE1F7C0C5400E938AC /* PointsOfInterestService.swift in Sources */,
 				EF61FC312088042B001A9C02 /* DestinationConutryTVC.swift in Sources */,
+				EF61FC56208A3CB3001A9C02 /* RestuarantsTVCell.swift in Sources */,
 				EF17CAF21F7C702D00E938AC /* LowPriceFlight.swift in Sources */,
 				EF156B911F98153E00924A89 /* ReviewResult.swift in Sources */,
 				EF15237C1FFECD7000ADAD1F /* CustomButton.swift in Sources */,
@@ -1181,6 +1195,7 @@
 				EF13833E2080371E00FD95C1 /* SettingSelectionTVCell.swift in Sources */,
 				EF7208581F83E55000E1824D /* CustomError.swift in Sources */,
 				EF61FC4920898E24001A9C02 /* CityDescriptionTVCell.swift in Sources */,
+				EF61FC58208A402B001A9C02 /* RestuarantsCVCell.swift in Sources */,
 				EF156B961F98514300924A89 /* RestuarantURL.swift in Sources */,
 				EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */,
 				EF37482420837E7A00A45AB7 /* DestinationTVCell.swift in Sources */,
@@ -1205,6 +1220,7 @@
 				EF1523761FFEC1C800ADAD1F /* SignInViewController.swift in Sources */,
 				EF2C1E992084F8FA003CEC8D /* FlightDestinationOptionsVC.swift in Sources */,
 				EF17F7311F7EBC8B00E7159A /* VehicleInfo.swift in Sources */,
+				EF61FC53208A38C6001A9C02 /* FoodDescriptionTVCell.swift in Sources */,
 				EF17CAFC1F7C9E4200E938AC /* Coordinates.swift in Sources */,
 				EF17F73A1F7EF34800E7159A /* TopFlights.swift in Sources */,
 				EF17F7431F7F087400E7159A /* NearestRelevantAirport.swift in Sources */,
