@@ -1,0 +1,267 @@
+[
+   {
+      "name":"220V AC",
+      "image":"AC_220V",
+      "parameter":"AC_220V"
+   },
+   {
+      "name":"Accessible Facilities",
+      "image":"ACCESSIBLE_FACILITIES",
+      "parameter":"ACCESSIBLE_FACILITIES"
+   },
+   {
+      "name":"Adjoining Rooms",
+      "image":"ADJOINING_ROOMS",
+      "parameter":"ADJOINING_ROOMS"
+   },
+   {
+      "name":"Ballroom",
+      "image":"BALLROOM",
+      "parameter":"BALLROOM"
+   },
+   {
+      "name":"Banquet Facilities",
+      "image":"BANQUET_FACILITIES",
+      "parameter":"BANQUET_FACILITIES"
+   },
+   {
+      "name":"Beauty Shop/Salon",
+      "image":"BEAUTY_SALON",
+      "parameter":"BEAUTY_SALON"
+   },
+   {
+      "name":"Bus Parking",
+      "image":"BUS_PARKING",
+      "parameter":"BUS_PARKING"
+   },
+   {
+      "name":"Car Rental Desk",
+      "image":"CAR_RENTAL",
+      "parameter":"CAR_RENTAL"
+   },
+   {
+      "name":"Casino",
+      "image":"CASINO",
+      "parameter":"CASINO"
+   },
+   {
+      "name":"Children Welcome",
+      "image":"CHILDREN_WELCOME",
+      "parameter":"CHILDREN_WELCOME"
+   },
+   {
+      "name":"Coffee Shop",
+      "image":"COFFEE_SHOP",
+      "parameter":"COFFEE_SHOP"
+   },
+   {
+      "name":"Concierge Desk",
+      "image":"CONCIERGE_DESK",
+      "parameter":"CONCIERGE_DESK"
+   },
+   {
+      "name":"Conference Facilities",
+      "image":"CONFERENCE_FACILITIES",
+      "parameter":"CONFERENCE_FACILITIES"
+   },
+   {
+      "name":"Currency Exchange",
+      "image":"CURRENCY_EXCHANGE",
+      "parameter":"CURRENCY_EXCHANGE"
+   },
+   {
+      "name":"Disco",
+      "image":"DISCO",
+      "parameter":"DISCO"
+   },
+   {
+      "name":"Doctor On Call",
+      "image":"DOCTOR_ON_CALL",
+      "parameter":"DOCTOR_ON_CALL"
+   },
+   {
+      "name":"Driving Range",
+      "image":"DRIVING_RANGE",
+      "parameter":"DRIVING_RANGE"
+   },
+   {
+      "name":"Elevator",
+      "image":"ELEVATORS",
+      "parameter":"ELEVATORS"
+   },
+   {
+      "name":"Executive Floor",
+      "image":"EXECUTIVE_FLOOR",
+      "parameter":"EXECUTIVE_FLOOR"
+   },
+   {
+      "name":"Express Check-in",
+      "image":"EXPRESS_CHECK_IN",
+      "parameter":"EXPRESS_CHECK_IN"
+   },
+   {
+      "name":"Express Check-out",
+      "image":"EXPRESS_CHECK_OUT",
+      "parameter":"EXPRESS_CHECK_OUT"
+   },
+   {
+      "name":"Family Plan",
+      "image":"FAMILY_PLAN",
+      "parameter":"FAMILY_PLAN"
+   },
+   {
+      "name":"Female Traveler Room/Floor",
+      "image":"FEMALE_TRAVELER_ROOM",
+      "parameter":"FEMALE_TRAVELER_ROOM"
+   },
+   {
+      "name":"Free High Speed Internet Connection",
+      "image":"FREE_HIGH_SPEED_INTERNET",
+      "parameter":"FREE_HIGH_SPEED_INTERNET"
+   },
+   {
+      "name":"24-Hour Front Desk",
+      "image":"FRONT_DESK_24_HOURS",
+      "parameter":"FRONT_DESK_24_HOURS"
+   },
+   {
+      "name":"Gift/News Stand",
+      "image":"GIFT_SHOP",
+      "parameter":"GIFT_SHOP"
+   },
+   {
+      "name":"Exercise Gym",
+      "image":"GYM",
+      "parameter":"GYM"
+   },
+   {
+      "name":"Wifi Hotspots",
+      "image":"HOTSPOTS",
+      "parameter":"HOTSPOTS"
+   },
+   {
+      "name":"Ice Machine",
+      "image":"ICE_MACHINE",
+      "parameter":"ICE_MACHINE"
+   },
+   {
+      "name":"High Speed Internet Access for Laptop In Public Areas",
+      "image":"INTERNET_PUBLIC_AREAS",
+      "parameter":"INTERNET_PUBLIC_AREAS"
+   },
+   {
+      "name":"Internet Services",
+      "image":"INTERNET_SERVICES",
+      "parameter":"INTERNET_SERVICES"
+   },
+   {
+      "name":"Jacuzzi",
+      "image":"JACUZZI",
+      "parameter":"JACUZZI"
+   },
+   {
+      "name":"Laundry/Valet Service",
+      "image":"LAUNDRY_SERVICE",
+      "parameter":"LAUNDRY_SERVICE"
+   },
+   {
+      "name":"Lounge/Bars",
+      "image":"LOUNGE_BARS",
+      "parameter":"LOUNGE_BARS"
+   },
+   {
+      "name":"Massage Services",
+      "image":"MASSAGE_SERVICES",
+      "parameter":"MASSAGE_SERVICES"
+   },
+   {
+      "name":"Multilingual Staff",
+      "image":"MULTILINGUAL_STAFF",
+      "parameter":"MULTILINGUAL_STAFF"
+   },
+   {
+      "name":"Nightclub",
+      "image":"NIGHTCLUB",
+      "parameter":"NIGHTCLUB"
+   },
+   {
+      "name":"Hotel Does Not Provide Pornographic Films/TV",
+      "image":"NON_PORNOGRAPHIC_TV",
+      "parameter":"NON_PORNOGRAPHIC_TV"
+   },
+   {
+      "name":"Non-Smoking Rooms (Generic)",
+      "image":"NON_SMOKING_ROOM",
+      "parameter":"NON_SMOKING_ROOM"
+   },
+   {
+      "name":"Outdoor Pool",
+      "image":"OUTDOOR_POOL",
+      "parameter":"OUTDOOR_POOL"
+   },
+   {
+      "name":"Parking",
+      "image":"PARKING",
+      "parameter":"PARKING"
+   },
+   {
+      "name":"Pets Allowed",
+      "image":"PETS_ALLOWED",
+      "parameter":"PETS_ALLOWED"
+   },
+   {
+      "name":"Pharmacy/Drugstore",
+      "image":"PHARMACY",
+      "parameter":"PHARMACY"
+   },
+   {
+      "name":"Pool",
+      "image":"POOL",
+      "parameter":"POOL"
+   },
+   {
+      "name":"Restaurant",
+      "image":"RESTAURANT",
+      "parameter":"RESTAURANT"
+   },
+   {
+      "name":"Room Service",
+      "image":"ROOM_SERVICE",
+      "parameter":"ROOM_SERVICE"
+   },
+   {
+      "name":"24-Hour Room Service",
+      "image":"ROOM_SERVICE_24_HOURS",
+      "parameter":"ROOM_SERVICE_24_HOURS"
+   },
+   {
+      "name":"Safe Deposit Box",
+      "image":"SAFE_DEPOSIT_BOX",
+      "parameter":"SAFE_DEPOSIT_BOX"
+   },
+   {
+      "name":"Sauna",
+      "image":"SAUNA",
+      "parameter":"SAUNA"
+   },
+   {
+      "name":"Solarium",
+      "image":"SOLARIUM",
+      "parameter":"SOLARIUM"
+   },
+   {
+      "name":"Spa",
+      "image":"SPA",
+      "parameter":"SPA"
+   },
+   {
+      "name":"Valet Parking",
+      "image":"VALET_PARKING",
+      "parameter":"VALET_PARKING"
+   },
+   {
+      "name":"Vending Machine",
+      "image":"VENDING_MACHINES",
+      "parameter":"VENDING_MACHINES"
+   }
+]

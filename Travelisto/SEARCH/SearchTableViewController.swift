@@ -17,7 +17,7 @@ class SearchTableViewController: UITableViewController {
     //var data = [[""], [""]]()
     var searchCodes : [[Codable]]!
     var position : Int!
-    var dummyCount = [["one", "two", "three", "four"], [" one", "two"]]
+    var dummyCount = [["one", "two", "three", "four"], ["one", "two"]]
  
     
     //Refresh Control

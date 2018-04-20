@@ -120,6 +120,7 @@
 		EF61FC392088125C001A9C02 /* DateResultsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC382088125C001A9C02 /* DateResultsCVCell.swift */; };
 		EF61FC3B2088127F001A9C02 /* FlightOfferTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC3A2088127F001A9C02 /* FlightOfferTVCell.swift */; };
 		EF61FC3E2088334A001A9C02 /* CheckOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC3D2088334A001A9C02 /* CheckOutVC.swift */; };
+		EF61FC402089656C001A9C02 /* amenity.json in Resources */ = {isa = PBXBuildFile; fileRef = EF61FC3F2089656C001A9C02 /* amenity.json */; };
 		EF7208561F82992100E1824D /* LowFareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208551F82992100E1824D /* LowFareURL.swift */; };
 		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
 		EFC9024C208668A3000B0EA3 /* CalendarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */; };
@@ -280,6 +281,7 @@
 		EF61FC382088125C001A9C02 /* DateResultsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateResultsCVCell.swift; sourceTree = "<group>"; };
 		EF61FC3A2088127F001A9C02 /* FlightOfferTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightOfferTVCell.swift; sourceTree = "<group>"; };
 		EF61FC3D2088334A001A9C02 /* CheckOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutVC.swift; sourceTree = "<group>"; };
+		EF61FC3F2089656C001A9C02 /* amenity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amenity.json; sourceTree = "<group>"; };
 		EF7208551F82992100E1824D /* LowFareURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowFareURL.swift; sourceTree = "<group>"; };
 		EF7208571F83E55000E1824D /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerVC.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				EF13834920803D4C00FD95C1 /* currency.json */,
 				EF13834520803A1E00FD95C1 /* languages.json */,
 				EF13834D20819F5100FD95C1 /* units.json */,
+				EF61FC3F2089656C001A9C02 /* amenity.json */,
 				EF13834B2081444300FD95C1 /* Codables.swift */,
 			);
 			path = JSON;
@@ -1008,6 +1011,7 @@
 				EF1551E9207CF5BD008DAA89 /* TabBar.storyboard in Resources */,
 				EF3656CE207D2F3D00B2AB3C /* Search.storyboard in Resources */,
 				EF13834620803A1E00FD95C1 /* languages.json in Resources */,
+				EF61FC402089656C001A9C02 /* amenity.json in Resources */,
 				EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */,
 				EF3656D2207D2FC300B2AB3C /* Settings.storyboard in Resources */,
 				EF13834820803B4100FD95C1 /* airports.json in Resources */,

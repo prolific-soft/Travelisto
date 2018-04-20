@@ -25,7 +25,6 @@ class DestinationTVCell: UITableViewCell, UICollectionViewDelegate, UICollection
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }
@@ -71,6 +70,5 @@ extension DestinationTVCell {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //Perform Segue
     }
-    
     
 }
