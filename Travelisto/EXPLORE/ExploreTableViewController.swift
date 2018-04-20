@@ -134,7 +134,7 @@ extension ExploreTableViewController : UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         //CollectionView Tag 1 is tripToCollectionView
-        //CollectionView Tag 1 is tripToCollectionView
+        //CollectionView Tag 2 is tripToCollectionView
         if collectionView.tag == 1 {
             return 30
         }else {

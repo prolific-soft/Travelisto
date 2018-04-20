@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+        <array key="SanFranciscoText-Regular.otf">
+            <string>SanFranciscoText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cityDescriptionTVCell" rowHeight="242" id="KGk-i7-Jjw" customClass="CityDescriptionTVCell" customModule="Travelisto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="242"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="241.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital of Roman Empire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiw-0U-9vt">
+                        <rect key="frame" x="20" y="11" width="295" height="20.5"/>
+                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="17"/>
+                        <color key="textColor" red="0.14117647058823529" green="0.14509803921568626" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="999" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upg-Bf-uNb">
+                        <rect key="frame" x="20" y="54.5" width="295" height="167"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="999" constant="167" id="6qy-z3-qM4"/>
+                        </constraints>
+                        <string key="text">Rome's history spans more than 2,500 years. While Roman mythology dates the founding of Rome at around 753 BC, the site has been inhabited for much longer, making it one of the oldest continuously occupied sites in Europe.
+
+The city's early population originated from a mix of Latins, Etruscans and Sabines. Eventually, the city successively became the capital of the Roman Kingdom, the Roman Republic and the Roman Empire, and is regarded as one of the birthplaces of Western civilisation and by some…</string>
+                        <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="13"/>
+                        <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Upg-Bf-uNb" secondAttribute="trailing" constant="20" id="1yD-o7-wJL"/>
+                    <constraint firstItem="oiw-0U-9vt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="59r-hJ-goZ"/>
+                    <constraint firstAttribute="bottom" secondItem="Upg-Bf-uNb" secondAttribute="bottom" constant="20" id="8Pe-bR-2lV"/>
+                    <constraint firstItem="Upg-Bf-uNb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="QDK-L2-W53"/>
+                    <constraint firstItem="oiw-0U-9vt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Upn-VO-yVN"/>
+                    <constraint firstItem="Upg-Bf-uNb" firstAttribute="top" secondItem="oiw-0U-9vt" secondAttribute="bottom" constant="23" id="jt7-AF-jIg"/>
+                    <constraint firstAttribute="trailing" secondItem="oiw-0U-9vt" secondAttribute="trailing" constant="20" id="zIn-aa-FQQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="47.5" y="221"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -8,6 +8,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+        <array key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Explore-->
         <scene sceneID="lcz-JE-Pdv">
@@ -82,6 +90,9 @@
                                                         <constraint firstAttribute="bottom" secondItem="qD1-ps-zeW" secondAttribute="bottom" id="nXp-u7-NWR"/>
                                                         <constraint firstAttribute="trailing" secondItem="qD1-ps-zeW" secondAttribute="trailing" id="oS0-ta-BrF"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <segue destination="hnN-eN-lz5" kind="show" id="PKE-3a-ohF"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -149,6 +160,9 @@
                                                         <constraint firstItem="0hZ-HA-66d" firstAttribute="leading" secondItem="Hb7-IO-HPU" secondAttribute="leading" id="c8W-oD-N5R"/>
                                                         <constraint firstAttribute="bottom" secondItem="jYP-qy-jfk" secondAttribute="bottom" constant="12" id="swV-gm-j9j"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <segue destination="hnN-eN-lz5" kind="show" id="QjV-6i-iMq"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -195,10 +209,115 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Explore" id="wQ5-cy-9Dy"/>
+                    <connections>
+                        <segue destination="hnN-eN-lz5" kind="show" identifier="toTripOpen" id="6ud-yy-OdG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsD-Rk-frL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1656.8" y="2924.8875562218891"/>
+        </scene>
+        <!--Rome-->
+        <scene sceneID="5xi-1U-Kq3">
+            <objects>
+                <tableViewController id="hnN-eN-lz5" customClass="TripOpenTVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="paZ-xu-cBH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="BNR-b2-WD6">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country_3" translatesAutoresizingMaskIntoConstraints="NO" id="pvt-Tn-L2H">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip to Rome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwR-QF-3h0">
+                                    <rect key="frame" x="8" y="78" width="359" height="37"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="30"/>
+                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A journey into the past" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sD-1n-hEX">
+                                    <rect key="frame" x="8" y="120" width="359" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shape-star" translatesAutoresizingMaskIntoConstraints="NO" id="ha7-pX-lpw">
+                                    <rect key="frame" x="144" y="152" width="14" height="14"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shape-star" translatesAutoresizingMaskIntoConstraints="NO" id="bee-dz-phj">
+                                    <rect key="frame" x="163" y="152" width="14" height="14"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shape-star" translatesAutoresizingMaskIntoConstraints="NO" id="b2j-8k-W6j">
+                                    <rect key="frame" x="182" y="152" width="14" height="14"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shape-star" translatesAutoresizingMaskIntoConstraints="NO" id="vpW-cp-rrW">
+                                    <rect key="frame" x="200" y="152" width="14" height="14"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shape-star" translatesAutoresizingMaskIntoConstraints="NO" id="jml-KK-XVh">
+                                    <rect key="frame" x="217" y="152" width="14" height="14"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="pvt-Tn-L2H" firstAttribute="leading" secondItem="BNR-b2-WD6" secondAttribute="leading" id="2x3-ed-inr"/>
+                                <constraint firstAttribute="bottom" secondItem="pvt-Tn-L2H" secondAttribute="bottom" id="Io4-bS-qGG"/>
+                                <constraint firstAttribute="trailing" secondItem="pvt-Tn-L2H" secondAttribute="trailing" id="P9r-rj-jxv"/>
+                                <constraint firstItem="pvt-Tn-L2H" firstAttribute="top" secondItem="BNR-b2-WD6" secondAttribute="top" id="fcl-p0-ndr"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cityMapTVCell" rowHeight="210" id="BW6-vK-Tbs" customClass="CityMapTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="230" width="375" height="210"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BW6-vK-Tbs" id="PqK-4c-EmV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3lq-Ai-Lye">
+                                            <rect key="frame" x="20" y="19" width="335" height="172"/>
+                                            <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </mapView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="3lq-Ai-Lye" firstAttribute="leading" secondItem="PqK-4c-EmV" secondAttribute="leading" constant="20" id="Ayj-JM-fsb"/>
+                                        <constraint firstAttribute="trailing" secondItem="3lq-Ai-Lye" secondAttribute="trailing" constant="20" id="SZ8-kR-rp5"/>
+                                        <constraint firstItem="3lq-Ai-Lye" firstAttribute="top" secondItem="PqK-4c-EmV" secondAttribute="top" constant="19" id="XbQ-tn-LF8"/>
+                                        <constraint firstAttribute="bottom" secondItem="3lq-Ai-Lye" secondAttribute="bottom" constant="19" id="dsf-qe-Fhq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hnN-eN-lz5" id="Swo-wh-W0t"/>
+                            <outlet property="delegate" destination="hnN-eN-lz5" id="6Sv-rh-zYC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rome" id="cyB-is-d37">
+                        <barButtonItem key="leftBarButtonItem" image="Back" id="acb-Jr-phR">
+                            <color key="tintColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="hnN-eN-lz5" id="W3H-fR-OL5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jua-59-PpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660" y="2924.8875562218891"/>
         </scene>
         <!--Explore-->
         <scene sceneID="QVb-wO-mId">
@@ -221,8 +340,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back" width="20" height="20"/>
+        <image name="Shape-star" width="14" height="14"/>
         <image name="country_3" width="1280" height="853"/>
         <image name="country_5" width="1280" height="853"/>
         <image name="explore" width="22" height="22"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6ud-yy-OdG"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -121,6 +121,13 @@
 		EF61FC3B2088127F001A9C02 /* FlightOfferTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC3A2088127F001A9C02 /* FlightOfferTVCell.swift */; };
 		EF61FC3E2088334A001A9C02 /* CheckOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC3D2088334A001A9C02 /* CheckOutVC.swift */; };
 		EF61FC402089656C001A9C02 /* amenity.json in Resources */ = {isa = PBXBuildFile; fileRef = EF61FC3F2089656C001A9C02 /* amenity.json */; };
+		EF61FC432089865A001A9C02 /* TripOpenTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC422089865A001A9C02 /* TripOpenTVC.swift */; };
+		EF61FC4620898679001A9C02 /* TripOpenCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC4520898679001A9C02 /* TripOpenCells.swift */; };
+		EF61FC4920898E24001A9C02 /* CityDescriptionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC4720898E24001A9C02 /* CityDescriptionTVCell.swift */; };
+		EF61FC4A20898E24001A9C02 /* CityDescriptionTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF61FC4820898E24001A9C02 /* CityDescriptionTVCell.xib */; };
+		EF61FC4C208A0AAC001A9C02 /* CityMapTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC4B208A0AAC001A9C02 /* CityMapTVCell.swift */; };
+		EF61FC4F208A0CFA001A9C02 /* TopExperiencesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC4D208A0CFA001A9C02 /* TopExperiencesTVCell.swift */; };
+		EF61FC50208A0CFA001A9C02 /* TopExperiencesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF61FC4E208A0CFA001A9C02 /* TopExperiencesTVCell.xib */; };
 		EF7208561F82992100E1824D /* LowFareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208551F82992100E1824D /* LowFareURL.swift */; };
 		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
 		EFC9024C208668A3000B0EA3 /* CalendarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */; };
@@ -282,6 +289,13 @@
 		EF61FC3A2088127F001A9C02 /* FlightOfferTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightOfferTVCell.swift; sourceTree = "<group>"; };
 		EF61FC3D2088334A001A9C02 /* CheckOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutVC.swift; sourceTree = "<group>"; };
 		EF61FC3F2089656C001A9C02 /* amenity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amenity.json; sourceTree = "<group>"; };
+		EF61FC422089865A001A9C02 /* TripOpenTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripOpenTVC.swift; sourceTree = "<group>"; };
+		EF61FC4520898679001A9C02 /* TripOpenCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripOpenCells.swift; sourceTree = "<group>"; };
+		EF61FC4720898E24001A9C02 /* CityDescriptionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDescriptionTVCell.swift; sourceTree = "<group>"; };
+		EF61FC4820898E24001A9C02 /* CityDescriptionTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDescriptionTVCell.xib; sourceTree = "<group>"; };
+		EF61FC4B208A0AAC001A9C02 /* CityMapTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapTVCell.swift; sourceTree = "<group>"; };
+		EF61FC4D208A0CFA001A9C02 /* TopExperiencesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopExperiencesTVCell.swift; sourceTree = "<group>"; };
+		EF61FC4E208A0CFA001A9C02 /* TopExperiencesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopExperiencesTVCell.xib; sourceTree = "<group>"; };
 		EF7208551F82992100E1824D /* LowFareURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowFareURL.swift; sourceTree = "<group>"; };
 		EF7208571F83E55000E1824D /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerVC.swift; sourceTree = "<group>"; };
@@ -731,6 +745,7 @@
 				EFFD278B207EF9A2004E7191 /* ExploreCells.swift */,
 				EFFD2788207EF950004E7191 /* TRIP TO */,
 				EF13831E207F06C900FD95C1 /* RELAXATION */,
+				EF61FC4120898625001A9C02 /* TRIP OPEN */,
 			);
 			path = EXPLORE;
 			sourceTree = "<group>";
@@ -906,6 +921,28 @@
 			path = "Check Out";
 			sourceTree = "<group>";
 		};
+		EF61FC4120898625001A9C02 /* TRIP OPEN */ = {
+			isa = PBXGroup;
+			children = (
+				EF61FC422089865A001A9C02 /* TripOpenTVC.swift */,
+				EF61FC4520898679001A9C02 /* TripOpenCells.swift */,
+				EF61FC4420898660001A9C02 /* Cells */,
+			);
+			path = "TRIP OPEN";
+			sourceTree = "<group>";
+		};
+		EF61FC4420898660001A9C02 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EF61FC4720898E24001A9C02 /* CityDescriptionTVCell.swift */,
+				EF61FC4820898E24001A9C02 /* CityDescriptionTVCell.xib */,
+				EF61FC4B208A0AAC001A9C02 /* CityMapTVCell.swift */,
+				EF61FC4D208A0CFA001A9C02 /* TopExperiencesTVCell.swift */,
+				EF61FC4E208A0CFA001A9C02 /* TopExperiencesTVCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		EF7208541F8298F800E1824D /* URL Builder */ = {
 			isa = PBXGroup;
 			children = (
@@ -1000,6 +1037,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3656D0207D2F8E00B2AB3C /* Trips.storyboard in Resources */,
+				EF61FC50208A0CFA001A9C02 /* TopExperiencesTVCell.xib in Resources */,
+				EF61FC4A20898E24001A9C02 /* CityDescriptionTVCell.xib in Resources */,
 				EF1523691FFDC19600ADAD1F /* SanFranciscoText-Regular.otf in Resources */,
 				EF53C9841F795F35009A1DB8 /* LaunchScreen.storyboard in Resources */,
 				EF53C9811F795F35009A1DB8 /* Assets.xcassets in Resources */,
@@ -1072,6 +1111,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF61FC4620898679001A9C02 /* TripOpenCells.swift in Sources */,
 				EF156B8D1F97C49B00924A89 /* RestuarantSearch.swift in Sources */,
 				EF156B8F1F97C60800924A89 /* Restuarant.swift in Sources */,
 				EF7208561F82992100E1824D /* LowFareURL.swift in Sources */,
@@ -1100,6 +1140,7 @@
 				EF17CAEA1F7C0BFD00E938AC /* CarService.swift in Sources */,
 				EF17F72B1F7EB69E00E7159A /* Amount.swift in Sources */,
 				EF3656E9207DB2F300B2AB3C /* DealsCVCell.swift in Sources */,
+				EF61FC432089865A001A9C02 /* TripOpenTVC.swift in Sources */,
 				EF13833220800FC200FD95C1 /* SettingsCells.swift in Sources */,
 				EF17CAEE1F7C0C5400E938AC /* PointsOfInterestService.swift in Sources */,
 				EF61FC312088042B001A9C02 /* DestinationConutryTVC.swift in Sources */,
@@ -1133,11 +1174,13 @@
 				EF17F7291F7EB36E00E7159A /* Car.swift in Sources */,
 				EF61FC392088125C001A9C02 /* DateResultsCVCell.swift in Sources */,
 				EF13833C208036FE00FD95C1 /* SettingSelectionTVC.swift in Sources */,
+				EF61FC4C208A0AAC001A9C02 /* CityMapTVCell.swift in Sources */,
 				EF61FC3320880722001A9C02 /* DestinationCountryTVCell.swift in Sources */,
 				EF43F8A31F9026F1008A1040 /* HotelURL.swift in Sources */,
 				EF1383412080376A00FD95C1 /* PrivacyTVCell.swift in Sources */,
 				EF13833E2080371E00FD95C1 /* SettingSelectionTVCell.swift in Sources */,
 				EF7208581F83E55000E1824D /* CustomError.swift in Sources */,
+				EF61FC4920898E24001A9C02 /* CityDescriptionTVCell.swift in Sources */,
 				EF156B961F98514300924A89 /* RestuarantURL.swift in Sources */,
 				EF17F7351F7EBD7F00E7159A /* CarRentalGeosearch.swift in Sources */,
 				EF37482420837E7A00A45AB7 /* DestinationTVCell.swift in Sources */,
@@ -1150,6 +1193,7 @@
 				EF17CAF41F7C72B200E938AC /* Fare.swift in Sources */,
 				EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */,
 				EF156B981F98515500924A89 /* RestuarantReviewURL.swift in Sources */,
+				EF61FC4F208A0CFA001A9C02 /* TopExperiencesTVCell.swift in Sources */,
 				EF1383432080378C00FD95C1 /* PrivacyTVC.swift in Sources */,
 				EFC9024E20867252000B0EA3 /* CalendarPickerCVCell.swift in Sources */,
 				EF15237A1FFEC43000ADAD1F /* CustomTextField.swift in Sources */,
