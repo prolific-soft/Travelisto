@@ -55,6 +55,16 @@ struct CunitStruct : Codable {
     }
 }
 
+
+
+//Amenity
+struct Camenity : Codable {
+    let name : String
+    let image : String
+    let parameter : String
+}
+
+
 //Airport
 struct Cairport : Codable {
     let code : String?

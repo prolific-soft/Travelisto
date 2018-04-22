@@ -380,7 +380,7 @@
                                                         <constraint firstItem="3b6-LK-JsR" firstAttribute="top" secondItem="f4r-AV-wGX" secondAttribute="top" id="pFw-VH-tUb"/>
                                                     </constraints>
                                                     <connections>
-                                                        <segue destination="4Ti-67-YIM" kind="show" id="4qo-34-9nU"/>
+                                                        <segue destination="4Ti-67-YIM" kind="show" identifier="toExperiences" id="4qo-34-9nU"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -483,7 +483,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="gdb-nx-tMP" kind="show" id="snV-tA-xMo"/>
+                        <segue destination="gdb-nx-tMP" kind="show" identifier="toPicturesOpen" id="snV-tA-xMo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1t8-7i-hyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -573,7 +573,7 @@
         <image name="explore" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sXP-UQ-HHT"/>
+        <segue reference="4qo-34-9nU"/>
         <segue reference="6ud-yy-OdG"/>
     </inferredMetricsTieBreakers>
 </document>

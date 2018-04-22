@@ -25,5 +25,8 @@ enum SearchCells : String {
     case dateResultsCVCell = "dateResultsCVCell"
     case dateResultsTVCell = "dateResultsTVCell"
     
+    //Hotel Amanity
+    case amenityTVCell = "amenityTVCell"
+    
     
 }
