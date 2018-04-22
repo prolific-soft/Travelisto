@@ -20,4 +20,7 @@ enum ExploreCells : String {
     case relaxationCVCell = "relaxationCVCell"
     case relaxationTVCell = "relaxationTVCell"
     
+    //Explore Content Open
+    case exploreContentOpenTVCell = "exploreContentOpenTVCell"
+    
 }

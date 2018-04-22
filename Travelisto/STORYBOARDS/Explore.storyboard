@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -14,6 +15,9 @@
         </array>
         <array key="SanFranciscoDisplay-Regular.otf">
             <string>SanFranciscoDisplay-Regular</string>
+        </array>
+        <array key="SanFranciscoText-Medium.otf">
+            <string>SanFranciscoText-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -278,6 +282,22 @@
                                 <constraint firstItem="pvt-Tn-L2H" firstAttribute="top" secondItem="BNR-b2-WD6" secondAttribute="top" id="fcl-p0-ndr"/>
                             </constraints>
                         </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="pVG-KC-i16">
+                            <rect key="frame" x="0.0" y="674" width="375" height="93"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxD-la-Hfs" customClass="CustomButton" customModule="Travelisto" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="18" width="335" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="17"/>
+                                    <state key="normal" title="Book a trip">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cityMapTVCell" rowHeight="210" id="BW6-vK-Tbs" customClass="CityMapTVCell" customModule="Travelisto" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="230" width="375" height="210"/>
@@ -359,6 +379,9 @@
                                                         <constraint firstAttribute="bottom" secondItem="3b6-LK-JsR" secondAttribute="bottom" id="L8d-cT-X83"/>
                                                         <constraint firstItem="3b6-LK-JsR" firstAttribute="top" secondItem="f4r-AV-wGX" secondAttribute="top" id="pFw-VH-tUb"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <segue destination="4Ti-67-YIM" kind="show" id="4qo-34-9nU"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -392,10 +415,135 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="4Ti-67-YIM" kind="show" identifier="toExploreContentOpen" id="sXP-UQ-HHT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jua-59-PpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2660" y="2924.8875562218891"/>
+        </scene>
+        <!--Experiences-->
+        <scene sceneID="ACJ-Ud-3eB">
+            <objects>
+                <tableViewController id="4Ti-67-YIM" customClass="ExploreContentOpenTVC" customModule="Travelisto" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="szr-eS-eSC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="exploreContentOpenTVCell" rowHeight="122" id="iKg-Sr-Wa0" customClass="ExploreContentOpenTVCell" customModule="Travelisto" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="122"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iKg-Sr-Wa0" id="2ry-uf-AIq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="country_3" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-1e-DNh">
+                                            <rect key="frame" x="20" y="14" width="94" height="94"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Colesseum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h2-yo-Wyb">
+                                            <rect key="frame" x="136" y="14" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                                            <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Italian cuisine has developed over the centuries. Although the country known " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL7-lm-iBe">
+                                            <rect key="frame" x="136" y="43" width="219" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="12"/>
+                                            <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6 Trips" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtO-lf-QKq">
+                                            <rect key="frame" x="136" y="84" width="73" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="12"/>
+                                            <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Ti-67-YIM" id="UPq-Yd-VwU"/>
+                            <outlet property="delegate" destination="4Ti-67-YIM" id="dvQ-Lk-6rf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Experiences" id="sz5-G9-aYE">
+                        <barButtonItem key="leftBarButtonItem" image="Back" id="wvb-I2-yZj">
+                            <color key="tintColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="4Ti-67-YIM" id="f1k-c6-d3x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="gdb-nx-tMP" kind="show" id="snV-tA-xMo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1t8-7i-hyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3648.8000000000002" y="2924.8875562218891"/>
+        </scene>
+        <!--Colosseum-->
+        <scene sceneID="hp3-Jx-tMF">
+            <objects>
+                <viewController id="gdb-nx-tMP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eyL-Pp-k2S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LTK-Qn-572">
+                                <rect key="frame" x="0.0" y="116" width="375" height="276"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fQg-4u-UGc">
+                                    <size key="itemSize" width="281" height="265"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pN9-Qg-X1N">
+                                        <rect key="frame" x="47" y="0.0" width="281" height="265"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="265"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hSZ-0O-i7f">
+                                <rect key="frame" x="168" y="400" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FG8-LN-fQp">
+                                <rect key="frame" x="16" y="429" width="343" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="m9B-LU-VmY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Colosseum" id="FJI-9W-Dw9">
+                        <barButtonItem key="leftBarButtonItem" image="Back" id="50n-4U-hpq">
+                            <color key="tintColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOV-sg-sf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4573.6000000000004" y="2924.8875562218891"/>
         </scene>
         <!--Explore-->
         <scene sceneID="QVb-wO-mId">
@@ -425,6 +573,7 @@
         <image name="explore" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="sXP-UQ-HHT"/>
         <segue reference="6ud-yy-OdG"/>
     </inferredMetricsTieBreakers>
 </document>

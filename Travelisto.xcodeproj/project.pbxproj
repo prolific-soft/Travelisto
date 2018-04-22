@@ -132,10 +132,13 @@
 		EF61FC54208A38C6001A9C02 /* FoodDescriptionTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF61FC52208A38C6001A9C02 /* FoodDescriptionTVCell.xib */; };
 		EF61FC56208A3CB3001A9C02 /* RestuarantsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC55208A3CB3001A9C02 /* RestuarantsTVCell.swift */; };
 		EF61FC58208A402B001A9C02 /* RestuarantsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC57208A402B001A9C02 /* RestuarantsCVCell.swift */; };
+		EF61FC5B208A4962001A9C02 /* ExploreContentOpenTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC5A208A4962001A9C02 /* ExploreContentOpenTVC.swift */; };
+		EF61FC5D208A4A40001A9C02 /* ExploreContentOpenTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC5C208A4A40001A9C02 /* ExploreContentOpenTVCell.swift */; };
 		EF7208561F82992100E1824D /* LowFareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208551F82992100E1824D /* LowFareURL.swift */; };
 		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
 		EFC9024C208668A3000B0EA3 /* CalendarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */; };
 		EFC9024E20867252000B0EA3 /* CalendarPickerCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */; };
+		EFCD59CF208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD59CE208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift */; };
 		EFFD2787207EF82F004E7191 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD2786207EF82F004E7191 /* ExploreTableViewController.swift */; };
 		EFFD278A207EF97B004E7191 /* TripToTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD2789207EF97B004E7191 /* TripToTVCell.swift */; };
 		EFFD278C207EF9A2004E7191 /* ExploreCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD278B207EF9A2004E7191 /* ExploreCells.swift */; };
@@ -304,10 +307,13 @@
 		EF61FC52208A38C6001A9C02 /* FoodDescriptionTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodDescriptionTVCell.xib; sourceTree = "<group>"; };
 		EF61FC55208A3CB3001A9C02 /* RestuarantsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantsTVCell.swift; sourceTree = "<group>"; };
 		EF61FC57208A402B001A9C02 /* RestuarantsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarantsCVCell.swift; sourceTree = "<group>"; };
+		EF61FC5A208A4962001A9C02 /* ExploreContentOpenTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreContentOpenTVC.swift; sourceTree = "<group>"; };
+		EF61FC5C208A4A40001A9C02 /* ExploreContentOpenTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreContentOpenTVCell.swift; sourceTree = "<group>"; };
 		EF7208551F82992100E1824D /* LowFareURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowFareURL.swift; sourceTree = "<group>"; };
 		EF7208571F83E55000E1824D /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerVC.swift; sourceTree = "<group>"; };
 		EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerCVCell.swift; sourceTree = "<group>"; };
+		EFCD59CE208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDestinationOptionsVC.swift; sourceTree = "<group>"; };
 		EFFD2786207EF82F004E7191 /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		EFFD2789207EF97B004E7191 /* TripToTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripToTVCell.swift; sourceTree = "<group>"; };
 		EFFD278B207EF9A2004E7191 /* ExploreCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCells.swift; sourceTree = "<group>"; };
@@ -754,6 +760,7 @@
 				EFFD2788207EF950004E7191 /* TRIP TO */,
 				EF13831E207F06C900FD95C1 /* RELAXATION */,
 				EF61FC4120898625001A9C02 /* TRIP OPEN */,
+				EF61FC59208A4919001A9C02 /* Explore Content Open */,
 			);
 			path = EXPLORE;
 			sourceTree = "<group>";
@@ -770,6 +777,7 @@
 				EF2C1E972084F8CB003CEC8D /* FlightDestinationOptionsVC */,
 				EF61FC2E2087A5F7001A9C02 /* FightOffers */,
 				EF61FC3C20883323001A9C02 /* Check Out */,
+				EFCD59CC208C09A100462FC8 /* HOTEL */,
 			);
 			path = SEARCH;
 			sourceTree = "<group>";
@@ -955,6 +963,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		EF61FC59208A4919001A9C02 /* Explore Content Open */ = {
+			isa = PBXGroup;
+			children = (
+				EF61FC5A208A4962001A9C02 /* ExploreContentOpenTVC.swift */,
+				EF61FC5C208A4A40001A9C02 /* ExploreContentOpenTVCell.swift */,
+			);
+			path = "Explore Content Open";
+			sourceTree = "<group>";
+		};
 		EF7208541F8298F800E1824D /* URL Builder */ = {
 			isa = PBXGroup;
 			children = (
@@ -975,6 +992,22 @@
 				EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */,
 			);
 			path = CalendarPicker;
+			sourceTree = "<group>";
+		};
+		EFCD59CC208C09A100462FC8 /* HOTEL */ = {
+			isa = PBXGroup;
+			children = (
+				EFCD59CD208C09C900462FC8 /* Hotel Destination Options  */,
+			);
+			path = HOTEL;
+			sourceTree = "<group>";
+		};
+		EFCD59CD208C09C900462FC8 /* Hotel Destination Options  */ = {
+			isa = PBXGroup;
+			children = (
+				EFCD59CE208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift */,
+			);
+			path = "Hotel Destination Options ";
 			sourceTree = "<group>";
 		};
 		EFFD2788207EF950004E7191 /* TRIP TO */ = {
@@ -1137,6 +1170,7 @@
 				EF156BA21F9A65DE00924A89 /* AuthService.swift in Sources */,
 				EF61FC3E2088334A001A9C02 /* CheckOutVC.swift in Sources */,
 				EF17CAD61F7BE72600E938AC /* NetworkProcessor.swift in Sources */,
+				EF61FC5B208A4962001A9C02 /* ExploreContentOpenTVC.swift in Sources */,
 				EF37482620837E9800A45AB7 /* DestinationCVCell.swift in Sources */,
 				EF17CAF01F7C599A00E938AC /* Destinations.swift in Sources */,
 				EF17CAE31F7C030E00E938AC /* PointsOfInterestNetworkProcessor.swift in Sources */,
@@ -1168,6 +1202,7 @@
 				EF17F73E1F7EFB0400E7159A /* FlightTraffic.swift in Sources */,
 				EF17CADD1F7C02BA00E938AC /* FlightNetworkProcessor.swift in Sources */,
 				EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */,
+				EF61FC5D208A4A40001A9C02 /* ExploreContentOpenTVCell.swift in Sources */,
 				EFFD2787207EF82F004E7191 /* ExploreTableViewController.swift in Sources */,
 				EF17F7271F7EB06C00E7159A /* CarRental.swift in Sources */,
 				EF1523C020044A8600ADAD1F /* Segue.swift in Sources */,
@@ -1231,6 +1266,7 @@
 				EF156B931F98174400924A89 /* Review.swift in Sources */,
 				EF156B9E1F985EBB00924A89 /* RestuarantService.swift in Sources */,
 				EF17CAF61F7C8F0700E938AC /* Outbound.swift in Sources */,
+				EFCD59CF208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift in Sources */,
 				EF3656D7207D326300B2AB3C /* SearchTableViewController.swift in Sources */,
 				EF138329207F20E100FD95C1 /* TripHeaderView.swift in Sources */,
 				EFFD278C207EF9A2004E7191 /* ExploreCells.swift in Sources */,
