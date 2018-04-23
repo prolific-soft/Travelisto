@@ -95,7 +95,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="qD1-ps-zeW" secondAttribute="trailing" id="oS0-ta-BrF"/>
                                                     </constraints>
                                                     <connections>
-                                                        <segue destination="hnN-eN-lz5" kind="show" id="PKE-3a-ohF"/>
+                                                        <segue destination="hnN-eN-lz5" kind="show" identifier="fakeOne" id="PKE-3a-ohF"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -165,7 +165,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="jYP-qy-jfk" secondAttribute="bottom" constant="12" id="swV-gm-j9j"/>
                                                     </constraints>
                                                     <connections>
-                                                        <segue destination="hnN-eN-lz5" kind="show" id="QjV-6i-iMq"/>
+                                                        <segue destination="hnN-eN-lz5" kind="show" identifier="fakeTwo" id="QjV-6i-iMq"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -509,7 +509,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pN9-Qg-X1N">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fakeImageColloseum" id="pN9-Qg-X1N">
                                         <rect key="frame" x="47" y="0.0" width="281" height="265"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
