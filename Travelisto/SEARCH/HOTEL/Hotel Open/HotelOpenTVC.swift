@@ -42,9 +42,7 @@ extension HotelOpenTVC  {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let hotelOneTVCellHeight = CGFloat(61)
         let hotelFiveCellHeight = CGFloat(190)
-        let topExperiencesCellHeight = CGFloat(231)
-        let foodDescriptionCellHeight = CGFloat(173)
-        let restuarantsCellHeight = CGFloat(234)
+        let hotelSixCellHeight = CGFloat(140)
         
         switch indexPath.row {
         case 0:
@@ -57,6 +55,8 @@ extension HotelOpenTVC  {
             return UITableViewAutomaticDimension
         case 4:
             return hotelFiveCellHeight
+        case 5:
+            return hotelSixCellHeight
         default:
             break
         }
@@ -95,6 +95,9 @@ extension HotelOpenTVC  {
             return cell
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: HotelOpenCells.hotelFiveTVCell.rawValue, for: indexPath) as! HotelFiveTVCell
+            return cell
+        case 5:
+            let cell = tableView.dequeueReusableCell(withIdentifier: HotelOpenCells.hotelSixTVCell.rawValue, for: indexPath) as! HotelSixTVCell
             return cell
         default:
             break

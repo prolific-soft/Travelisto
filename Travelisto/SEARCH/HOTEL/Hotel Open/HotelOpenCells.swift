@@ -15,4 +15,5 @@ enum HotelOpenCells : String {
     case hotelThreeTVCell = "hotelThreeTVCell"
     case hotelFourTVCell = "hotelFourTVCell"
     case hotelFiveTVCell = "hotelFiveTVCell"
+    case hotelSixTVCell = "hotelSixTVCell"
 }

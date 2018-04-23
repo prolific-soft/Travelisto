@@ -148,6 +148,7 @@
 		EFCD59DF208D77C200462FC8 /* HotelThreeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD59DE208D77C200462FC8 /* HotelThreeTVCell.swift */; };
 		EFCD59E1208D78F500462FC8 /* HotelFourTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD59E0208D78F500462FC8 /* HotelFourTVCell.swift */; };
 		EFCD59E3208D7B1400462FC8 /* HotelFiveTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD59E2208D7B1400462FC8 /* HotelFiveTVCell.swift */; };
+		EFCD59E5208D7CB900462FC8 /* HotelSixTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD59E4208D7CB900462FC8 /* HotelSixTVCell.swift */; };
 		EFFD2787207EF82F004E7191 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD2786207EF82F004E7191 /* ExploreTableViewController.swift */; };
 		EFFD278A207EF97B004E7191 /* TripToTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD2789207EF97B004E7191 /* TripToTVCell.swift */; };
 		EFFD278C207EF9A2004E7191 /* ExploreCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD278B207EF9A2004E7191 /* ExploreCells.swift */; };
@@ -332,6 +333,7 @@
 		EFCD59DE208D77C200462FC8 /* HotelThreeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelThreeTVCell.swift; sourceTree = "<group>"; };
 		EFCD59E0208D78F500462FC8 /* HotelFourTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelFourTVCell.swift; sourceTree = "<group>"; };
 		EFCD59E2208D7B1400462FC8 /* HotelFiveTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelFiveTVCell.swift; sourceTree = "<group>"; };
+		EFCD59E4208D7CB900462FC8 /* HotelSixTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSixTVCell.swift; sourceTree = "<group>"; };
 		EFFD2786207EF82F004E7191 /* ExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		EFFD2789207EF97B004E7191 /* TripToTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripToTVCell.swift; sourceTree = "<group>"; };
 		EFFD278B207EF9A2004E7191 /* ExploreCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCells.swift; sourceTree = "<group>"; };
@@ -1049,6 +1051,7 @@
 				EFCD59DE208D77C200462FC8 /* HotelThreeTVCell.swift */,
 				EFCD59E0208D78F500462FC8 /* HotelFourTVCell.swift */,
 				EFCD59E2208D7B1400462FC8 /* HotelFiveTVCell.swift */,
+				EFCD59E4208D7CB900462FC8 /* HotelSixTVCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1227,6 +1230,7 @@
 				EF17F7251F7EABAA00E7159A /* Hotel.swift in Sources */,
 				EF53C97A1F795F35009A1DB8 /* AppDelegate.swift in Sources */,
 				EF17F73C1F7EF48900E7159A /* TopFlightDestination.swift in Sources */,
+				EFCD59E5208D7CB900462FC8 /* HotelSixTVCell.swift in Sources */,
 				EF17F74D1F7F23AD00E7159A /* POIAPISearchBy.swift in Sources */,
 				EF1C9F421FFDB8B9008084FE /* TutorialViewController.swift in Sources */,
 				EFFD278A207EF97B004E7191 /* TripToTVCell.swift in Sources */,
