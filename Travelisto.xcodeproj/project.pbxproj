@@ -136,6 +136,8 @@
 		EF61FC5D208A4A40001A9C02 /* ExploreContentOpenTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FC5C208A4A40001A9C02 /* ExploreContentOpenTVCell.swift */; };
 		EF7208561F82992100E1824D /* LowFareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208551F82992100E1824D /* LowFareURL.swift */; };
 		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
+		EFA0DE41208E3EE500C4D9C4 /* TravelistoUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0DE40208E3EE500C4D9C4 /* TravelistoUnitTests.swift */; };
+		EFA0DE4F208E3F0D00C4D9C4 /* TravelistoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0DE4E208E3F0D00C4D9C4 /* TravelistoUITests.swift */; };
 		EFC9024C208668A3000B0EA3 /* CalendarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */; };
 		EFC9024E20867252000B0EA3 /* CalendarPickerCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */; };
 		EFCD59CF208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD59CE208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift */; };
@@ -154,6 +156,23 @@
 		EFFD278C207EF9A2004E7191 /* ExploreCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD278B207EF9A2004E7191 /* ExploreCells.swift */; };
 		EFFD278E207EFF03004E7191 /* TripToCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD278D207EFF03004E7191 /* TripToCVCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFA0DE43208E3EE500C4D9C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF53C96E1F795F35009A1DB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF53C9751F795F35009A1DB8;
+			remoteInfo = Travelisto;
+		};
+		EFA0DE51208E3F0D00C4D9C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF53C96E1F795F35009A1DB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF53C9751F795F35009A1DB8;
+			remoteInfo = Travelisto;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EF156BA41F9A764C00924A89 /* CopyFiles */ = {
@@ -321,6 +340,12 @@
 		EF61FC5C208A4A40001A9C02 /* ExploreContentOpenTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreContentOpenTVCell.swift; sourceTree = "<group>"; };
 		EF7208551F82992100E1824D /* LowFareURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowFareURL.swift; sourceTree = "<group>"; };
 		EF7208571F83E55000E1824D /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		EFA0DE3E208E3EE500C4D9C4 /* TravelistoUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelistoUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA0DE40208E3EE500C4D9C4 /* TravelistoUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelistoUnitTests.swift; sourceTree = "<group>"; };
+		EFA0DE42208E3EE500C4D9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFA0DE4C208E3F0D00C4D9C4 /* TravelistoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelistoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA0DE4E208E3F0D00C4D9C4 /* TravelistoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelistoUITests.swift; sourceTree = "<group>"; };
+		EFA0DE50208E3F0D00C4D9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerVC.swift; sourceTree = "<group>"; };
 		EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerCVCell.swift; sourceTree = "<group>"; };
 		EFCD59CE208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDestinationOptionsVC.swift; sourceTree = "<group>"; };
@@ -347,6 +372,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A14D741113BFD837DB27AF4 /* Pods_Travelisto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA0DE3B208E3EE500C4D9C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA0DE49208E3F0D00C4D9C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,6 +932,8 @@
 			isa = PBXGroup;
 			children = (
 				EF53C9781F795F35009A1DB8 /* Travelisto */,
+				EFA0DE3F208E3EE500C4D9C4 /* TravelistoUnitTests */,
+				EFA0DE4D208E3F0D00C4D9C4 /* TravelistoUITests */,
 				EF53C9771F795F35009A1DB8 /* Products */,
 				4921899092502A842DE4EF85 /* Pods */,
 				EF1C9F431FFDBDC9008084FE /* Fonts */,
@@ -904,6 +945,8 @@
 			isa = PBXGroup;
 			children = (
 				EF53C9761F795F35009A1DB8 /* Travelisto.app */,
+				EFA0DE3E208E3EE500C4D9C4 /* TravelistoUnitTests.xctest */,
+				EFA0DE4C208E3F0D00C4D9C4 /* TravelistoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1005,6 +1048,24 @@
 			path = "URL Builder";
 			sourceTree = "<group>";
 		};
+		EFA0DE3F208E3EE500C4D9C4 /* TravelistoUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFA0DE40208E3EE500C4D9C4 /* TravelistoUnitTests.swift */,
+				EFA0DE42208E3EE500C4D9C4 /* Info.plist */,
+			);
+			path = TravelistoUnitTests;
+			sourceTree = "<group>";
+		};
+		EFA0DE4D208E3F0D00C4D9C4 /* TravelistoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFA0DE4E208E3F0D00C4D9C4 /* TravelistoUITests.swift */,
+				EFA0DE50208E3F0D00C4D9C4 /* Info.plist */,
+			);
+			path = TravelistoUITests;
+			sourceTree = "<group>";
+		};
 		EFC9024A208667A4000B0EA3 /* CalendarPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1088,19 +1149,65 @@
 			productReference = EF53C9761F795F35009A1DB8 /* Travelisto.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EFA0DE3D208E3EE500C4D9C4 /* TravelistoUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFA0DE47208E3EE500C4D9C4 /* Build configuration list for PBXNativeTarget "TravelistoUnitTests" */;
+			buildPhases = (
+				EFA0DE3A208E3EE500C4D9C4 /* Sources */,
+				EFA0DE3B208E3EE500C4D9C4 /* Frameworks */,
+				EFA0DE3C208E3EE500C4D9C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFA0DE44208E3EE500C4D9C4 /* PBXTargetDependency */,
+			);
+			name = TravelistoUnitTests;
+			productName = TravelistoUnitTests;
+			productReference = EFA0DE3E208E3EE500C4D9C4 /* TravelistoUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFA0DE4B208E3F0D00C4D9C4 /* TravelistoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFA0DE53208E3F0D00C4D9C4 /* Build configuration list for PBXNativeTarget "TravelistoUITests" */;
+			buildPhases = (
+				EFA0DE48208E3F0D00C4D9C4 /* Sources */,
+				EFA0DE49208E3F0D00C4D9C4 /* Frameworks */,
+				EFA0DE4A208E3F0D00C4D9C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFA0DE52208E3F0D00C4D9C4 /* PBXTargetDependency */,
+			);
+			name = TravelistoUITests;
+			productName = TravelistoUITests;
+			productReference = EFA0DE4C208E3F0D00C4D9C4 /* TravelistoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		EF53C96E1F795F35009A1DB8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Chidi Emeh";
 				TargetAttributes = {
 					EF53C9751F795F35009A1DB8 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+					};
+					EFA0DE3D208E3EE500C4D9C4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EF53C9751F795F35009A1DB8;
+					};
+					EFA0DE4B208E3F0D00C4D9C4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EF53C9751F795F35009A1DB8;
 					};
 				};
 			};
@@ -1118,6 +1225,8 @@
 			projectRoot = "";
 			targets = (
 				EF53C9751F795F35009A1DB8 /* Travelisto */,
+				EFA0DE3D208E3EE500C4D9C4 /* TravelistoUnitTests */,
+				EFA0DE4B208E3F0D00C4D9C4 /* TravelistoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1146,6 +1255,20 @@
 				EF53C97F1F795F35009A1DB8 /* Main.storyboard in Resources */,
 				EF3656D2207D2FC300B2AB3C /* Settings.storyboard in Resources */,
 				EF13834820803B4100FD95C1 /* airports.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA0DE3C208E3EE500C4D9C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA0DE4A208E3F0D00C4D9C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1331,7 +1454,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFA0DE3A208E3EE500C4D9C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA0DE41208E3EE500C4D9C4 /* TravelistoUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA0DE48208E3F0D00C4D9C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA0DE4F208E3F0D00C4D9C4 /* TravelistoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFA0DE44208E3EE500C4D9C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF53C9751F795F35009A1DB8 /* Travelisto */;
+			targetProxy = EFA0DE43208E3EE500C4D9C4 /* PBXContainerItemProxy */;
+		};
+		EFA0DE52208E3F0D00C4D9C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF53C9751F795F35009A1DB8 /* Travelisto */;
+			targetProxy = EFA0DE51208E3F0D00C4D9C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EF53C97D1F795F35009A1DB8 /* Main.storyboard */ = {
@@ -1498,6 +1650,72 @@
 			};
 			name = Release;
 		};
+		EFA0DE45208E3EE500C4D9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V82X98L5Q;
+				INFOPLIST_FILE = TravelistoUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.chidiemeh184.TravelistoUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travelisto.app/Travelisto";
+			};
+			name = Debug;
+		};
+		EFA0DE46208E3EE500C4D9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V82X98L5Q;
+				INFOPLIST_FILE = TravelistoUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.chidiemeh184.TravelistoUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travelisto.app/Travelisto";
+			};
+			name = Release;
+		};
+		EFA0DE54208E3F0D00C4D9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V82X98L5Q;
+				INFOPLIST_FILE = TravelistoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.chidiemeh184.TravelistoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Travelisto;
+			};
+			name = Debug;
+		};
+		EFA0DE55208E3F0D00C4D9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V82X98L5Q;
+				INFOPLIST_FILE = TravelistoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.chidiemeh184.TravelistoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Travelisto;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1515,6 +1733,24 @@
 			buildConfigurations = (
 				EF53C9891F795F35009A1DB8 /* Debug */,
 				EF53C98A1F795F35009A1DB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFA0DE47208E3EE500C4D9C4 /* Build configuration list for PBXNativeTarget "TravelistoUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFA0DE45208E3EE500C4D9C4 /* Debug */,
+				EFA0DE46208E3EE500C4D9C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFA0DE53208E3F0D00C4D9C4 /* Build configuration list for PBXNativeTarget "TravelistoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFA0DE54208E3F0D00C4D9C4 /* Debug */,
+				EFA0DE55208E3F0D00C4D9C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
+        </array>
         <array key="SanFranciscoDisplay-Medium.otf">
             <string>SanFranciscoDisplay-Medium</string>
         </array>
@@ -1483,7 +1488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHD-lF-oeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3287" y="5838"/>
+            <point key="canvasLocation" x="4007" y="6079"/>
         </scene>
         <!--Rome Ciampano-->
         <scene sceneID="1Bs-If-z1h">
@@ -2140,7 +2145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4u-ri-o9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="6707"/>
+            <point key="canvasLocation" x="2951" y="6949"/>
         </scene>
         <!--Country-->
         <scene sceneID="Ats-5q-uOA">
@@ -2208,7 +2213,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yl-wd-W6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3050" y="7477"/>
+            <point key="canvasLocation" x="3770" y="7719"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xB3-HB-yl3">
@@ -2226,7 +2231,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zor-sg-yHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3050" y="6707"/>
+            <point key="canvasLocation" x="3770" y="6949"/>
         </scene>
         <!--Amenities-->
         <scene sceneID="kUK-ar-eN7">
@@ -2283,7 +2288,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hV2-xi-0qM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3922" y="6707"/>
+            <point key="canvasLocation" x="4642" y="6949"/>
         </scene>
         <!--Passenger Picker ModalVC-->
         <scene sceneID="Uw3-yV-LfK">
@@ -2547,7 +2552,7 @@
                     <viewLayoutGuide key="safeArea" id="tNZ-v9-Yvc"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="4714" y="6707"/>
+            <point key="canvasLocation" x="5434" y="6949"/>
         </scene>
         <!--Hotels-->
         <scene sceneID="v4s-lQ-WJ4">
@@ -2614,7 +2619,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADO-MP-M2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4566" y="5755"/>
+            <point key="canvasLocation" x="5287" y="5997"/>
         </scene>
         <!--Hotel Cassandro-->
         <scene sceneID="Vht-Nv-WQL">
@@ -2900,7 +2905,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGm-Mz-Eyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5901.6000000000004" y="5754.8725637181415"/>
+            <point key="canvasLocation" x="6623" y="5997"/>
         </scene>
     </scenes>
     <resources>
@@ -2928,7 +2933,7 @@
         <image name="standing-man-filled-small" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mJ2-dn-OGC"/>
+        <segue reference="Vg3-ZW-8gS"/>
         <segue reference="a9A-IK-b3Z"/>
     </inferredMetricsTieBreakers>
 </document>
