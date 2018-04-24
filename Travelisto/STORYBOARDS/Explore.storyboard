@@ -212,7 +212,14 @@
                             <outlet property="delegate" destination="gaH-A5-Zj0" id="n5U-Mo-48S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Explore" id="wQ5-cy-9Dy"/>
+                    <navigationItem key="navigationItem" title="Explore" id="wQ5-cy-9Dy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="75C-LE-FTR">
+                            <color key="tintColor" red="0.99215686270000003" green="0.3411764706" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="9Nq-mO-68L" kind="show" id="zkZ-Fs-kyZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="hnN-eN-lz5" kind="show" identifier="toTripOpen" id="6ud-yy-OdG"/>
                     </connections>
@@ -220,6 +227,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsD-Rk-frL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1656.8" y="2924.8875562218891"/>
+        </scene>
+        <!--Rome-->
+        <scene sceneID="yb7-Rx-70H">
+            <objects>
+                <viewController id="9Nq-mO-68L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="58T-FF-u1M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1417"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ap0-db-O6S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1417"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUC-4l-Shh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1417"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="country_3" translatesAutoresizingMaskIntoConstraints="NO" id="h0f-jV-sn5">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-dG-vK9">
+                                                <rect key="frame" x="20" y="433" width="335" height="964"/>
+                                                <subviews>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nf-cp-lUL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="230"/>
+                                                        <connections>
+                                                            <segue destination="PAp-N1-fVd" kind="embed" id="nnj-zS-j43"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQh-Wm-uIW">
+                                                        <rect key="frame" x="0.0" y="235" width="335" height="175"/>
+                                                        <connections>
+                                                            <segue destination="DAj-0M-Jc2" kind="embed" id="6zX-pY-Zdh"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDl-9b-gGG">
+                                                        <rect key="frame" x="0.0" y="415" width="335" height="256"/>
+                                                        <connections>
+                                                            <segue destination="HS0-94-0zY" kind="embed" id="PvO-Ko-jmb"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfG-iW-I7S">
+                                                        <rect key="frame" x="0.0" y="676" width="335" height="140"/>
+                                                        <connections>
+                                                            <segue destination="zem-tq-rLR" kind="embed" id="vYh-Sa-kzS"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKv-TX-VAc">
+                                                        <rect key="frame" x="0.0" y="821" width="335" height="143"/>
+                                                        <connections>
+                                                            <segue destination="CQE-ym-bkC" kind="embed" id="Qki-CU-v4u"/>
+                                                        </connections>
+                                                    </containerView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="tKv-TX-VAc" firstAttribute="top" secondItem="Wdh-dG-vK9" secondAttribute="top" constant="821" id="Uqe-ct-bJ1"/>
+                                                    <constraint firstItem="HDl-9b-gGG" firstAttribute="top" secondItem="Wdh-dG-vK9" secondAttribute="top" constant="415" id="axF-sF-T4w"/>
+                                                    <constraint firstItem="UfG-iW-I7S" firstAttribute="top" secondItem="Wdh-dG-vK9" secondAttribute="top" constant="676" id="hbw-97-YrW"/>
+                                                    <constraint firstItem="KQh-Wm-uIW" firstAttribute="top" secondItem="Wdh-dG-vK9" secondAttribute="top" constant="235" id="lXr-jm-uKV"/>
+                                                    <constraint firstAttribute="height" constant="964" id="sfx-Go-qfg"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Wdh-dG-vK9" secondAttribute="trailing" constant="20" id="FLR-mc-fCF"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wdh-dG-vK9" secondAttribute="bottom" constant="20" id="Umc-IL-93O"/>
+                                            <constraint firstAttribute="height" constant="1417" id="rOa-Xe-1pl"/>
+                                            <constraint firstItem="Wdh-dG-vK9" firstAttribute="leading" secondItem="cUC-4l-Shh" secondAttribute="leading" constant="20" id="uZu-In-tMD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cUC-4l-Shh" secondAttribute="bottom" id="FXb-v5-XEv"/>
+                                    <constraint firstItem="cUC-4l-Shh" firstAttribute="top" secondItem="ap0-db-O6S" secondAttribute="top" id="THX-9U-DZU"/>
+                                    <constraint firstAttribute="trailing" secondItem="cUC-4l-Shh" secondAttribute="trailing" id="TbJ-Lv-LAh"/>
+                                    <constraint firstItem="cUC-4l-Shh" firstAttribute="leading" secondItem="ap0-db-O6S" secondAttribute="leading" id="cuD-1v-ebP"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ap0-db-O6S" firstAttribute="top" secondItem="58T-FF-u1M" secondAttribute="top" id="3Zv-YY-GeV"/>
+                            <constraint firstItem="cUC-4l-Shh" firstAttribute="width" secondItem="58T-FF-u1M" secondAttribute="width" id="EV6-bU-IXi"/>
+                            <constraint firstItem="ap0-db-O6S" firstAttribute="trailing" secondItem="Nyv-2r-dwe" secondAttribute="trailing" id="QhT-ji-Pyl"/>
+                            <constraint firstItem="ap0-db-O6S" firstAttribute="leading" secondItem="Nyv-2r-dwe" secondAttribute="leading" id="gNY-nP-TuH"/>
+                            <constraint firstItem="ap0-db-O6S" firstAttribute="bottom" secondItem="Nyv-2r-dwe" secondAttribute="bottom" id="yjS-l2-YlG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nyv-2r-dwe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rome" id="4rG-Ij-Wcf"/>
+                    <size key="freeformSize" width="375" height="1417"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQZ-jS-ve5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1933.5999999999999" y="4295.8020989505249"/>
         </scene>
         <!--Rome-->
         <scene sceneID="5xi-1U-Kq3">
@@ -564,6 +666,121 @@
             </objects>
             <point key="canvasLocation" x="1659.2" y="1984.4077961019491"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="B7z-xb-Z19">
+            <objects>
+                <viewController id="PAp-N1-fVd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4hR-N9-vZD">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="230"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUx-f8-XZx">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="230"/>
+                                <string key="text">Rome's history spans more than 2,500 years. While Roman mythology dates the founding of Rome at around 753 BC, the site has been inhabited for much longer, making it one of the oldest continuously occupied sites in Europe.
+
+The city's early population originated from a mix of Latins, Etruscans and Sabines. Eventually, the city successively became the capital of the Roman Kingdom, the Roman Republic and the Roman Empire, and is regarded as one of the birthplaces of Western civilisation and by some…</string>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bUx-f8-XZx" secondAttribute="trailing" id="2Rj-FI-ySc"/>
+                            <constraint firstItem="bUx-f8-XZx" firstAttribute="leading" secondItem="4hR-N9-vZD" secondAttribute="leading" id="QVd-0j-m9Y"/>
+                            <constraint firstAttribute="bottom" secondItem="bUx-f8-XZx" secondAttribute="bottom" id="Vwu-jG-Haz"/>
+                            <constraint firstItem="bUx-f8-XZx" firstAttribute="top" secondItem="4hR-N9-vZD" secondAttribute="top" id="Z4q-7Q-YDS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcn-kt-vCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="4055"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kfE-Hv-0zv">
+            <objects>
+                <viewController id="DAj-0M-Jc2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Y7-AR-0L7">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="175"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="saw-4D-RPs">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="175"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="saw-4D-RPs" secondAttribute="bottom" id="39I-rm-U4m"/>
+                            <constraint firstItem="saw-4D-RPs" firstAttribute="leading" secondItem="0Y7-AR-0L7" secondAttribute="leading" id="6Rm-0G-rgi"/>
+                            <constraint firstAttribute="trailing" secondItem="saw-4D-RPs" secondAttribute="trailing" id="L2B-5o-hGT"/>
+                            <constraint firstItem="saw-4D-RPs" firstAttribute="top" secondItem="0Y7-AR-0L7" secondAttribute="top" id="xM2-WH-AeG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7p-cB-Gtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2776.8000000000002" y="4313.7931034482763"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JVd-p9-4G0">
+            <objects>
+                <viewController id="HS0-94-0zY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FPB-Nh-c9j">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="256"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zv0-gA-F47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="4592"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qZu-PY-b8t">
+            <objects>
+                <viewController id="zem-tq-rLR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yJp-lm-n4P">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="140"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z9-XD-Q6a">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="140"/>
+                                <string key="text">Rome's history spans more than 2,500 years. While Roman mythology dates the founding of Rome at around 753 BC, the site has been inhabited for much longer, making it one of the oldest continuously occupied sites in Europe.
+
+The city's early population originated from a mix of Latins, Etruscans and Sabines. Eventually, the city successively became the capital of the Roman Kingdom, the Roman Republic and the Roman Empire, and is regarded as one of the birthplaces of Western civilisation and by some…</string>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6z9-XD-Q6a" secondAttribute="bottom" id="5Mg-y4-fjZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6z9-XD-Q6a" secondAttribute="trailing" id="5sO-47-BRk"/>
+                            <constraint firstItem="6z9-XD-Q6a" firstAttribute="leading" secondItem="yJp-lm-n4P" secondAttribute="leading" id="NwY-6K-gOZ"/>
+                            <constraint firstItem="6z9-XD-Q6a" firstAttribute="top" secondItem="yJp-lm-n4P" secondAttribute="top" id="diO-4J-nIe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMf-Rb-xKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="4862"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Sty-nT-Xh0">
+            <objects>
+                <viewController id="CQE-ym-bkC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rge-j6-xRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="143"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YsD-Uy-6I2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="5104"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Back" width="20" height="20"/>
@@ -574,6 +791,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4qo-34-9nU"/>
-        <segue reference="6ud-yy-OdG"/>
+        <segue reference="QjV-6i-iMq"/>
     </inferredMetricsTieBreakers>
 </document>

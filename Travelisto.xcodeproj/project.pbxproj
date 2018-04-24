@@ -138,6 +138,7 @@
 		EF7208581F83E55000E1824D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7208571F83E55000E1824D /* CustomError.swift */; };
 		EFA0DE41208E3EE500C4D9C4 /* TravelistoUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0DE40208E3EE500C4D9C4 /* TravelistoUnitTests.swift */; };
 		EFA0DE4F208E3F0D00C4D9C4 /* TravelistoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0DE4E208E3F0D00C4D9C4 /* TravelistoUITests.swift */; };
+		EFA5D005208FB354007A3D19 /* TravelistoLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5D004208FB354007A3D19 /* TravelistoLogicTests.swift */; };
 		EFC9024C208668A3000B0EA3 /* CalendarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */; };
 		EFC9024E20867252000B0EA3 /* CalendarPickerCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */; };
 		EFCD59CF208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD59CE208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift */; };
@@ -346,6 +347,7 @@
 		EFA0DE4C208E3F0D00C4D9C4 /* TravelistoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelistoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA0DE4E208E3F0D00C4D9C4 /* TravelistoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelistoUITests.swift; sourceTree = "<group>"; };
 		EFA0DE50208E3F0D00C4D9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFA5D004208FB354007A3D19 /* TravelistoLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelistoLogicTests.swift; sourceTree = "<group>"; };
 		EFC9024B208668A3000B0EA3 /* CalendarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerVC.swift; sourceTree = "<group>"; };
 		EFC9024D20867252000B0EA3 /* CalendarPickerCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerCVCell.swift; sourceTree = "<group>"; };
 		EFCD59CE208C0A1D00462FC8 /* HotelDestinationOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDestinationOptionsVC.swift; sourceTree = "<group>"; };
@@ -1051,6 +1053,7 @@
 		EFA0DE3F208E3EE500C4D9C4 /* TravelistoUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				EFA5D004208FB354007A3D19 /* TravelistoLogicTests.swift */,
 				EFA0DE40208E3EE500C4D9C4 /* TravelistoUnitTests.swift */,
 				EFA0DE42208E3EE500C4D9C4 /* Info.plist */,
 			);
@@ -1459,6 +1462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA0DE41208E3EE500C4D9C4 /* TravelistoUnitTests.swift in Sources */,
+				EFA5D005208FB354007A3D19 /* TravelistoLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

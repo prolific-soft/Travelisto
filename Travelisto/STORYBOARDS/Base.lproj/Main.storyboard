@@ -158,7 +158,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vvh-dp-TdT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In" largeTitleDisplayMode="always" id="gCL-WG-hcE">
+                    <navigationItem key="navigationItem" title="Sign In" id="gCL-WG-hcE">
                         <barButtonItem key="leftBarButtonItem" image="Back" id="Liv-SX-YJm">
                             <connections>
                                 <action selector="backButtonTapped:" destination="yip-oH-Jkf" id="hrX-cb-sE3"/>
@@ -325,8 +325,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99215686270000003" green="0.26755450879999998" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="28"/>
-                            <color key="textColor" red="0.14117647059999999" green="0.1450980392" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -351,6 +350,6 @@
         <image name="Back" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dwz-6n-5KU"/>
+        <segue reference="frC-8p-XL4"/>
     </inferredMetricsTieBreakers>
 </document>
