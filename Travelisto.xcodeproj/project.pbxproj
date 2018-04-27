@@ -102,6 +102,7 @@
 		EF37483B208414C800A45AB7 /* SearchCodeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37483A208414C800A45AB7 /* SearchCodeTVC.swift */; };
 		EF37483D20843A2300A45AB7 /* SearchCodeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37483C20843A2300A45AB7 /* SearchCodeTVCell.swift */; };
 		EF37483F20844C5E00A45AB7 /* DetailPeekVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37483E20844C5E00A45AB7 /* DetailPeekVC.swift */; };
+		EF39E2452092CEBC00D153AD /* ExploreTVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39E2442092CEBC00D153AD /* ExploreTVCTest.swift */; };
 		EF43F8991F8DD21D008A1040 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F8981F8DD21D008A1040 /* BaseURL.swift */; };
 		EF43F89B1F8E3975008A1040 /* InspirationURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89A1F8E3975008A1040 /* InspirationURL.swift */; };
 		EF43F89D1F8FF070008A1040 /* AirportAutoCompleteURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */; };
@@ -305,6 +306,7 @@
 		EF37483A208414C800A45AB7 /* SearchCodeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodeTVC.swift; sourceTree = "<group>"; };
 		EF37483C20843A2300A45AB7 /* SearchCodeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodeTVCell.swift; sourceTree = "<group>"; };
 		EF37483E20844C5E00A45AB7 /* DetailPeekVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPeekVC.swift; sourceTree = "<group>"; };
+		EF39E2442092CEBC00D153AD /* ExploreTVCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTVCTest.swift; sourceTree = "<group>"; };
 		EF43F8981F8DD21D008A1040 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		EF43F89A1F8E3975008A1040 /* InspirationURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationURL.swift; sourceTree = "<group>"; };
 		EF43F89C1F8FF070008A1040 /* AirportAutoCompleteURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAutoCompleteURL.swift; sourceTree = "<group>"; };
@@ -1053,6 +1055,7 @@
 		EFA0DE3F208E3EE500C4D9C4 /* TravelistoUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF39E2442092CEBC00D153AD /* ExploreTVCTest.swift */,
 				EFA5D004208FB354007A3D19 /* TravelistoLogicTests.swift */,
 				EFA0DE40208E3EE500C4D9C4 /* TravelistoUnitTests.swift */,
 				EFA0DE42208E3EE500C4D9C4 /* Info.plist */,
@@ -1462,6 +1465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA0DE41208E3EE500C4D9C4 /* TravelistoUnitTests.swift in Sources */,
+				EF39E2452092CEBC00D153AD /* ExploreTVCTest.swift in Sources */,
 				EFA5D005208FB354007A3D19 /* TravelistoLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -691,6 +691,7 @@ The city's early population originated from a mix of Latins, Etruscans and Sabin
                             <constraint firstAttribute="bottom" secondItem="bUx-f8-XZx" secondAttribute="bottom" id="Vwu-jG-Haz"/>
                             <constraint firstItem="bUx-f8-XZx" firstAttribute="top" secondItem="4hR-N9-vZD" secondAttribute="top" id="Z4q-7Q-YDS"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="My7-f9-Z42"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcn-kt-vCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -716,6 +717,7 @@ The city's early population originated from a mix of Latins, Etruscans and Sabin
                             <constraint firstAttribute="trailing" secondItem="saw-4D-RPs" secondAttribute="trailing" id="L2B-5o-hGT"/>
                             <constraint firstItem="saw-4D-RPs" firstAttribute="top" secondItem="0Y7-AR-0L7" secondAttribute="top" id="xM2-WH-AeG"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="frB-2s-xNf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7p-cB-Gtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -730,6 +732,7 @@ The city's early population originated from a mix of Latins, Etruscans and Sabin
                         <rect key="frame" x="0.0" y="0.0" width="335" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yPg-s4-gHg"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zv0-gA-F47" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -761,6 +764,7 @@ The city's early population originated from a mix of Latins, Etruscans and Sabin
                             <constraint firstItem="6z9-XD-Q6a" firstAttribute="leading" secondItem="yJp-lm-n4P" secondAttribute="leading" id="NwY-6K-gOZ"/>
                             <constraint firstItem="6z9-XD-Q6a" firstAttribute="top" secondItem="yJp-lm-n4P" secondAttribute="top" id="diO-4J-nIe"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="TbW-a0-v6v"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMf-Rb-xKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -775,6 +779,7 @@ The city's early population originated from a mix of Latins, Etruscans and Sabin
                         <rect key="frame" x="0.0" y="0.0" width="335" height="143"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZSR-AX-tIS"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsD-Uy-6I2" userLabel="First Responder" sceneMemberID="firstResponder"/>
